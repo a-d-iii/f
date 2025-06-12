@@ -2,15 +2,17 @@
 import Base from '../layouts/Base.astro';
 import faculty from '../data/faculty.json';
 import FacultyCard from '../components/FacultyCard.astro';
-import SearchBar from '../components/SearchBar.tsx';
+import SearchBar from '../components/SearchBar.astro';
 import { paginate, PER_PAGE } from '../utils/pagination';
 const page = 1;
-let filteredIds = faculty.map(f => f.id);
+const url = new URL(Astro.request.url);
+const query = url.searchParams.get('q') ?? '';
+const list = query ? faculty.filter(f => f.name.toLowerCase().includes(query.toLowerCase())) : faculty;
 ---
 <Base>
-  <div slot="search" class="w-full"><SearchBar data={faculty} onFilter={(ids)=>filteredIds = ids} client:load /></div>
+  <div slot="search" class="w-full"><SearchBar query={query} /></div>
   <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
-    {paginate(faculty.filter(f=>filteredIds.includes(f.id)), page).map(f => (
+    {paginate(list, page).map(f => (
       <FacultyCard faculty={f} />
     ))}
   </div>
