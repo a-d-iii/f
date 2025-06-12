@@ -6,5 +6,6 @@ const { faculty } = Astro.props;
   <img src={faculty.photo} alt={`Photo of ${faculty.name}`} loading="lazy" class="w-full h-auto rounded mb-2" />
   <h3 class="text-lg font-semibold">{faculty.name}</h3>
   <p class="text-sm text-gray-600 dark:text-gray-300">{faculty.dept}</p>
-  <RatingWidget rating={faculty.avgRating} client:load />
+  <RatingWidget rating={faculty.avgRating} showValue={true} client:load />
+  <p class="text-sm mt-1">{faculty.ratingsCount} rating{faculty.ratingsCount === 1 ? '' : 's'}</p>
 </article>
