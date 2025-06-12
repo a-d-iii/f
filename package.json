@@ -16,7 +16,6 @@
     "@astrojs/image": "^0.18.0",
     "@astrojs/react": "^4.3.0",
     "@astrojs/tailwind": "^6.0.2",
-    "@motionone/react": "^10.16.4",
     "@tailwindcss/postcss": "^4.1.10",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
