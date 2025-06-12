@@ -10,62 +10,46 @@ const person = faculty.find((f) => String(f.id) === String(id));
 if (!person) throw Astro.redirect('/', 302);
 ---
 <Base title={`${person.name} - Faculty Ranker`}>
-  <div class="flex flex-col items-center">
-    <h1 class="text-2xl font-bold mb-2 text-center">{person.name}</h1>
+  <div class="flex flex-col md:flex-row md:items-start md:gap-8 items-center">
     <img
       src={person.photo}
       alt={`Photo of ${person.name}`}
       onerror="this.src='https://placehold.co/300x400?text=No+Photo';this.onerror=null;"
-      class="w-64 h-auto rounded mb-4"
+      class="w-64 h-auto rounded mb-4 md:mb-0"
     />
-    <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
-      <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
-        <span class="text-xs font-medium">Teaching</span>
-        <RatingWidget rating={person.teachingRating} client:load />
+    <div class="flex flex-col items-center md:items-start">
+      <h1 class="text-2xl font-bold mb-2 text-center md:text-left">{person.name}</h1>
+      <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
+        <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
+          <span class="text-xs font-medium">Teaching</span>
+          <RatingWidget rating={person.teachingRating} client:load />
+        </div>
+        <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
+          <span class="text-xs font-medium">Attendance</span>
+          <RatingWidget rating={person.attendanceRating} client:load />
+        </div>
+        <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
+          <span class="text-xs font-medium">Correction</span>
+          <RatingWidget rating={person.correctionRating} client:load />
+        </div>
       </div>
-      <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
-        <span class="text-xs font-medium">Attendance</span>
-        <RatingWidget rating={person.attendanceRating} client:load />
-      </div>
-      <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
-        <span class="text-xs font-medium">Correction</span>
-        <RatingWidget rating={person.correctionRating} client:load />
-      </div>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 text-center md:text-left clamp-three-lines">{person.dept}</p>
+      <p class="mt-1 mb-2 text-sm">{person.ratingsCount} rating{person.ratingsCount === 1 ? '' : 's'}</p>
+      <form class="mt-4 flex flex-col items-stretch gap-4 w-full" onsubmit="event.preventDefault(); alert('Thanks for rating!');">
+        <div class="flex flex-col gap-1">
+          <label for="teach" class="text-sm">Teaching</label>
+          <input id="teach" type="range" min="1" max="5" class="w-full" />
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="attend" class="text-sm">Attendance</label>
+          <input id="attend" type="range" min="1" max="5" class="w-full" />
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="corr" class="text-sm">Correction</label>
+          <input id="corr" type="range" min="1" max="5" class="w-full" />
+        </div>
+        <button type="submit" class="mt-2 px-4 py-1 rounded bg-blue-600 text-white hover:bg-blue-700 self-start">Submit Rating</button>
+      </form>
     </div>
-    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 text-center clamp-three-lines">{person.dept}</p>
-    <p class="mt-1 mb-2 text-sm">{person.ratingsCount} rating{person.ratingsCount === 1 ? '' : 's'}</p>
-    <form class="mt-4 flex flex-col items-center gap-2" onsubmit="event.preventDefault(); alert('Thanks for rating!');">
-      <div class="flex gap-2 items-center">
-        <label for="teach" class="text-sm">Teaching</label>
-        <select id="teach" class="border rounded p-1">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-      <div class="flex gap-2 items-center">
-        <label for="attend" class="text-sm">Attendance</label>
-        <select id="attend" class="border rounded p-1">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-      <div class="flex gap-2 items-center">
-        <label for="corr" class="text-sm">Correction</label>
-        <select id="corr" class="border rounded p-1">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-      <button type="submit" class="mt-2 px-4 py-1 rounded bg-violet-600 text-white hover:bg-violet-700">Submit Rating</button>
-    </form>
   </div>
 </Base>
