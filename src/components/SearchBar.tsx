@@ -2,7 +2,7 @@ import MiniSearch from 'minisearch';
 import type { FC } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 
-interface Props { data: { id: number; name: string }[]; onFilter: (ids: number[]) => void; }
+interface Props { data: { id: string; name: string }[]; onFilter: (ids: string[]) => void; }
 
 const SearchBar: FC<Props> = ({ data, onFilter }) => {
   const [query, setQuery] = useState('');
@@ -15,7 +15,7 @@ const SearchBar: FC<Props> = ({ data, onFilter }) => {
   useEffect(() => {
     if (!query) return onFilter(data.map((d) => d.id));
     const results = index.search(query);
-    onFilter(results.map((r) => r.id as number));
+    onFilter(results.map((r) => r.id as string));
   }, [query]);
 
   return (
