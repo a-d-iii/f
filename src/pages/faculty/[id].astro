@@ -6,7 +6,7 @@ export function getStaticPaths() {
 }
 import RatingWidget from '../../components/RatingWidget.tsx';
 const { id } = Astro.params;
-const person = faculty.find(f => f.id == id);
+const person = faculty.find((f) => String(f.id) === String(id));
 if (!person) throw Astro.redirect('/', 302);
 ---
 <Base title={`${person.name} - Faculty Ranker`}>
@@ -16,6 +16,6 @@ if (!person) throw Astro.redirect('/', 302);
     <p class="mb-2">{person.dept}</p>
     <RatingWidget rating={person.avgRating} showValue={true} client:load />
     <p class="mt-1 mb-2 text-sm">{person.ratingsCount} rating{person.ratingsCount === 1 ? '' : 's'}</p>
-    <p class="mt-4">This is a placeholder bio for {person.name}. Rating data will connect soon.</p>
+    <p class="mt-4">This is a placeholder bio for {person.name}. Rating data will be available soon.</p>
   </div>
 </Base>
