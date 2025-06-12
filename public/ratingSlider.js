@@ -29,6 +29,7 @@
     const bubble=document.createElement('div');
     bubble.className='rating-bubble';
     parent.appendChild(bubble);
+
     const update=()=>{
       const min=parseFloat(slider.min||'0');
       const max=parseFloat(slider.max||'100');
@@ -46,16 +47,10 @@
 
     const stop=()=>{
       bubble.classList.add('hidden');
-      document.body.classList.remove('no-scroll');
-      document.documentElement.classList.remove('no-scroll');
     };
     slider.addEventListener('input',update);
-    slider.addEventListener('pointerdown',()=>{
-      bubble.classList.remove('hidden');
-      document.body.classList.add('no-scroll');
-      document.documentElement.classList.add('no-scroll');
-      update();
-    });
+    slider.addEventListener('pointerdown',()=>{bubble.classList.remove('hidden');update();});
+    slider.addEventListener('pointermove',update);
     slider.addEventListener('pointerup',stop);
     slider.addEventListener('pointercancel',stop);
     slider.addEventListener('change',stop);

@@ -1,0 +1,7 @@
+---
+const { query = '', placeholder = 'Search by name...' } = Astro.props;
+---
+<form action="/" method="get" class="flex w-full gap-2">
+  <input type="search" name="q" value={query} aria-label="Search faculty" class="flex-1 p-2 border rounded" placeholder={placeholder} />
+  <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded shadow">Search</button>
+</form>

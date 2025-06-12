@@ -60,8 +60,3 @@
   font-size: 0.875rem;
 }
 
-html.no-scroll,
-body.no-scroll {
-  overflow: hidden;
-  touch-action: none;
-}
