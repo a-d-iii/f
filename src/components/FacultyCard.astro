@@ -8,7 +8,7 @@ const { faculty } = Astro.props;
       src={faculty.photo}
       alt={`Photo of ${faculty.name}`}
       loading="lazy"
-      class="w-full h-40 md:h-48 object-cover rounded mb-2"
+      class="w-full h-auto max-h-40 md:max-h-48 object-contain rounded mb-2"
     />
     <h3 class="text-lg font-semibold">{faculty.name}</h3>
     <p class="text-sm text-gray-600 dark:text-gray-300">{faculty.dept}</p>
