@@ -6,3 +6,11 @@
 .card {
   @apply bg-gray-100 dark:bg-gray-800 shadow rounded p-4 transition-shadow hover:shadow-lg animate-fade;
 }
+
+/* Utility class to keep multiline text from growing cards */
+.clamp-two-lines {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
