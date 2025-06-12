@@ -14,3 +14,12 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+/* Ensure faculty cards stay uniform height even with shorter text */
+.clamp-three-lines {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  min-height: 3.75rem;
+}

@@ -12,7 +12,12 @@ if (!person) throw Astro.redirect('/', 302);
 <Base title={`${person.name} - Faculty Ranker`}>
   <div class="flex flex-col items-center">
     <h1 class="text-2xl font-bold mb-2 text-center">{person.name}</h1>
-    <img src={person.photo} alt={`Photo of ${person.name}`} class="w-64 h-auto rounded mb-4" />
+    <img
+      src={person.photo}
+      alt={`Photo of ${person.name}`}
+      onerror="this.src='https://placehold.co/300x400?text=No+Photo';this.onerror=null;"
+      class="w-64 h-auto rounded mb-4"
+    />
     <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
       <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
         <span class="text-xs font-medium">Teaching</span>
@@ -27,7 +32,7 @@ if (!person) throw Astro.redirect('/', 302);
         <RatingWidget rating={person.correctionRating} client:load />
       </div>
     </div>
-    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 text-center" style="display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">{person.dept}</p>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 text-center clamp-three-lines">{person.dept}</p>
     <p class="mt-1 mb-2 text-sm">{person.ratingsCount} rating{person.ratingsCount === 1 ? '' : 's'}</p>
     <p class="mt-4">This is a placeholder bio for {person.name}. Rating data will be available soon.</p>
   </div>
