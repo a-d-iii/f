@@ -23,13 +23,10 @@
   }
   function setupSlider(slider){
     const parent=slider.parentElement;
- 
     const valueEl=parent.querySelector('.rating-value');
-    const bubble=document.createElement('span');
- 
     parent.style.position='relative';
+
     const bubble=document.createElement('div');
- 
     bubble.className='rating-bubble';
     parent.appendChild(bubble);
     const update=()=>{
@@ -41,9 +38,6 @@
       if(valueEl) valueEl.textContent=val.toFixed(1);
       bubble.textContent=val.toFixed(1);
       bubble.style.left=`calc(${percent*100}% - 0.5rem)`;
-   
-      bubble.textContent=val.toFixed(1);
-      bubble.style.left=`calc(${percent*100}% )`;
  
       const color=colorAt(val);
       slider.style.setProperty('--slider-color',color);
@@ -59,8 +53,6 @@
     slider.addEventListener('pointerup',stop);
     slider.addEventListener('pointercancel',stop);
     slider.addEventListener('change',stop);
-
-    slider.addEventListener('input',update);
 
     update();
   }
