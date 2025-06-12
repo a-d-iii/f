@@ -9,7 +9,7 @@ const { id } = Astro.params;
 const person = faculty.find((f) => String(f.id) === String(id));
 if (!person) throw Astro.redirect('/', 302);
 ---
-<Base title={`${person.name} - Faculty Ranker`}>
+<Base title={`${person.name} - Faculty Ranker`} headerTitle={person.name}>
   <div class="flex flex-col md:flex-row md:items-start md:gap-8 items-center">
     <img
       src={person.photo}
@@ -18,7 +18,6 @@ if (!person) throw Astro.redirect('/', 302);
       class="w-64 h-auto rounded mb-4 md:mb-0"
     />
     <div class="flex flex-col items-center md:items-start">
-      <h1 class="text-2xl font-bold mb-2 text-center md:text-left">{person.name}</h1>
       <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
         <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
           <span class="text-xs font-medium">Teaching</span>
@@ -34,19 +33,19 @@ if (!person) throw Astro.redirect('/', 302);
         </div>
       </div>
       <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 text-center md:text-left clamp-three-lines">{person.dept}</p>
-      <p class="mt-1 mb-2 text-sm">{person.ratingsCount} rating{person.ratingsCount === 1 ? '' : 's'}</p>
+      <p class="mt-1 mb-2 text-sm text-gray-500 dark:text-gray-400 self-start">Rated by {person.ratingsCount} student{person.ratingsCount === 1 ? '' : 's'}</p>
       <form class="mt-4 flex flex-col items-stretch gap-4 w-full" onsubmit="event.preventDefault(); alert('Thanks for rating!');">
-        <div class="flex flex-col gap-1">
-          <label for="teach" class="text-sm">Teaching</label>
-          <input id="teach" type="range" min="1" max="5" class="w-full" />
+        <div class="flex items-center gap-2">
+          <label for="teach" class="text-sm whitespace-nowrap">Teaching</label>
+          <input id="teach" type="range" min="1" max="5" step="0.1" class="rating-slider" />
         </div>
-        <div class="flex flex-col gap-1">
-          <label for="attend" class="text-sm">Attendance</label>
-          <input id="attend" type="range" min="1" max="5" class="w-full" />
+        <div class="flex items-center gap-2">
+          <label for="attend" class="text-sm whitespace-nowrap">Attendance</label>
+          <input id="attend" type="range" min="1" max="5" step="0.1" class="rating-slider" />
         </div>
-        <div class="flex flex-col gap-1">
-          <label for="corr" class="text-sm">Correction</label>
-          <input id="corr" type="range" min="1" max="5" class="w-full" />
+        <div class="flex items-center gap-2">
+          <label for="corr" class="text-sm whitespace-nowrap">Correction</label>
+          <input id="corr" type="range" min="1" max="5" step="0.1" class="rating-slider" />
         </div>
         <button type="submit" class="mt-2 px-4 py-1 rounded bg-blue-600 text-white hover:bg-blue-700 self-start">Submit Rating</button>
       </form>
