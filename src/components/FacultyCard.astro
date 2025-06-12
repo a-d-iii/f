@@ -3,16 +3,9 @@ import RatingWidget from './RatingWidget.tsx';
 const { faculty } = Astro.props;
 ---
 <a href={`/faculty/${faculty.id}`} class="block">
-  <article class="card" view-transition-name={`card-${faculty.id}`}>
-    <img
-      src={faculty.photo}
-      alt={`Photo of ${faculty.name}`}
-      loading="lazy"
-      class="w-full h-auto max-h-56 md:max-h-72 object-contain rounded mb-2"
-    />
-    <h3 class="text-lg font-semibold">{faculty.name}</h3>
-    <p class="text-sm text-gray-600 dark:text-gray-300 truncate min-h-[3rem]">{faculty.dept}</p>
-    <div class="grid grid-cols-3 gap-2 mt-2 text-center">
+  <article class="card flex flex-col items-center" view-transition-name={`card-${faculty.id}`}>
+    <h3 class="text-lg font-semibold text-center mb-2">{faculty.name}</h3>
+    <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
       <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
         <span class="text-xs font-medium">Teaching</span>
         <RatingWidget rating={faculty.teachingRating} client:load />
@@ -26,6 +19,13 @@ const { faculty } = Astro.props;
         <RatingWidget rating={faculty.correctionRating} client:load />
       </div>
     </div>
+    <p class="text-sm text-gray-600 dark:text-gray-300 truncate min-h-[3rem] mb-2 text-center">{faculty.dept}</p>
+    <img
+      src={faculty.photo}
+      alt={`Photo of ${faculty.name}`}
+      loading="lazy"
+      class="w-full h-auto max-h-56 md:max-h-72 object-contain rounded mb-2"
+    />
     <p class="text-sm mt-1">{faculty.ratingsCount} rating{faculty.ratingsCount === 1 ? '' : 's'}</p>
   </article>
 </a>
