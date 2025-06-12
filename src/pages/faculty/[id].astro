@@ -34,6 +34,38 @@ if (!person) throw Astro.redirect('/', 302);
     </div>
     <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 text-center clamp-three-lines">{person.dept}</p>
     <p class="mt-1 mb-2 text-sm">{person.ratingsCount} rating{person.ratingsCount === 1 ? '' : 's'}</p>
-    <p class="mt-4">This is a placeholder bio for {person.name}. Rating data will be available soon.</p>
+    <form class="mt-4 flex flex-col items-center gap-2" onsubmit="event.preventDefault(); alert('Thanks for rating!');">
+      <div class="flex gap-2 items-center">
+        <label for="teach" class="text-sm">Teaching</label>
+        <select id="teach" class="border rounded p-1">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="flex gap-2 items-center">
+        <label for="attend" class="text-sm">Attendance</label>
+        <select id="attend" class="border rounded p-1">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="flex gap-2 items-center">
+        <label for="corr" class="text-sm">Correction</label>
+        <select id="corr" class="border rounded p-1">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <button type="submit" class="mt-2 px-4 py-1 rounded bg-violet-600 text-white hover:bg-violet-700">Submit Rating</button>
+    </form>
   </div>
 </Base>
