@@ -29,6 +29,10 @@
     const bubble=document.createElement('div');
     bubble.className='rating-bubble';
     parent.appendChild(bubble);
+
+    let active=false;
+    let pointerId=null;
+
     const update=()=>{
       const min=parseFloat(slider.min||'0');
       const max=parseFloat(slider.max||'100');
@@ -45,17 +49,26 @@
     };
 
     const stop=()=>{
+      active=false;
       bubble.classList.add('hidden');
       document.body.classList.remove('no-scroll');
       document.documentElement.classList.remove('no-scroll');
+      if(pointerId!==null){
+        try{slider.releasePointerCapture(pointerId);}catch{}
+        pointerId=null;
+      }
     };
     slider.addEventListener('input',update);
-    slider.addEventListener('pointerdown',()=>{
+    slider.addEventListener('pointerdown',(e)=>{
       bubble.classList.remove('hidden');
       document.body.classList.add('no-scroll');
       document.documentElement.classList.add('no-scroll');
+      active=true;
+      pointerId=e.pointerId;
+      try{slider.setPointerCapture(pointerId);}catch{}
       update();
     });
+    slider.addEventListener('pointermove',(e)=>{if(active){e.preventDefault();update();}});
     slider.addEventListener('pointerup',stop);
     slider.addEventListener('pointercancel',stop);
     slider.addEventListener('change',stop);
