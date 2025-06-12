@@ -14,7 +14,25 @@ if (!person) throw Astro.redirect('/', 302);
     <img src={person.photo} alt={`Photo of ${person.name}`} class="w-64 h-auto rounded mb-4" />
     <h1 class="text-2xl font-bold mb-2">{person.name}</h1>
     <p class="mb-2">{person.dept}</p>
-    <RatingWidget rating={person.avgRating} client:load />
+    <RatingWidget rating={person.avgRating} showValue={true} client:load />
+    <p class="mt-1 mb-2 text-sm">{person.ratingsCount} rating{person.ratingsCount === 1 ? '' : 's'}</p>
+    <div class="mt-2 space-y-1">
+      <div class="flex items-center gap-1">
+        <span>Teaching:</span>
+        <RatingWidget rating={person.teachingAvg} showValue={true} client:load />
+        <span class="text-xs">({person.teachingCount})</span>
+      </div>
+      <div class="flex items-center gap-1">
+        <span>Attendance:</span>
+        <RatingWidget rating={person.attendanceAvg} showValue={true} client:load />
+        <span class="text-xs">({person.attendanceCount})</span>
+      </div>
+      <div class="flex items-center gap-1">
+        <span>Correction:</span>
+        <RatingWidget rating={person.correctionAvg} showValue={true} client:load />
+        <span class="text-xs">({person.correctionCount})</span>
+      </div>
+    </div>
     <p class="mt-4">This is a placeholder bio for {person.name}. Rating data will connect soon.</p>
   </div>
 </Base>
