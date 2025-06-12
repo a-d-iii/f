@@ -4,5 +4,5 @@
 
 /* Critical styles for cards */
 .card {
-  @apply bg-white dark:bg-gray-800 shadow rounded p-4 transition-shadow hover:shadow-lg animate-fade;
+  @apply bg-gray-100 dark:bg-gray-800 shadow rounded p-4 transition-shadow hover:shadow-lg animate-fade;
 }
