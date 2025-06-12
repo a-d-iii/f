@@ -8,7 +8,7 @@ const page = 1;
 let filteredIds = faculty.map(f => f.id);
 ---
 <Base>
-  <div class="mb-4" id="search"><SearchBar data={faculty} onFilter={(ids)=>filteredIds = ids} client:load /></div>
+  <div slot="search" class="w-full"><SearchBar data={faculty} onFilter={(ids)=>filteredIds = ids} client:load /></div>
   <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
     {paginate(faculty.filter(f=>filteredIds.includes(f.id)), page).map(f => (
       <FacultyCard faculty={f} />
