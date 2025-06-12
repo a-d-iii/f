@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import faculty from '../data/faculty.json';
+import FacultyCard from '../components/FacultyCard.astro';
+import SearchBar from '../components/SearchBar.tsx';
+import { paginate, PER_PAGE } from '../utils/pagination';
+const page = 1;
+let filteredIds = faculty.map(f => f.id);
+---
+<Base>
+  <div class="mb-4" id="search"><SearchBar data={faculty} onFilter={(ids)=>filteredIds = ids} client:load /></div>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    {paginate(faculty.filter(f=>filteredIds.includes(f.id)), page).map(f => (
+      <FacultyCard faculty={f} />
+    ))}
+  </div>
+  <nav class="mt-4 flex justify-center gap-2">
+    <a href="/page/2" class="underline">Next</a>
+  </nav>
+</Base>

@@ -1,0 +1,21 @@
+---
+import '../styles/global.css';
+const { title = 'Faculty Ranker', children } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{title}</title>
+  <link rel="preload" as="image" href="https://placehold.co/300x400?text=Faculty+1" />
+  <link rel="preload" as="image" href="https://placehold.co/300x400?text=Faculty+2" />
+  <link rel="preload" as="image" href="https://placehold.co/300x400?text=Faculty+3" />
+  <link rel="preload" as="image" href="https://placehold.co/300x400?text=Faculty+4" />
+  <script type="module" src="/viewTransitions.js" />
+</head>
+<body class="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+  <header class="p-4 text-center text-2xl font-bold">Faculty Ranker</header>
+  <main class="container mx-auto p-4">{children}</main>
+</body>
+</html>
