@@ -1,25 +1,26 @@
-import { motion } from '@motionone/react';
 import type { FC } from 'react';
 
 interface Props {
   rating: number;
-  showValue?: boolean;
+  showValue?: boolean; // retained for compatibility but ignored
   disabled?: boolean;
 }
 
-const RatingWidget: FC<Props> = ({ rating, showValue = false }) => {
+const getColor = (rating: number) => {
+  if (rating > 4) return 'bg-green-600 text-white';
+  if (rating > 3.5) return 'bg-green-500 text-white';
+  if (rating >= 3) return 'bg-yellow-400 text-gray-900';
+  if (rating >= 2) return 'bg-red-500 text-white';
+  return 'bg-red-700 text-white';
+};
+
+const RatingWidget: FC<Props> = ({ rating }) => {
+  const classes = `px-2 py-1 rounded font-bold text-sm ${getColor(rating)}`;
   return (
-    <div
-      aria-label={`Average rating ${rating}`}
-      className="flex items-center gap-1 text-yellow-500 text-sm md:text-base"
-    >
-      {[1, 2, 3, 4, 5].map((i) => (
-        <motion.span key={i} initial={{ scale: 0 }} animate={{ scale: 1 }}>
-          {i <= Math.round(rating) ? '★' : '☆'}
-        </motion.span>
-      ))}
-      {showValue && <span className="ml-1">{rating.toFixed(1)}</span>}
+    <div aria-label={`Rating ${rating}`} className={classes}>
+      {rating.toFixed(1)}
     </div>
   );
 };
+
 export default RatingWidget;
