@@ -11,14 +11,14 @@ const RatingWidget: FC<Props> = ({ rating, showValue = false }) => {
   return (
     <div
       aria-label={`Average rating ${rating}`}
-      className="flex items-center gap-1"
+      className="flex items-center gap-1 text-yellow-500 text-sm md:text-base"
     >
       {[1, 2, 3, 4, 5].map((i) => (
         <motion.span key={i} initial={{ scale: 0 }} animate={{ scale: 1 }}>
           {i <= Math.round(rating) ? '★' : '☆'}
         </motion.span>
       ))}
-      {showValue && <span className="text-sm">{rating.toFixed(1)}</span>}
+      {showValue && <span className="ml-1">{rating.toFixed(1)}</span>}
     </div>
   );
 };

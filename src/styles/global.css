@@ -3,4 +3,6 @@
 @tailwind utilities;
 
 /* Critical styles for cards */
-.card { @apply bg-white dark:bg-gray-800 shadow rounded p-4 transition-shadow; }
+.card {
+  @apply bg-white dark:bg-gray-800 shadow rounded p-4 transition-shadow hover:shadow-lg animate-fade;
+}
