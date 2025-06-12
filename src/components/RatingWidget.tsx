@@ -7,6 +7,7 @@ interface Props {
 }
 
 const getColor = (rating: number) => {
+  if (rating === 5) return 'bg-violet-600 text-white ring-2 ring-violet-300 animate-pulse';
   if (rating > 4) return 'bg-green-600 text-white';
   if (rating > 3.5) return 'bg-green-500 text-white';
   if (rating >= 3) return 'bg-yellow-400 text-gray-900';
