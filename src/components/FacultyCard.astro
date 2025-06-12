@@ -1,0 +1,10 @@
+---
+import RatingWidget from './RatingWidget.tsx';
+const { faculty } = Astro.props;
+---
+<article class="card" view-transition-name={`card-${faculty.id}`}> 
+  <img src={faculty.photo} alt={`Photo of ${faculty.name}`} loading="lazy" class="w-full h-auto rounded mb-2" />
+  <h3 class="text-lg font-semibold">{faculty.name}</h3>
+  <p class="text-sm text-gray-600 dark:text-gray-300">{faculty.dept}</p>
+  <RatingWidget rating={faculty.avgRating} client:load />
+</article>

@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import faculty from '../../data/faculty.json';
+export function getStaticPaths() {
+  const pages = Math.ceil(faculty.length / PER_PAGE);
+  return Array.from({ length: pages }, (_, i) => ({ params: { n: String(i + 1) } }));
+}
+import FacultyCard from '../../components/FacultyCard.astro';
+import { paginate, PER_PAGE } from '../../utils/pagination';
+const { n } = Astro.params;
+const page = Number(n);
+const pages = Math.ceil(faculty.length / PER_PAGE);
+if (page < 1 || page > pages) {
+  throw Astro.redirect('/', 302);
+}
+---
+<Base title={`Page ${page} - Faculty Ranker`}>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    {paginate(faculty, page).map(f => (
+      <FacultyCard faculty={f} />
+    ))}
+  </div>
+  <nav class="mt-4 flex justify-center gap-2">
+    {page > 1 && <a href={`/page/${page-1}`} class="underline">Prev</a>}
+    {page < pages && <a href={`/page/${page+1}`} class="underline">Next</a>}
+  </nav>
+</Base>

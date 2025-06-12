@@ -1,0 +1,403 @@
+[
+  {
+    "id": 1,
+    "name": "Prof. Bob Johnson",
+    "dept": "Chemistry",
+    "photo": "https://placehold.co/300x400?text=Faculty+1",
+    "avgRating": 3.3,
+    "ratingsCount": 82
+  },
+  {
+    "id": 2,
+    "name": "Prof. Charlie Williams",
+    "dept": "Mathematics",
+    "photo": "https://placehold.co/300x400?text=Faculty+2",
+    "avgRating": 4.1,
+    "ratingsCount": 12
+  },
+  {
+    "id": 3,
+    "name": "Prof. David Brown",
+    "dept": "Biology",
+    "photo": "https://placehold.co/300x400?text=Faculty+3",
+    "avgRating": 4.7,
+    "ratingsCount": 38
+  },
+  {
+    "id": 4,
+    "name": "Prof. Eve Jones",
+    "dept": "Computer Science",
+    "photo": "https://placehold.co/300x400?text=Faculty+4",
+    "avgRating": 3.5,
+    "ratingsCount": 35
+  },
+  {
+    "id": 5,
+    "name": "Prof. Fay Miller",
+    "dept": "Physics",
+    "photo": "https://placehold.co/300x400?text=Faculty+5",
+    "avgRating": 5,
+    "ratingsCount": 22
+  },
+  {
+    "id": 6,
+    "name": "Prof. Grace Davis",
+    "dept": "Chemistry",
+    "photo": "https://placehold.co/300x400?text=Faculty+6",
+    "avgRating": 4.1,
+    "ratingsCount": 7
+  },
+  {
+    "id": 7,
+    "name": "Prof. Heidi Garcia",
+    "dept": "Mathematics",
+    "photo": "https://placehold.co/300x400?text=Faculty+7",
+    "avgRating": 4.5,
+    "ratingsCount": 22
+  },
+  {
+    "id": 8,
+    "name": "Prof. Ivan Rodriguez",
+    "dept": "Biology",
+    "photo": "https://placehold.co/300x400?text=Faculty+8",
+    "avgRating": 3.4,
+    "ratingsCount": 44
+  },
+  {
+    "id": 9,
+    "name": "Prof. Judy Wilson",
+    "dept": "Computer Science",
+    "photo": "https://placehold.co/300x400?text=Faculty+9",
+    "avgRating": 4.2,
+    "ratingsCount": 44
+  },
+  {
+    "id": 10,
+    "name": "Prof. Kathy Martinez",
+    "dept": "Physics",
+    "photo": "https://placehold.co/300x400?text=Faculty+10",
+    "avgRating": 4.8,
+    "ratingsCount": 67
+  },
+  {
+    "id": 11,
+    "name": "Prof. Leo Anderson",
+    "dept": "Chemistry",
+    "photo": "https://placehold.co/300x400?text=Faculty+11",
+    "avgRating": 4.4,
+    "ratingsCount": 21
+  },
+  {
+    "id": 12,
+    "name": "Prof. Mallory Taylor",
+    "dept": "Mathematics",
+    "photo": "https://placehold.co/300x400?text=Faculty+12",
+    "avgRating": 4.5,
+    "ratingsCount": 51
+  },
+  {
+    "id": 13,
+    "name": "Prof. Niaj Thomas",
+    "dept": "Biology",
+    "photo": "https://placehold.co/300x400?text=Faculty+13",
+    "avgRating": 3.1,
+    "ratingsCount": 24
+  },
+  {
+    "id": 14,
+    "name": "Prof. Olivia Hernandez",
+    "dept": "Computer Science",
+    "photo": "https://placehold.co/300x400?text=Faculty+14",
+    "avgRating": 4.8,
+    "ratingsCount": 56
+  },
+  {
+    "id": 15,
+    "name": "Prof. Peggy Moore",
+    "dept": "Physics",
+    "photo": "https://placehold.co/300x400?text=Faculty+15",
+    "avgRating": 5,
+    "ratingsCount": 62
+  },
+  {
+    "id": 16,
+    "name": "Prof. Quinn Martin",
+    "dept": "Chemistry",
+    "photo": "https://placehold.co/300x400?text=Faculty+16",
+    "avgRating": 3.2,
+    "ratingsCount": 64
+  },
+  {
+    "id": 17,
+    "name": "Prof. Rupert Jackson",
+    "dept": "Mathematics",
+    "photo": "https://placehold.co/300x400?text=Faculty+17",
+    "avgRating": 4.5,
+    "ratingsCount": 51
+  },
+  {
+    "id": 18,
+    "name": "Prof. Sybil Thompson",
+    "dept": "Biology",
+    "photo": "https://placehold.co/300x400?text=Faculty+18",
+    "avgRating": 4.1,
+    "ratingsCount": 69
+  },
+  {
+    "id": 19,
+    "name": "Prof. Trent White",
+    "dept": "Computer Science",
+    "photo": "https://placehold.co/300x400?text=Faculty+19",
+    "avgRating": 3.8,
+    "ratingsCount": 4
+  },
+  {
+    "id": 20,
+    "name": "Prof. Uma Lopez",
+    "dept": "Physics",
+    "photo": "https://placehold.co/300x400?text=Faculty+20",
+    "avgRating": 3.1,
+    "ratingsCount": 75
+  },
+  {
+    "id": 21,
+    "name": "Prof. Victor Lee",
+    "dept": "Chemistry",
+    "photo": "https://placehold.co/300x400?text=Faculty+21",
+    "avgRating": 4.7,
+    "ratingsCount": 53
+  },
+  {
+    "id": 22,
+    "name": "Prof. Wendy Gonzalez",
+    "dept": "Mathematics",
+    "photo": "https://placehold.co/300x400?text=Faculty+22",
+    "avgRating": 3.2,
+    "ratingsCount": 28
+  },
+  {
+    "id": 23,
+    "name": "Prof. Xavier Harris",
+    "dept": "Biology",
+    "photo": "https://placehold.co/300x400?text=Faculty+23",
+    "avgRating": 3.6,
+    "ratingsCount": 55
+  },
+  {
+    "id": 24,
+    "name": "Prof. Yvonne Clark",
+    "dept": "Computer Science",
+    "photo": "https://placehold.co/300x400?text=Faculty+24",
+    "avgRating": 3.3,
+    "ratingsCount": 41
+  },
+  {
+    "id": 25,
+    "name": "Prof. Alice Smith",
+    "dept": "Physics",
+    "photo": "https://placehold.co/300x400?text=Faculty+25",
+    "avgRating": 3.2,
+    "ratingsCount": 84
+  },
+  {
+    "id": 26,
+    "name": "Prof. Bob Johnson",
+    "dept": "Chemistry",
+    "photo": "https://placehold.co/300x400?text=Faculty+26",
+    "avgRating": 4.3,
+    "ratingsCount": 98
+  },
+  {
+    "id": 27,
+    "name": "Prof. Charlie Williams",
+    "dept": "Mathematics",
+    "photo": "https://placehold.co/300x400?text=Faculty+27",
+    "avgRating": 4.5,
+    "ratingsCount": 11
+  },
+  {
+    "id": 28,
+    "name": "Prof. David Brown",
+    "dept": "Biology",
+    "photo": "https://placehold.co/300x400?text=Faculty+28",
+    "avgRating": 4.5,
+    "ratingsCount": 53
+  },
+  {
+    "id": 29,
+    "name": "Prof. Eve Jones",
+    "dept": "Computer Science",
+    "photo": "https://placehold.co/300x400?text=Faculty+29",
+    "avgRating": 4.8,
+    "ratingsCount": 64
+  },
+  {
+    "id": 30,
+    "name": "Prof. Fay Miller",
+    "dept": "Physics",
+    "photo": "https://placehold.co/300x400?text=Faculty+30",
+    "avgRating": 3.7,
+    "ratingsCount": 5
+  },
+  {
+    "id": 31,
+    "name": "Prof. Grace Davis",
+    "dept": "Chemistry",
+    "photo": "https://placehold.co/300x400?text=Faculty+31",
+    "avgRating": 3.9,
+    "ratingsCount": 35
+  },
+  {
+    "id": 32,
+    "name": "Prof. Heidi Garcia",
+    "dept": "Mathematics",
+    "photo": "https://placehold.co/300x400?text=Faculty+32",
+    "avgRating": 4.3,
+    "ratingsCount": 94
+  },
+  {
+    "id": 33,
+    "name": "Prof. Ivan Rodriguez",
+    "dept": "Biology",
+    "photo": "https://placehold.co/300x400?text=Faculty+33",
+    "avgRating": 5,
+    "ratingsCount": 67
+  },
+  {
+    "id": 34,
+    "name": "Prof. Judy Wilson",
+    "dept": "Computer Science",
+    "photo": "https://placehold.co/300x400?text=Faculty+34",
+    "avgRating": 4.1,
+    "ratingsCount": 69
+  },
+  {
+    "id": 35,
+    "name": "Prof. Kathy Martinez",
+    "dept": "Physics",
+    "photo": "https://placehold.co/300x400?text=Faculty+35",
+    "avgRating": 3.6,
+    "ratingsCount": 82
+  },
+  {
+    "id": 36,
+    "name": "Prof. Leo Anderson",
+    "dept": "Chemistry",
+    "photo": "https://placehold.co/300x400?text=Faculty+36",
+    "avgRating": 3.4,
+    "ratingsCount": 96
+  },
+  {
+    "id": 37,
+    "name": "Prof. Mallory Taylor",
+    "dept": "Mathematics",
+    "photo": "https://placehold.co/300x400?text=Faculty+37",
+    "avgRating": 3.9,
+    "ratingsCount": 33
+  },
+  {
+    "id": 38,
+    "name": "Prof. Niaj Thomas",
+    "dept": "Biology",
+    "photo": "https://placehold.co/300x400?text=Faculty+38",
+    "avgRating": 3.2,
+    "ratingsCount": 89
+  },
+  {
+    "id": 39,
+    "name": "Prof. Olivia Hernandez",
+    "dept": "Computer Science",
+    "photo": "https://placehold.co/300x400?text=Faculty+39",
+    "avgRating": 4.6,
+    "ratingsCount": 38
+  },
+  {
+    "id": 40,
+    "name": "Prof. Peggy Moore",
+    "dept": "Physics",
+    "photo": "https://placehold.co/300x400?text=Faculty+40",
+    "avgRating": 3.1,
+    "ratingsCount": 55
+  },
+  {
+    "id": 41,
+    "name": "Prof. Quinn Martin",
+    "dept": "Chemistry",
+    "photo": "https://placehold.co/300x400?text=Faculty+41",
+    "avgRating": 4.1,
+    "ratingsCount": 19
+  },
+  {
+    "id": 42,
+    "name": "Prof. Rupert Jackson",
+    "dept": "Mathematics",
+    "photo": "https://placehold.co/300x400?text=Faculty+42",
+    "avgRating": 4.4,
+    "ratingsCount": 30
+  },
+  {
+    "id": 43,
+    "name": "Prof. Sybil Thompson",
+    "dept": "Biology",
+    "photo": "https://placehold.co/300x400?text=Faculty+43",
+    "avgRating": 4.2,
+    "ratingsCount": 50
+  },
+  {
+    "id": 44,
+    "name": "Prof. Trent White",
+    "dept": "Computer Science",
+    "photo": "https://placehold.co/300x400?text=Faculty+44",
+    "avgRating": 4.9,
+    "ratingsCount": 73
+  },
+  {
+    "id": 45,
+    "name": "Prof. Uma Lopez",
+    "dept": "Physics",
+    "photo": "https://placehold.co/300x400?text=Faculty+45",
+    "avgRating": 4,
+    "ratingsCount": 24
+  },
+  {
+    "id": 46,
+    "name": "Prof. Victor Lee",
+    "dept": "Chemistry",
+    "photo": "https://placehold.co/300x400?text=Faculty+46",
+    "avgRating": 4.5,
+    "ratingsCount": 5
+  },
+  {
+    "id": 47,
+    "name": "Prof. Wendy Gonzalez",
+    "dept": "Mathematics",
+    "photo": "https://placehold.co/300x400?text=Faculty+47",
+    "avgRating": 3.3,
+    "ratingsCount": 51
+  },
+  {
+    "id": 48,
+    "name": "Prof. Xavier Harris",
+    "dept": "Biology",
+    "photo": "https://placehold.co/300x400?text=Faculty+48",
+    "avgRating": 3.6,
+    "ratingsCount": 53
+  },
+  {
+    "id": 49,
+    "name": "Prof. Yvonne Clark",
+    "dept": "Computer Science",
+    "photo": "https://placehold.co/300x400?text=Faculty+49",
+    "avgRating": 3.9,
+    "ratingsCount": 0
+  },
+  {
+    "id": 50,
+    "name": "Prof. Alice Smith",
+    "dept": "Physics",
+    "photo": "https://placehold.co/300x400?text=Faculty+50",
+    "avgRating": 3.3,
+    "ratingsCount": 43
+  }
+]
+
