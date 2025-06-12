@@ -27,6 +27,6 @@ const { faculty } = Astro.props;
       </div>
     </div>
     <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 text-center clamp-three-lines">{faculty.dept}</p>
-    <p class="text-sm mt-1">{faculty.ratingsCount} rating{faculty.ratingsCount === 1 ? '' : 's'}</p>
+    <p class="text-sm mt-1 self-start text-gray-500 dark:text-gray-400">Rated by {faculty.ratingsCount} student{faculty.ratingsCount === 1 ? '' : 's'}</p>
   </article>
 </a>
