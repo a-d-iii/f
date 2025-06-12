@@ -23,3 +23,43 @@
   -webkit-box-orient: vertical;
   min-height: 3.75rem;
 }
+
+/* Styles for interactive rating sliders */
+.rating-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12rem;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  background: #ddd;
+  outline: none;
+  cursor: pointer;
+}
+.rating-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  background: var(--slider-color, #7c3aed);
+  cursor: pointer;
+}
+.rating-slider::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  background: var(--slider-color, #7c3aed);
+  cursor: pointer;
+}
+.rating-bubble {
+  @apply absolute -top-6 left-1/2 -translate-x-1/2 px-2 py-0.5 text-sm font-semibold rounded bg-black text-white pointer-events-none hidden;
+}
+.rating-value {
+  min-width: 2rem;
+  text-align: right;
+  font-size: 0.875rem;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

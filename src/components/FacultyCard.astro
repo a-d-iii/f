@@ -4,7 +4,7 @@ const { faculty } = Astro.props;
 ---
 <a href={`/faculty/${faculty.id}`} class="block">
   <article class="card flex flex-col items-center" view-transition-name={`card-${faculty.id}`}>
-    <h3 class="text-lg font-semibold text-center mb-2">{faculty.name}</h3>
+  <h3 class="text-lg font-bold text-center mb-2">{faculty.name}</h3>
     <img
       src={faculty.photo}
       alt={`Photo of ${faculty.name}`}
@@ -14,16 +14,16 @@ const { faculty } = Astro.props;
     />
     <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
       <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
-        <span class="text-xs font-medium">Teaching</span>
         <RatingWidget rating={faculty.teachingRating} client:load />
+        <span class="text-xs font-medium">Teaching</span>
       </div>
       <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
-        <span class="text-xs font-medium">Attendance</span>
         <RatingWidget rating={faculty.attendanceRating} client:load />
+        <span class="text-xs font-medium">Attendance</span>
       </div>
       <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
-        <span class="text-xs font-medium">Correction</span>
         <RatingWidget rating={faculty.correctionRating} client:load />
+        <span class="text-xs font-medium">Correction</span>
       </div>
     </div>
     <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 text-center clamp-three-lines">{faculty.dept}</p>
