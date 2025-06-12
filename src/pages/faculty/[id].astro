@@ -20,20 +20,37 @@ if (!person) throw Astro.redirect('/', 302);
     <div class="flex flex-col items-center md:items-start">
       <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
         <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
-          <span class="text-xs font-medium">Teaching</span>
           <RatingWidget rating={person.teachingRating} client:load />
+          <span class="text-xs font-medium">Teaching</span>
         </div>
         <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
-          <span class="text-xs font-medium">Attendance</span>
           <RatingWidget rating={person.attendanceRating} client:load />
+          <span class="text-xs font-medium">Attendance</span>
         </div>
         <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
-          <span class="text-xs font-medium">Correction</span>
           <RatingWidget rating={person.correctionRating} client:load />
+          <span class="text-xs font-medium">Correction</span>
         </div>
       </div>
       <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 text-center md:text-left clamp-three-lines">{person.dept}</p>
       <p class="mt-1 mb-2 text-sm text-gray-500 dark:text-gray-400 self-start">Rated by {person.ratingsCount} student{person.ratingsCount === 1 ? '' : 's'}</p>
+ 
+      <form class="mt-4 flex flex-col items-center gap-4 w-full" onsubmit="event.preventDefault(); alert('Thanks for rating!');">
+        <div class="relative flex items-center gap-2">
+          <label for="teach" class="text-sm w-24">Teaching</label>
+          <input id="teach" type="range" min="1" max="5" step="0.1" class="rating-slider w-48" />
+          <span class="rating-value text-sm w-8 text-right"></span>
+        </div>
+        <div class="relative flex items-center gap-2">
+          <label for="attend" class="text-sm w-24">Attendance</label>
+          <input id="attend" type="range" min="1" max="5" step="0.1" class="rating-slider w-48" />
+          <span class="rating-value text-sm w-8 text-right"></span>
+        </div>
+        <div class="relative flex items-center gap-2">
+          <label for="corr" class="text-sm w-24">Correction</label>
+          <input id="corr" type="range" min="1" max="5" step="0.1" class="rating-slider w-48" />
+          <span class="rating-value text-sm w-8 text-right"></span>
+ 
       <form class="mt-4 flex flex-col items-stretch gap-4 w-full" onsubmit="event.preventDefault(); alert('Thanks for rating!');">
         <div class="flex items-center gap-2">
           <label for="teach" class="text-sm whitespace-nowrap">Teaching</label>
@@ -46,8 +63,9 @@ if (!person) throw Astro.redirect('/', 302);
         <div class="flex items-center gap-2">
           <label for="corr" class="text-sm whitespace-nowrap">Correction</label>
           <input id="corr" type="range" min="1" max="5" step="0.1" class="rating-slider" />
+ 
         </div>
-        <button type="submit" class="mt-2 px-4 py-1 rounded bg-blue-600 text-white hover:bg-blue-700 self-start">Submit Rating</button>
+        <button type="submit" class="mt-2 px-4 py-1 rounded bg-black text-white hover:bg-gray-800 self-start">Submit Rating</button>
       </form>
     </div>
   </div>
