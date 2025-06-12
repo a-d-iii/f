@@ -47,9 +47,15 @@
     const stop=()=>{
       bubble.classList.add('hidden');
       document.body.classList.remove('no-scroll');
+      document.documentElement.classList.remove('no-scroll');
     };
     slider.addEventListener('input',update);
-    slider.addEventListener('pointerdown',()=>{bubble.classList.remove('hidden');document.body.classList.add('no-scroll');update();});
+    slider.addEventListener('pointerdown',()=>{
+      bubble.classList.remove('hidden');
+      document.body.classList.add('no-scroll');
+      document.documentElement.classList.add('no-scroll');
+      update();
+    });
     slider.addEventListener('pointerup',stop);
     slider.addEventListener('pointercancel',stop);
     slider.addEventListener('change',stop);
