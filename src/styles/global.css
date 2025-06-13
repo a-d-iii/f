@@ -73,7 +73,7 @@
 .photo-wrapper {
 
   /* Increased size with maintained 3:4 ratio and stronger shadow */
-  @apply w-28 h-36 rounded-lg overflow-hidden flex items-center justify-center bg-white dark:bg-gray-900 shadow-lg -ml-4;
+  @apply w-28 h-36 rounded-lg overflow-hidden flex items-center justify-center bg-white dark:bg-gray-900 shadow-lg ml-2;
 
 
 }
