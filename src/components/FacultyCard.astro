@@ -21,11 +21,13 @@ const specialization =
           class="faculty-photo"
         />
       </div>
+
       <div class="flex flex-col flex-1">
         <h3 class="text-lg font-bold">{faculty.name || 'Unknown'}</h3>
         {specialization && (
           <p class="clamp-three-lines text-xs text-gray-600 dark:text-gray-400">
             {specialization}
+
           </p>
         )}
       </div>
