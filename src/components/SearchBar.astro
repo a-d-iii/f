@@ -1,5 +1,4 @@
 ---
-import MiniSearch from 'minisearch';
 import { fetchLists } from '../utils/supabase';
 
 const { query = '', placeholder = 'Search by name...' } = Astro.props;
@@ -14,12 +13,25 @@ const names = faculty
   <ul id="suggestions" class="hidden absolute left-0 top-full mt-1 w-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 rounded-lg shadow-lg max-h-60 overflow-auto z-10"></ul>
 </form>
 <script type="module">
+  import MiniSearch from 'minisearch';
   const list = {JSON.stringify(names)};
   const miniSearch = new MiniSearch({
     fields: ['name'],
     storeFields: ['name', 'id']
   });
   miniSearch.addAll(list);
+
+  const cards = Array.from(document.querySelectorAll('[data-id]'));
+
+  function filterPage(ids){
+    cards.forEach(card => {
+      if(!ids || ids.has(card.dataset.id)){
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
 
   const input = document.getElementById('search-input');
   const suggestions = document.getElementById('suggestions');
@@ -43,10 +55,13 @@ const names = faculty
     const q = input.value.trim();
     let matches;
     if(q){
-      const results = miniSearch.search(q, { prefix: true, fuzzy: 0.2 }).slice(0,10);
-      matches = results.map(r => ({ name: r.name, id: r.id }));
+      const results = miniSearch.search(q, { prefix: true, fuzzy: 0.2 });
+      const ids = new Set(results.map(r => String(r.id)));
+      matches = results.slice(0,10).map(r => ({ name: r.name, id: r.id }));
+      filterPage(ids);
     }else{
       matches = list.slice(0,10);
+      filterPage(null);
     }
     renderMatches(matches);
   }
@@ -54,9 +69,9 @@ const names = faculty
   input.addEventListener('focus', update);
   input.addEventListener('input', update);
   form.addEventListener('submit', (e) => {
+    e.preventDefault();
     const first = suggestions.querySelector('a');
     if(first){
-      e.preventDefault();
       window.location.href = first.href;
     }
   });
