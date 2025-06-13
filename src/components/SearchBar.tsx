@@ -115,26 +115,6 @@ export default function SearchBar() {
             <HeartButton />
           </article>
 
-          <div key={item.name} className="card flex flex-col items-center">
-            <img
-              src={item.photo_url || 'https://placehold.co/300x400?text=No+Photo'}
-              alt={item.name}
-              className="w-28 h-40 object-cover rounded-lg mb-2"
-            />
-            <h3 className="text-lg font-bold mb-1 text-center">{item.name}</h3>
-            {item.specialization && (
-              <p className="text-sm italic text-gray-500 text-center mb-2">
-                {item.specialization}
-              </p>
-            )}
-            <div className="text-sm text-gray-600 w-full">
-              <p>Teaching: {item.teaching_rating ?? 'N/A'}</p>
-              <p>Attendance: {item.attendance_rating ?? 'N/A'}</p>
-              <p>Correction: {item.correction_rating ?? 'N/A'}</p>
-              <p>Total ratings: {item.total_ratings ?? 'N/A'}</p>
-            </div>
-          </div>
-
         ))}
       </div>
     </div>
