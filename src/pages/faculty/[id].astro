@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import RatingBar from '../../components/RatingBar.tsx';
+import RatingWidget from '../../components/RatingWidget.tsx';
 import { fetchLists } from '../../utils/supabase';
 export async function getStaticPaths() {
   const faculty = await fetchLists();
@@ -22,10 +22,19 @@ if (!person) throw Astro.redirect('/', 302);
 
     />
     <div class="flex flex-col items-center md:items-start">
-      <div class="flex flex-col gap-2 mb-2 w-full">
-        <RatingBar rating={person.teaching_rating} label="Teaching" client:load />
-        <RatingBar rating={person.attendance_rating} label="Attendance" client:load />
-        <RatingBar rating={person.correction_rating} label="Correction" client:load />
+      <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
+        <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+          <RatingWidget rating={person.teaching_rating} client:load />
+          <span class="text-xs font-medium">Teaching</span>
+        </div>
+        <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+          <RatingWidget rating={person.attendance_rating} client:load />
+          <span class="text-xs font-medium">Attendance</span>
+        </div>
+        <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+          <RatingWidget rating={person.correction_rating} client:load />
+          <span class="text-xs font-medium">Correction</span>
+        </div>
       </div>
       <p class="mt-1 mb-2 text-sm text-gray-500 dark:text-gray-400 self-start">Rated by {person.total_ratings} student{person.total_ratings === 1 ? '' : 's'}</p>
  
