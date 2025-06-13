@@ -1,12 +1,5 @@
 ---
-import MiniSearch from 'minisearch';
-import { fetchLists } from '../utils/supabase';
-
 const { query = '', placeholder = 'Search by name...' } = Astro.props;
-const faculty = await fetchLists();
-const names = faculty
-  .filter(f => f.name && String(f.name).trim())
-  .map(f => ({ name: f.name, id: f.id }));
 ---
 <form id="search-form" action="/" method="get" class="relative flex w-full gap-2">
   <input id="search-input" type="search" name="q" value={query} aria-label="Search faculty" class="flex-1 p-2 border rounded-lg" placeholder={placeholder} autocomplete="off" />
@@ -14,50 +7,72 @@ const names = faculty
   <ul id="suggestions" class="hidden absolute left-0 top-full mt-1 w-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 rounded-lg shadow-lg max-h-60 overflow-auto z-10"></ul>
 </form>
 <script type="module">
-  const list = {JSON.stringify(names)};
-  const miniSearch = new MiniSearch({
-    fields: ['name'],
-    storeFields: ['name', 'id']
-  });
-  miniSearch.addAll(list);
-
+  import MiniSearch from 'minisearch';
   const input = document.getElementById('search-input');
   const suggestions = document.getElementById('suggestions');
   const form = document.getElementById('search-form');
 
-  function renderMatches(matches){
-    suggestions.innerHTML = '';
-    for(const m of matches){
-      const li = document.createElement('li');
-      li.className = 'px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg';
-      const a = document.createElement('a');
-      a.href = `/faculty/${m.id}`;
-      a.textContent = m.name;
-      li.appendChild(a);
-      suggestions.appendChild(li);
-    }
-    suggestions.classList.remove('hidden');
-  }
+  window.addEventListener('DOMContentLoaded', () => {
+    const cards = Array.from(
+      document.querySelectorAll('[data-id][data-name]')
+    );
+    const list = cards.map(card => ({
+      id: card.dataset.id,
+      name: card.dataset.name
+    }));
+    const miniSearch = new MiniSearch({
+      fields: ['name'],
+      storeFields: ['name', 'id']
+    });
+    miniSearch.addAll(list);
 
-  function update(){
-    const q = input.value.trim();
-    let matches;
-    if(q){
-      const results = miniSearch.search(q, { prefix: true, fuzzy: 0.2 }).slice(0,10);
-      matches = results.map(r => ({ name: r.name, id: r.id }));
-    }else{
-      matches = list.slice(0,10);
+    function filterPage(ids){
+      cards.forEach(card => {
+        if(!ids || ids.has(card.dataset.id)){
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
     }
-    renderMatches(matches);
-  }
 
-  input.addEventListener('focus', update);
-  input.addEventListener('input', update);
-  form.addEventListener('submit', (e) => {
-    const first = suggestions.querySelector('a');
-    if(first){
+    function renderMatches(matches){
+      suggestions.innerHTML = '';
+      for(const m of matches){
+        const li = document.createElement('li');
+        li.className = 'px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg';
+        const a = document.createElement('a');
+        a.href = `/faculty/${m.id}`;
+        a.textContent = m.name;
+        li.appendChild(a);
+        suggestions.appendChild(li);
+      }
+      suggestions.classList.remove('hidden');
+    }
+
+    function update(){
+      const q = input.value.trim();
+      let matches;
+      if(q){
+        const results = miniSearch.search(q, { prefix: true, fuzzy: 0.2 });
+        const ids = new Set(results.map(r => String(r.id)));
+        matches = results.slice(0,10).map(r => ({ name: r.name, id: r.id }));
+        filterPage(ids);
+      }else{
+        matches = list.slice(0,10);
+        filterPage(null);
+      }
+      renderMatches(matches);
+    }
+
+    input.addEventListener('focus', update);
+    input.addEventListener('input', update);
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      window.location.href = first.href;
-    }
+      const first = suggestions.querySelector('a');
+      if(first){
+        window.location.href = first.href;
+      }
+    });
   });
 </script>
