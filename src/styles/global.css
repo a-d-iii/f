@@ -28,6 +28,16 @@
   min-height: 3.75rem;
 }
 
+/* Additional clamp utilities for faculty cards */
+.clamp-four-lines {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+
 /* Styles for interactive rating sliders */
 .rating-slider {
   -webkit-appearance: none;
