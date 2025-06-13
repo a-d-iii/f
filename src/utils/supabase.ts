@@ -10,7 +10,10 @@ export async function fetchLists() {
   try {
     const { data, error } = await supabase.from('lists').select('*');
     if (error) throw error;
-    return data ?? [];
+    const list = data ?? [];
+    const withName = list.filter((f: any) => f.name && String(f.name).trim());
+    const withoutName = list.filter((f: any) => !f.name || !String(f.name).trim());
+    return [...withName, ...withoutName];
   } catch (err) {
     console.error('Error fetching lists:', err);
     return [];

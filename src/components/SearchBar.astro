@@ -4,7 +4,9 @@ import { fetchLists } from '../utils/supabase';
 
 const { query = '', placeholder = 'Search by name...' } = Astro.props;
 const faculty = await fetchLists();
-const names = faculty.map(f => ({ name: f.name, id: f.id }));
+const names = faculty
+  .filter(f => f.name && String(f.name).trim())
+  .map(f => ({ name: f.name, id: f.id }));
 ---
 <form id="search-form" action="/" method="get" class="relative flex w-full gap-2">
   <input id="search-input" type="search" name="q" value={query} aria-label="Search faculty" class="flex-1 p-2 border rounded-lg" placeholder={placeholder} autocomplete="off" />

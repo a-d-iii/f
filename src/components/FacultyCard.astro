@@ -4,10 +4,10 @@ const { faculty } = Astro.props;
 ---
 <a href={`/faculty/${faculty.id}`} class="block">
   <article class="card flex flex-col items-center" view-transition-name={`card-${faculty.id}`}>
-  <h3 class="text-lg font-bold text-center mb-2">{faculty.name}</h3>
+  <h3 class="text-lg font-bold text-center mb-2">{faculty.name || 'Unknown'}</h3>
   <img
     src={faculty.photo_url}
-    alt={`Photo of ${faculty.name}`}
+    alt={`Photo of ${faculty.name || 'Unknown'}`}
     loading="lazy"
     onerror="this.src='https://placehold.co/300x400?text=No+Photo';this.onerror=null;"
 
