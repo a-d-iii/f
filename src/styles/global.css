@@ -8,7 +8,7 @@
 
 /* Critical styles for cards */
 .card {
-  @apply relative bg-gray-50 dark:bg-gray-100 p-4 rounded-lg shadow-md transition-shadow transition-transform transform animate-fade;
+  @apply relative bg-gray-50 dark:bg-darkblue dark:text-white p-4 rounded-lg shadow-md transition-shadow transition-transform transform animate-fade;
 }
 
 .card:hover {
@@ -57,6 +57,9 @@
   outline: none;
   cursor: pointer;
 }
+.dark .rating-slider {
+  background: #0284c7;
+}
 .rating-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -73,8 +76,8 @@
   background: var(--slider-color, #7c3aed);
   cursor: pointer;
 }
-.rating-bubble { 
-  @apply absolute -top-6 left-1/2 -translate-x-1/2 px-2 py-0.5 text-sm font-semibold rounded bg-black text-white pointer-events-none hidden;
+.rating-bubble {
+  @apply absolute -top-6 left-1/2 -translate-x-1/2 px-2 py-0.5 text-sm font-semibold rounded bg-black dark:bg-pink-600 text-white pointer-events-none hidden;
 }
 .rating-value {
   min-width: 2rem;
@@ -89,11 +92,11 @@
 }
 
 
-.photo-wrapper {
 
+.photo-wrapper {
   /* Increased size with maintained 3:4 ratio and stronger shadow */
   /* Slightly taller to give the card more vertical room */
-  @apply w-28 h-40 rounded-lg overflow-hidden flex items-center justify-center bg-white dark:bg-gray-900 shadow-lg ml-2;
+  @apply w-28 h-40 rounded-lg overflow-hidden flex items-center justify-center bg-white dark:bg-darkblue shadow-lg ml-2;
 
 
 }

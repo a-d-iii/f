@@ -22,6 +22,11 @@ module.exports = {
         segoe: ['"Segoe UI"', 'Helvetica', 'Arial', 'sans-serif'],
         poppins: ['"Poppins"', 'sans-serif'],
       },
+      colors: {
+        darkpurple: '#0a0116',
+        seablue: '#0284c7',
+        darkblue: '#1e3a8a',
+      },
     },
   },
   plugins: [],
