@@ -1,14 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
-import faculty from '../../data/faculty.json';
-export function getStaticPaths() {
+import FacultyCard from '../../components/FacultyCard.astro';
+import { paginate, PER_PAGE } from '../../utils/pagination';
+import { fetchLists } from '../../utils/supabase';
+export async function getStaticPaths() {
+  const faculty = await fetchLists();
   const pages = Math.ceil(faculty.length / PER_PAGE);
   return Array.from({ length: pages }, (_, i) => ({ params: { n: String(i + 1) } }));
 }
-import FacultyCard from '../../components/FacultyCard.astro';
-import { paginate, PER_PAGE } from '../../utils/pagination';
 const { n } = Astro.params;
 const page = Number(n);
+const faculty = await fetchLists();
 const pages = Math.ceil(faculty.length / PER_PAGE);
 if (page < 1 || page > pages) {
   throw Astro.redirect('/', 302);

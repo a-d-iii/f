@@ -1,8 +1,9 @@
 ---
-import faculty from '../data/faculty.json';
 import MiniSearch from 'minisearch';
+import { fetchLists } from '../utils/supabase';
 
 const { query = '', placeholder = 'Search by name...' } = Astro.props;
+const faculty = await fetchLists();
 const names = faculty.map(f => ({ name: f.name, id: f.id }));
 ---
 <form id="search-form" action="/" method="get" class="relative flex w-full gap-2">
