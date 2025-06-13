@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
+
 import FacultyRatings from './FacultyRatings.tsx';
 import RateFaculty from './RateFaculty.tsx';
 import HeartButton from './HeartButton.tsx';
+
 
 interface ListItem {
   name: string;
@@ -75,6 +77,7 @@ export default function SearchBar() {
       )}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {results.map((item) => (
+
           <article key={item.name} className="card pb-32">
             <div className="flex items-start gap-4 mb-2 h-40">
               <div className="photo-wrapper">
@@ -111,6 +114,27 @@ export default function SearchBar() {
             <RateFaculty />
             <HeartButton />
           </article>
+
+          <div key={item.name} className="card flex flex-col items-center">
+            <img
+              src={item.photo_url || 'https://placehold.co/300x400?text=No+Photo'}
+              alt={item.name}
+              className="w-28 h-40 object-cover rounded-lg mb-2"
+            />
+            <h3 className="text-lg font-bold mb-1 text-center">{item.name}</h3>
+            {item.specialization && (
+              <p className="text-sm italic text-gray-500 text-center mb-2">
+                {item.specialization}
+              </p>
+            )}
+            <div className="text-sm text-gray-600 w-full">
+              <p>Teaching: {item.teaching_rating ?? 'N/A'}</p>
+              <p>Attendance: {item.attendance_rating ?? 'N/A'}</p>
+              <p>Correction: {item.correction_rating ?? 'N/A'}</p>
+              <p>Total ratings: {item.total_ratings ?? 'N/A'}</p>
+            </div>
+          </div>
+
         ))}
       </div>
     </div>
