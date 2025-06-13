@@ -20,10 +20,7 @@ if (specializationRaw) {
 }
 
 ---
-
-
-<article class="card pb-24">
- 
+<article class="card pb-32"> 
     <div class="flex items-start gap-4 mb-2 h-40">
       <div class="photo-wrapper">
         <img
@@ -49,13 +46,15 @@ if (specializationRaw) {
         )}
       </div>
     </div>
-    <FacultyRatings
-      teaching={faculty.teaching_rating}
-      attendance={faculty.attendance_rating}
-      correction={faculty.correction_rating}
-      count={faculty.total_ratings}
-      client:visible
-    />
+    <div class="mb-4">
+      <FacultyRatings
+        teaching={faculty.teaching_rating}
+        attendance={faculty.attendance_rating}
+        correction={faculty.correction_rating}
+        count={faculty.total_ratings}
+        client:visible
+      />
+    </div>
     <RateFaculty client:visible />
     <HeartButton client:visible />
 </article>
