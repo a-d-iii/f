@@ -1,0 +1,98 @@
+import { useState, useEffect } from 'react';
+import { createClient } from '@supabase/supabase-js';
+
+interface ListItem {
+  name: string;
+  photo_url: string | null;
+  specialization: string | null;
+  teaching_rating: number | null;
+  attendance_rating: number | null;
+  correction_rating: number | null;
+  total_ratings: number | null;
+}
+
+const supabaseUrl =
+  (import.meta as any).env.PUBLIC_SUPABASE_URL ||
+  'https://dwyojdeyfaozeeplpbyr.supabase.co';
+const supabaseAnonKey =
+  (import.meta as any).env.PUBLIC_SUPABASE_ANON_KEY ||
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR3eW9qZGV5ZmFvemVlcGxwYnlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk3OTY5MTMsImV4cCI6MjA2NTM3MjkxM30.A3EWWal-iREIyXX6j2F5Dzdi9KBTJQXAF1GHVcpDHY8';
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+export default function SearchBar() {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState<ListItem[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!query.trim()) {
+      setResults([]);
+      return;
+    }
+
+    const ctrl = { cancelled: false };
+    setLoading(true);
+    setError(null);
+    const timer = setTimeout(async () => {
+      const { data, error } = await supabase
+        .from('lists')
+        .select('*')
+        .ilike('name', `%${query}%`);
+      if (ctrl.cancelled) return;
+      if (error) {
+        setError(error.message);
+        setResults([]);
+      } else {
+        setResults((data as ListItem[]) || []);
+      }
+      setLoading(false);
+    }, 300);
+
+    return () => {
+      ctrl.cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [query]);
+
+  return (
+    <div className="mb-6">
+      <input
+        type="text"
+        className="w-full px-4 py-2 border rounded-lg mb-4"
+        placeholder="Search..."
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      {loading && <p className="text-gray-500">Loading...</p>}
+      {error && <p className="text-red-500">Error: {error}</p>}
+      {!loading && !error && query.trim() && results.length === 0 && (
+        <p className="text-gray-500">No results found.</p>
+      )}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {results.map((item) => (
+          <div key={item.name} className="card flex flex-col items-center">
+            <img
+              src={item.photo_url || 'https://placehold.co/300x400?text=No+Photo'}
+              alt={item.name}
+              className="w-28 h-40 object-cover rounded-lg mb-2"
+            />
+            <h3 className="text-lg font-bold mb-1 text-center">{item.name}</h3>
+            {item.specialization && (
+              <p className="text-sm italic text-gray-500 text-center mb-2">
+                {item.specialization}
+              </p>
+            )}
+            <div className="text-sm text-gray-600 w-full">
+              <p>Teaching: {item.teaching_rating ?? 'N/A'}</p>
+              <p>Attendance: {item.attendance_rating ?? 'N/A'}</p>
+              <p>Correction: {item.correction_rating ?? 'N/A'}</p>
+              <p>Total ratings: {item.total_ratings ?? 'N/A'}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
