@@ -57,11 +57,19 @@ function getTextColor(rating: number) {
 }
 
 export default function FacultyRatings({ teaching, attendance, correction, count }: Props) {
-  const [detailed, setDetailed] = useState(true);
+  const [detailed, setDetailed] = useState(false);
+  const [inside, setInside] = useState(true);
 
   return (
     <div>
-      <div className="flex justify-end mb-1">
+      <div className="flex justify-between mb-1">
+        <button
+          type="button"
+          onClick={() => setInside(!inside)}
+          className="text-xs px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"
+        >
+          {inside ? 'Counts inside' : 'Counts below'}
+        </button>
         <button
           type="button"
           onClick={() => setDetailed(!detailed)}
@@ -78,17 +86,71 @@ export default function FacultyRatings({ teaching, attendance, correction, count
         </div>
       ) : (
         <div className="grid grid-cols-3 gap-2 mb-2 w-full text-center">
-          <div className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
-            <RatingWidget rating={teaching} />
-            <span className="text-xs font-medium">Teaching</span>
+          <div className="flex flex-col items-center gap-1">
+            <div className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+              <RatingWidget rating={teaching} />
+              <span className="text-xs font-medium">Teaching</span>
+              {inside && typeof count === 'number' && (
+                <span className="text-[10px] text-gray-400 flex items-center gap-1">
+                  <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM5 13a4 4 0 018 0v1H5v-1zM15 12h2a2 2 0 012 2v2h-4v-4z" />
+                  </svg>
+                  {count}
+                </span>
+              )}
+            </div>
+            {!inside && typeof count === 'number' && (
+              <span className="text-[10px] text-gray-400 flex items-center gap-1 mt-1">
+                <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM5 13a4 4 0 018 0v1H5v-1zM15 12h2a2 2 0 012 2v2h-4v-4z" />
+                </svg>
+                {count}
+              </span>
+            )}
           </div>
-          <div className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
-            <RatingWidget rating={attendance} />
-            <span className="text-xs font-medium">Attendance</span>
+          <div className="flex flex-col items-center gap-1">
+            <div className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+              <RatingWidget rating={attendance} />
+              <span className="text-xs font-medium">Attendance</span>
+              {inside && typeof count === 'number' && (
+                <span className="text-[10px] text-gray-400 flex items-center gap-1">
+                  <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM5 13a4 4 0 018 0v1H5v-1zM15 12h2a2 2 0 012 2v2h-4v-4z" />
+                  </svg>
+                  {count}
+                </span>
+              )}
+            </div>
+            {!inside && typeof count === 'number' && (
+              <span className="text-[10px] text-gray-400 flex items-center gap-1 mt-1">
+                <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM5 13a4 4 0 018 0v1H5v-1zM15 12h2a2 2 0 012 2v2h-4v-4z" />
+                </svg>
+                {count}
+              </span>
+            )}
           </div>
-          <div className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
-            <RatingWidget rating={correction} />
-            <span className="text-xs font-medium">Correction</span>
+          <div className="flex flex-col items-center gap-1">
+            <div className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+              <RatingWidget rating={correction} />
+              <span className="text-xs font-medium">Correction</span>
+              {inside && typeof count === 'number' && (
+                <span className="text-[10px] text-gray-400 flex items-center gap-1">
+                  <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM5 13a4 4 0 018 0v1H5v-1zM15 12h2a2 2 0 012 2v2h-4v-4z" />
+                  </svg>
+                  {count}
+                </span>
+              )}
+            </div>
+            {!inside && typeof count === 'number' && (
+              <span className="text-[10px] text-gray-400 flex items-center gap-1 mt-1">
+                <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM5 13a4 4 0 018 0v1H5v-1zM15 12h2a2 2 0 012 2v2h-4v-4z" />
+                </svg>
+                {count}
+              </span>
+            )}
           </div>
         </div>
       )}
