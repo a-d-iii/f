@@ -4,10 +4,8 @@ const { faculty } = Astro.props;
 ---
 <a href={`/faculty/${faculty.id}`} class="block" data-id={faculty.id} data-name={faculty.name}>
   <article class="card" view-transition-name={`card-${faculty.id}`}>
-
     <div class="flex items-start gap-4 mb-2">
       <div class="photo-wrapper">
-
         <img
           src={faculty.photo_url}
           alt={`Photo of ${faculty.name || 'Unknown'}`}
@@ -16,7 +14,15 @@ const { faculty } = Astro.props;
           class="faculty-photo"
         />
       </div>
-      <h3 class="text-lg font-bold">{faculty.name || 'Unknown'}</h3>
+ 
+      <div class="flex flex-col flex-1">
+        <h3 class="text-lg font-bold">{faculty.name || 'Unknown'}</h3>
+        {faculty.dept && (
+          <p class="clamp-three-lines text-xs text-gray-600 dark:text-gray-400">
+            {faculty.dept}
+          </p>
+        )}
+      </div>
     </div>
     <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
       <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
