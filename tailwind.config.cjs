@@ -18,6 +18,9 @@ module.exports = {
         fade: 'fade 0.3s ease-in-out',
         pop: 'pop 0.3s ease-out',
       },
+      fontFamily: {
+        segoe: ['"Segoe UI"', 'Helvetica', 'Arial', 'sans-serif'],
+      },
     },
   },
   plugins: [],
