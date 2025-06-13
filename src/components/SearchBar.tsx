@@ -75,6 +75,7 @@ export default function SearchBar() {
       {!loading && !error && query.trim() && results.length === 0 && (
         <p className="text-gray-500">No results found.</p>
       )}
+
       {/* Mirror the listing page grid so each card keeps the same width. */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {results.map((item) => (
