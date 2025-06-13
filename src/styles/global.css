@@ -106,5 +106,7 @@ body.no-scroll {
 
 /* Wrapper for faculty cards with adjustable width */
 .card-wrapper {
-  width: var(--card-width, 18rem);
+  /* Stretch up to the configured width but shrink on small screens */
+  max-width: var(--card-width, 18rem);
+  width: 100%;
 }
