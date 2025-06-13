@@ -1,13 +1,21 @@
 ---
 import Base from '../layouts/Base.astro';
+import FacultyCard from '../components/FacultyCard.astro';
 import DetailedToggle from '../components/DetailedToggle.tsx';
-import SearchBar from '../components/SearchBar.tsx';
-import FacultyList from '../components/FacultyList.tsx';
+import { paginate } from '../utils/pagination';
 import { fetchLists } from '../utils/supabase';
+const page = 1;
 const faculty = await fetchLists();
+const list = faculty;
 ---
 <Base>
-  <SearchBar slot="search" client:load />
   <DetailedToggle client:load />
-  <FacultyList faculty={faculty} client:load />
+  <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    {paginate(list, page).map(f => (
+      <FacultyCard faculty={f} />
+    ))}
+  </div>
+  <nav class="mt-4 flex justify-center gap-2">
+    <a href="/page/2" class="px-4 py-2 rounded-lg bg-black text-white hover:bg-gray-800">Next &rarr;</a>
+  </nav>
 </Base>

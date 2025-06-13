@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import FacultyCard from '../../components/FacultyCard.astro';
+import DetailedToggle from '../../components/DetailedToggle.tsx';
+import { paginate, PER_PAGE } from '../../utils/pagination';
+import { fetchLists } from '../../utils/supabase';
+export async function getStaticPaths() {
+  const faculty = await fetchLists();
+  const pages = Math.ceil(faculty.length / PER_PAGE);
+  return Array.from({ length: pages }, (_, i) => ({ params: { n: String(i + 1) } }));
+}
+const { n } = Astro.params;
+const page = Number(n);
+const faculty = await fetchLists();
+const pages = Math.ceil(faculty.length / PER_PAGE);
+if (page < 1 || page > pages) {
+  throw Astro.redirect('/', 302);
+}
+---
+<Base title={`Page ${page} - Faculty Ranker`}>
+  <DetailedToggle client:load />
+  <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    {paginate(faculty, page).map(f => (
+      <FacultyCard faculty={f} />
+    ))}
+  </div>
+  <nav class="mt-4 flex justify-center gap-2">
+    {page > 1 && (
+      <a href={`/page/${page-1}`} class="px-4 py-2 rounded-lg bg-black text-white hover:bg-gray-800">&larr; Prev</a>
+    )}
+    {page < pages && (
+      <a href={`/page/${page+1}`} class="px-4 py-2 rounded-lg bg-black text-white hover:bg-gray-800">Next &rarr;</a>
+    )}
+  </nav>
+</Base>
