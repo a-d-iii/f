@@ -2,12 +2,20 @@
 import RatingWidget from './RatingWidget.tsx';
 const { faculty } = Astro.props;
 const photoUrl = faculty.photo_url || faculty.photo;
-const specialization =
+const specializationRaw =
   faculty.specialization ||
   faculty.specialisation ||
   faculty.specializations ||
   faculty.dept ||
   faculty.department;
+
+let specialization = specializationRaw;
+if (specializationRaw) {
+  const words = specializationRaw.split(/\s+/);
+  if (words.length > 12) {
+    specialization = words.slice(0, 12).join(' ') + '...';
+  }
+}
 ---
 <a href={`/faculty/${faculty.id}`} class="block" data-id={faculty.id} data-name={faculty.name}>
   <article class="card" view-transition-name={`card-${faculty.id}`}>
