@@ -17,8 +17,7 @@ if (specializationRaw) {
   }
 }
 ---
-<a href={`/faculty/${faculty.id}`} class="block" data-id={faculty.id} data-name={faculty.name}>
-  <article class="card" view-transition-name={`card-${faculty.id}`}>
+<article class="card">
     <div class="flex items-start gap-4 mb-2 h-36">
       <div class="photo-wrapper">
         <img
@@ -49,5 +48,4 @@ if (specializationRaw) {
       client:visible
     />
     <p class="text-sm text-gray-500 dark:text-gray-400">Rated by {faculty.total_ratings} student{faculty.total_ratings === 1 ? '' : 's'}</p>
-  </article>
-</a>
+</article>
