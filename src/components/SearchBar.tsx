@@ -79,7 +79,7 @@ export default function SearchBar() {
       <div className="flex flex-wrap justify-center gap-x-4 gap-y-6">
         {results.map((item) => (
 
-          <article key={item.name} className="card pb-32 w-72">
+          <article key={item.name} className="card pb-32 card-wrapper">
             <div className="flex items-start gap-4 mb-2 h-40">
               <div className="photo-wrapper">
                 <img
