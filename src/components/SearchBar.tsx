@@ -75,10 +75,9 @@ export default function SearchBar() {
       {!loading && !error && query.trim() && results.length === 0 && (
         <p className="text-gray-500">No results found.</p>
       )}
-      {/* Mirror the card grid used on the listing page so each card keeps
-          the same width. Even if there is only one search result, its
-          dimensions won't stretch across the page. */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
+
+      {/* Mirror the listing page grid so each card keeps the same width. */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {results.map((item) => (
 
           <article key={item.name} className="card pb-32">
