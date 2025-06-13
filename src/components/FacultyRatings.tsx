@@ -59,7 +59,6 @@ function getTextColor(rating: number) {
 export default function FacultyRatings({ teaching, attendance, correction, count }: Props) {
   const [detailed, setDetailed] = useState(false);
  
-
   return (
     <div>
       <div className="flex justify-between mb-1">
