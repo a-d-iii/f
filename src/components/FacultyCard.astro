@@ -3,24 +3,26 @@ import RatingBar from './RatingBar.tsx';
 const { faculty } = Astro.props;
 ---
 <a href={`/faculty/${faculty.id}`} class="block" data-id={faculty.id} data-name={faculty.name}>
-  <article class="card flex items-center gap-4" view-transition-name={`card-${faculty.id}`}>
-    <div class="photo-wrapper">
-      <img
-        src={faculty.photo_url}
-        alt={`Photo of ${faculty.name || 'Unknown'}`}
-        loading="lazy"
-        onerror="this.src='https://placehold.co/300x400?text=No+Photo';this.onerror=null;"
-        class="faculty-photo"
-      />
-    </div>
-    <div class="flex flex-col items-start flex-1">
-      <h3 class="text-lg font-bold mb-2">{faculty.name || 'Unknown'}</h3>
-      <div class="flex flex-col gap-2 mb-2 w-full">
-        <RatingBar rating={faculty.teaching_rating} label="Teaching" client:load />
-        <RatingBar rating={faculty.attendance_rating} label="Attendance" client:load />
-        <RatingBar rating={faculty.correction_rating} label="Correction" client:load />
+  <article class="card" view-transition-name={`card-${faculty.id}`}>
+    <h3 class="text-lg font-bold text-center mb-2 w-full">{faculty.name || 'Unknown'}</h3>
+    <div class="flex items-start gap-4">
+      <div class="photo-wrapper mt-2">
+        <img
+          src={faculty.photo_url}
+          alt={`Photo of ${faculty.name || 'Unknown'}`}
+          loading="lazy"
+          onerror="this.src='https://placehold.co/300x400?text=No+Photo';this.onerror=null;"
+          class="faculty-photo"
+        />
       </div>
-      <p class="text-sm mt-1 text-gray-500 dark:text-gray-400">Rated by {faculty.total_ratings} student{faculty.total_ratings === 1 ? '' : 's'}</p>
+      <div class="flex flex-col items-start flex-1">
+        <div class="flex flex-col gap-2 mb-2 w-full">
+          <RatingBar rating={faculty.teaching_rating} label="Teaching" client:load />
+          <RatingBar rating={faculty.attendance_rating} label="Attendance" client:load />
+          <RatingBar rating={faculty.correction_rating} label="Correction" client:load />
+        </div>
+        <p class="text-sm mt-1 text-gray-500 dark:text-gray-400">Rated by {faculty.total_ratings} student{faculty.total_ratings === 1 ? '' : 's'}</p>
+      </div>
     </div>
   </article>
 </a>
