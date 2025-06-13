@@ -4,8 +4,10 @@ const { faculty } = Astro.props;
 ---
 <a href={`/faculty/${faculty.id}`} class="block" data-id={faculty.id} data-name={faculty.name}>
   <article class="card" view-transition-name={`card-${faculty.id}`}>
+
     <div class="flex items-start gap-4 mb-2">
       <div class="photo-wrapper">
+
         <img
           src={faculty.photo_url}
           alt={`Photo of ${faculty.name || 'Unknown'}`}
