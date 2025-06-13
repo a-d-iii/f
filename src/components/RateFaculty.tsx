@@ -32,9 +32,12 @@ export default function RateFaculty() {
   const [teaching, setTeaching] = useState(0);
   const [attendance, setAttendance] = useState(0);
   const [correction, setCorrection] = useState(0);
+  const [ratedAverage, setRatedAverage] = useState<number | null>(null);
 
   const submit = () => {
     alert('Thanks for rating!');
+    const avg = (teaching + attendance + correction) / 3;
+    setRatedAverage(avg);
     setOpen(false);
     setTeaching(0);
     setAttendance(0);
@@ -46,9 +49,13 @@ export default function RateFaculty() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="mt-2 px-2 py-1 rounded bg-violet-600 text-white hover:bg-violet-700"
+        className={`mt-2 px-2 py-0.5 rounded text-sm ${
+          ratedAverage === null
+            ? 'bg-gray-400 text-white hover:bg-gray-500'
+            : 'bg-yellow-300 text-gray-900'
+        }`}
       >
-        Rate
+        {ratedAverage === null ? 'Rate' : ratedAverage.toFixed(1)}
       </button>
     );
   }

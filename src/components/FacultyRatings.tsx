@@ -82,7 +82,7 @@ export default function FacultyRatings({ teaching, attendance, correction, count
         <div className="grid grid-cols-3 gap-2 mb-2 w-full text-center">
 
           <div className="flex flex-col items-center gap-1">
-            <div className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
+            <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
               <RatingWidget rating={teaching} />
               <span className="text-xs font-medium">Teaching</span>
             </div>
@@ -97,7 +97,7 @@ export default function FacultyRatings({ teaching, attendance, correction, count
           </div>
 
           <div className="flex flex-col items-center gap-1">
-            <div className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
+            <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
               <RatingWidget rating={attendance} />
               <span className="text-xs font-medium">Attendance</span>
             </div>
@@ -112,7 +112,7 @@ export default function FacultyRatings({ teaching, attendance, correction, count
           </div>
 
           <div className="flex flex-col items-center gap-1">
-            <div className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
+            <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
               <RatingWidget rating={correction} />
               <span className="text-xs font-medium">Correction</span>
             </div>
