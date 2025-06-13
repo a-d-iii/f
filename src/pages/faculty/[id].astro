@@ -15,19 +15,19 @@ if (!person) throw Astro.redirect('/', 302);
       src={person.photo}
       alt={`Photo of ${person.name}`}
       onerror="this.src='https://placehold.co/300x400?text=No+Photo';this.onerror=null;"
-      class="w-64 h-auto rounded mb-4 md:mb-0"
+      class="w-64 h-auto rounded-lg shadow mb-4 md:mb-0"
     />
     <div class="flex flex-col items-center md:items-start">
       <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
-        <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
+        <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
           <RatingWidget rating={person.teachingRating} client:load />
           <span class="text-xs font-medium">Teaching</span>
         </div>
-        <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
+        <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
           <RatingWidget rating={person.attendanceRating} client:load />
           <span class="text-xs font-medium">Attendance</span>
         </div>
-        <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1">
+        <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
           <RatingWidget rating={person.correctionRating} client:load />
           <span class="text-xs font-medium">Correction</span>
         </div>
