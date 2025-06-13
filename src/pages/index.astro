@@ -1,13 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
-import faculty from '../data/faculty.json';
 import FacultyCard from '../components/FacultyCard.astro';
 import { paginate, PER_PAGE } from '../utils/pagination';
 import MiniSearch from 'minisearch';
+import { fetchLists } from '../utils/supabase';
 const page = 1;
 const url = new URL(Astro.request.url);
 const query = url.searchParams.get('q') ?? '';
-
+const faculty = await fetchLists();
 let list = faculty;
 if (query) {
   const miniSearch = new MiniSearch({
