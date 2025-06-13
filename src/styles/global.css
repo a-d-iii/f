@@ -32,11 +32,13 @@
 .clamp-four-lines {
   overflow: hidden;
   display: -webkit-box;
- 
+
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   line-clamp: 4;
-  
+  /* Reserve space so cards stay uniform when text is shorter */
+  min-height: 5rem;
+
 }
 
 
