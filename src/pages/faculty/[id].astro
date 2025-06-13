@@ -1,18 +1,20 @@
 ---
 import Base from '../../layouts/Base.astro';
-import faculty from '../../data/faculty.json';
-export function getStaticPaths() {
+import RatingWidget from '../../components/RatingWidget.tsx';
+import { fetchLists } from '../../utils/supabase';
+export async function getStaticPaths() {
+  const faculty = await fetchLists();
   return faculty.map((f) => ({ params: { id: String(f.id) } }));
 }
-import RatingWidget from '../../components/RatingWidget.tsx';
 const { id } = Astro.params;
+const faculty = await fetchLists();
 const person = faculty.find((f) => String(f.id) === String(id));
 if (!person) throw Astro.redirect('/', 302);
 ---
 <Base title={`${person.name} - Faculty Ranker`} headerTitle={person.name}>
   <div class="flex flex-col md:flex-row md:items-start md:gap-8 items-center">
     <img
-      src={person.photo}
+      src={person.photo_url}
       alt={`Photo of ${person.name}`}
       onerror="this.src='https://placehold.co/300x400?text=No+Photo';this.onerror=null;"
 
@@ -22,20 +24,19 @@ if (!person) throw Astro.redirect('/', 302);
     <div class="flex flex-col items-center md:items-start">
       <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
         <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
-          <RatingWidget rating={person.teachingRating} client:load />
+          <RatingWidget rating={person.teaching_rating} client:load />
           <span class="text-xs font-medium">Teaching</span>
         </div>
         <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
-          <RatingWidget rating={person.attendanceRating} client:load />
+          <RatingWidget rating={person.attendance_rating} client:load />
           <span class="text-xs font-medium">Attendance</span>
         </div>
         <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
-          <RatingWidget rating={person.correctionRating} client:load />
+          <RatingWidget rating={person.correction_rating} client:load />
           <span class="text-xs font-medium">Correction</span>
         </div>
       </div>
-      <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 text-center md:text-left clamp-two-lines">{person.dept}</p>
-      <p class="mt-1 mb-2 text-sm text-gray-500 dark:text-gray-400 self-start">Rated by {person.ratingsCount} student{person.ratingsCount === 1 ? '' : 's'}</p>
+      <p class="mt-1 mb-2 text-sm text-gray-500 dark:text-gray-400 self-start">Rated by {person.total_ratings} student{person.total_ratings === 1 ? '' : 's'}</p>
  
       <form class="mt-4 flex flex-col items-center gap-4 w-full" onsubmit="event.preventDefault(); alert('Thanks for rating!');">
         <div class="relative flex items-center gap-2">
