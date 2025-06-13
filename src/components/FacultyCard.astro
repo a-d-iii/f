@@ -16,6 +16,7 @@ const { faculty } = Astro.props;
         />
       </div>
       <div class="flex flex-col items-start flex-1">
+ 
         <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
           <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
             <RatingWidget rating={faculty.teaching_rating} client:load />
