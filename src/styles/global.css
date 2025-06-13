@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+
   --card-width: 400px;
 }
 
