@@ -11,24 +11,24 @@ const { faculty } = Astro.props;
     loading="lazy"
     onerror="this.src='https://placehold.co/300x400?text=No+Photo';this.onerror=null;"
 
-    class="h-64 w-auto rounded-xl shadow-lg mb-2"
+    class="h-64 w-auto faculty-photo mb-2"
 
   />
     <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
-      <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+      <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
         <RatingWidget rating={faculty.teachingRating} client:load />
         <span class="text-xs font-medium">Teaching</span>
       </div>
-      <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+      <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
         <RatingWidget rating={faculty.attendanceRating} client:load />
         <span class="text-xs font-medium">Attendance</span>
       </div>
-      <div class="p-2 rounded bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+      <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
         <RatingWidget rating={faculty.correctionRating} client:load />
         <span class="text-xs font-medium">Correction</span>
       </div>
     </div>
-    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 text-center clamp-three-lines">{faculty.dept}</p>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 text-center clamp-two-lines">{faculty.dept}</p>
     <p class="text-sm mt-1 self-start text-gray-500 dark:text-gray-400">Rated by {faculty.ratingsCount} student{faculty.ratingsCount === 1 ? '' : 's'}</p>
   </article>
 </a>
