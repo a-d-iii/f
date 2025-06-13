@@ -75,8 +75,8 @@ export default function SearchBar() {
       {!loading && !error && query.trim() && results.length === 0 && (
         <p className="text-gray-500">No results found.</p>
       )}
-      {/* Display search results in a three-column grid */}
-      <div className="grid grid-cols-3 gap-x-4 gap-y-8 justify-items-center">
+      {/* Display search results in a responsive grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 justify-items-center">
         {results.map((item) => (
 
           <article key={item.name} className="card pb-32 card-wrapper">
