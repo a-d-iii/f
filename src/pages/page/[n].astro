@@ -22,7 +22,7 @@ if (page < 1 || page > pages) {
   <!-- Wrap cards with fixed width using flex -->
   <div class="flex flex-wrap justify-center gap-x-4 gap-y-6">
     {paginate(faculty, page).map(f => (
-      <div class="w-72">
+      <div class="card-wrapper">
         <FacultyCard faculty={f} />
       </div>
     ))}

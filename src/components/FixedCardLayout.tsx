@@ -3,7 +3,7 @@ import FacultyRatings from './FacultyRatings';
 // Simple faculty card using fixed width
 export function FacultyCardExample() {
   return (
-    <div className="w-72 rounded-lg shadow-lg bg-white dark:bg-gray-800 overflow-hidden p-4 flex flex-col gap-2">
+    <div className="card-wrapper rounded-lg shadow-lg bg-white dark:bg-gray-800 overflow-hidden p-4 flex flex-col gap-2">
       <img
         src="https://placehold.co/200x250"
         alt="Prof. Jane Doe"
