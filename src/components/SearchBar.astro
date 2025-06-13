@@ -21,6 +21,18 @@ const names = faculty
   });
   miniSearch.addAll(list);
 
+  const cards = Array.from(document.querySelectorAll('[data-id]'));
+
+  function filterPage(ids){
+    cards.forEach(card => {
+      if(!ids || ids.has(card.dataset.id)){
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
   const input = document.getElementById('search-input');
   const suggestions = document.getElementById('suggestions');
   const form = document.getElementById('search-form');
@@ -43,10 +55,13 @@ const names = faculty
     const q = input.value.trim();
     let matches;
     if(q){
-      const results = miniSearch.search(q, { prefix: true, fuzzy: 0.2 }).slice(0,10);
-      matches = results.map(r => ({ name: r.name, id: r.id }));
+      const results = miniSearch.search(q, { prefix: true, fuzzy: 0.2 });
+      const ids = new Set(results.map(r => String(r.id)));
+      matches = results.slice(0,10).map(r => ({ name: r.name, id: r.id }));
+      filterPage(ids);
     }else{
       matches = list.slice(0,10);
+      filterPage(null);
     }
     renderMatches(matches);
   }

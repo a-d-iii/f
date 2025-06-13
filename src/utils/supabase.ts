@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import localData from '../data/faculty.json';
 
 const supabaseUrl = 'https://dwyojdeyfaozeeplpbyr.supabase.co';
 const supabaseAnonKey =
@@ -16,6 +17,9 @@ export async function fetchLists() {
     return [...withName, ...withoutName];
   } catch (err) {
     console.error('Error fetching lists:', err);
-    return [];
+    const list = (localData as any[]) ?? [];
+    const withName = list.filter((f: any) => f.name && String(f.name).trim());
+    const withoutName = list.filter((f: any) => !f.name || !String(f.name).trim());
+    return [...withName, ...withoutName];
   }
 }
