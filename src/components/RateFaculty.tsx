@@ -49,7 +49,7 @@ export default function RateFaculty() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className={`mt-2 px-2 py-0.5 rounded text-sm ${
+        className={`absolute bottom-2 left-2 px-2 py-0.5 rounded text-sm ${
           ratedAverage === null
             ? 'bg-gray-400 text-white hover:bg-gray-500'
             : 'bg-yellow-300 text-gray-900'
@@ -61,7 +61,7 @@ export default function RateFaculty() {
   }
 
   return (
-    <div className="flex flex-col gap-2 mt-2 p-2 rounded bg-gray-100 dark:bg-gray-800">
+    <div className="absolute bottom-2 left-2 flex flex-col gap-2 p-2 rounded bg-gray-100 dark:bg-gray-800 z-10">
       <StarRow label="Teaching" value={teaching} onChange={setTeaching} />
       <StarRow label="Attendance" value={attendance} onChange={setAttendance} />
       <StarRow label="Correction" value={correction} onChange={setCorrection} />

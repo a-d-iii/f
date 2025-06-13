@@ -26,7 +26,7 @@ function StarRow({ label, value, count }: { label: string; value: number; count?
   const half = value - full >= 0.5;
   return (
     <div className="flex items-center justify-between gap-2">
-      <span className="text-sm font-semibold flex-1">{label}</span>
+      <span className="text-base font-light text-gray-700 flex-1">{label}</span>
       <span className="flex">
         {[1,2,3,4,5].map(i => (
           <Star key={i} filled={i <= full || (i === full + 1 && half)} />
@@ -36,7 +36,7 @@ function StarRow({ label, value, count }: { label: string; value: number; count?
       <span className={`text-xs ml-1 w-8 text-right font-semibold ${getTextColor(value)}`}>{value.toFixed(1)}</span>
 
       {typeof count === 'number' && (
-        <span className="text-xs text-gray-500 flex items-center gap-1 ml-1">
+        <span className="text-sm text-gray-500 flex items-center gap-1 ml-1">
           <svg className="w-3 h-3" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM5 13a4 4 0 018 0v1H5v-1zM15 12h2a2 2 0 012 2v2h-4v-4z" />
           </svg>
@@ -84,10 +84,10 @@ export default function FacultyRatings({ teaching, attendance, correction, count
           <div className="flex flex-col items-center gap-1">
             <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
               <RatingWidget rating={teaching} />
-              <span className="text-xs font-medium">Teaching</span>
+              <span className="text-sm font-light text-gray-700">Teaching</span>
             </div>
             {typeof count === 'number' && (
-              <span className="text-[10px] text-gray-400 flex items-center gap-1 mt-1">
+              <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
                 <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM5 13a4 4 0 018 0v1H5v-1zM15 12h2a2 2 0 012 2v2h-4v-4z" />
                 </svg>
@@ -99,10 +99,10 @@ export default function FacultyRatings({ teaching, attendance, correction, count
           <div className="flex flex-col items-center gap-1">
             <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
               <RatingWidget rating={attendance} />
-              <span className="text-xs font-medium">Attendance</span>
+              <span className="text-sm font-light text-gray-700">Attendance</span>
             </div>
             {typeof count === 'number' && (
-              <span className="text-[10px] text-gray-400 flex items-center gap-1 mt-1">
+              <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
                 <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM5 13a4 4 0 018 0v1H5v-1zM15 12h2a2 2 0 012 2v2h-4v-4z" />
                 </svg>
@@ -114,10 +114,10 @@ export default function FacultyRatings({ teaching, attendance, correction, count
           <div className="flex flex-col items-center gap-1">
             <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
               <RatingWidget rating={correction} />
-              <span className="text-xs font-medium">Correction</span>
+              <span className="text-sm font-light text-gray-700">Correction</span>
             </div>
             {typeof count === 'number' && (
-              <span className="text-[10px] text-gray-400 flex items-center gap-1 mt-1">
+              <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
                 <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM5 13a4 4 0 018 0v1H5v-1zM15 12h2a2 2 0 012 2v2h-4v-4z" />
                 </svg>
