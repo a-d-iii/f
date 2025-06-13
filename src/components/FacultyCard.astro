@@ -10,8 +10,8 @@ const specialization =
   faculty.department;
 ---
 <a href={`/faculty/${faculty.id}`} class="block" data-id={faculty.id} data-name={faculty.name}>
-  <article class="card" view-transition-name={`card-${faculty.id}`}>
-    <div class="flex items-start gap-4 mb-2">
+  <article class="card" view-transition-name={`card-${faculty.id}`} data-faculty-card>
+    <div class="flex items-start gap-4 mb-2 h-36">
       <div class="photo-wrapper">
         <img
           src={photoUrl}
@@ -22,12 +22,11 @@ const specialization =
         />
       </div>
 
-      <div class="flex flex-col flex-1">
-        <h3 class="text-lg font-bold">{faculty.name || 'Unknown'}</h3>
+      <div class="flex flex-col flex-1 h-36 overflow-hidden">
+        <h3 class="text-lg font-bold mb-1 clamp-two-lines faculty-name">{faculty.name || 'Unknown'}</h3>
         {specialization && (
-          <p class="clamp-three-lines text-xs text-gray-600 dark:text-gray-400">
+          <p class="text-sm text-gray-500 dark:text-gray-300 leading-snug overflow-hidden flex-grow faculty-spec clamp-five-lines">
             {specialization}
-
           </p>
         )}
       </div>
