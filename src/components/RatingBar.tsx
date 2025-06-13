@@ -74,9 +74,9 @@ const RatingBar: FC<Props> = ({ rating, label }) => {
     <div className="w-full my-1">
       <div className="flex justify-between items-baseline px-1">
         <span className={`flex items-center gap-1 text-sm font-semibold ${text}`}>{icon}{label}</span>
-        <span className={`text-base font-semibold ${text}`}>{value.toFixed(1)}</span>
+        <span className={`text-base font-bold ${text}`}>{value.toFixed(1)}</span>
       </div>
-      <div className="w-11/12 mx-auto h-3 rounded bg-gray-300 dark:bg-gray-700 overflow-hidden shadow-lg">
+      <div className="w-11/12 mx-auto h-2 rounded bg-gray-300 dark:bg-gray-700 overflow-hidden shadow-lg">
         <div className={`${bg} h-full shadow-inner brightness-110`} style={{ width }}></div>
       </div>
     </div>
