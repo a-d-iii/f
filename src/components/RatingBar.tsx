@@ -14,13 +14,11 @@ const getColor = (rating: number) => {
   return { bg: 'bg-red-700', text: 'text-red-700' };
 };
 
-
 const icons: Record<string, string> = {
   Teaching: '📚',
   Attendance: '📅',
   Correction: '📝',
 };
-
 
 const RatingBar: FC<Props> = ({ rating, label }) => {
   const value = typeof rating === 'number' ? rating : 0;
@@ -34,14 +32,6 @@ const RatingBar: FC<Props> = ({ rating, label }) => {
         <span className={`text-xs font-semibold ${text}`}>{value.toFixed(1)}</span>
       </div>
       <div className="w-full h-3 rounded bg-gray-300 dark:bg-gray-700 overflow-hidden shadow">
-
-    <div className="w-full my-1">
-      <div className="flex justify-between items-baseline px-1">
-        <span className={`text-xs font-semibold ${text}`}>{label}</span>
-        <span className={`text-xs font-semibold ${text}`}>{value.toFixed(1)}</span>
-      </div>
-      <div className="w-full h-2 rounded bg-gray-300 dark:bg-gray-700 overflow-hidden">
-
         <div className={`${bg} h-full`} style={{ width }}></div>
       </div>
     </div>
