@@ -20,6 +20,7 @@ module.exports = {
       },
       fontFamily: {
         segoe: ['"Segoe UI"', 'Helvetica', 'Arial', 'sans-serif'],
+        poppins: ['"Poppins"', 'sans-serif'],
       },
     },
   },
