@@ -4,7 +4,11 @@
 
 /* Critical styles for cards */
 .card {
-  @apply bg-gray-100 dark:bg-gray-800 p-4 rounded-lg transition-shadow animate-fade;
+  @apply bg-gray-100 dark:bg-gray-800 p-4 rounded-lg transition-shadow transition-transform transform animate-fade;
+}
+
+.card:hover {
+  @apply shadow-xl scale-105 -translate-y-1;
 }
 
 /* Utility class to keep multiline text from growing cards */
@@ -62,12 +66,11 @@
 
 /* Consistent photo shadow */
 .faculty-photo {
-  @apply rounded-lg shadow-lg;
-  box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+  @apply w-full h-full object-contain;
 }
 
-.dark .faculty-photo {
-  box-shadow: 0 10px 15px rgba(255,255,255,0.2);
+.photo-wrapper {
+  @apply w-full h-64 border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden flex items-center justify-center bg-white dark:bg-gray-900;
 }
 
 html.no-scroll,
