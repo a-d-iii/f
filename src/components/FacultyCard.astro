@@ -4,9 +4,8 @@ const { faculty } = Astro.props;
 ---
 <a href={`/faculty/${faculty.id}`} class="block" data-id={faculty.id} data-name={faculty.name}>
   <article class="card" view-transition-name={`card-${faculty.id}`}>
-    <h3 class="text-lg font-bold text-center mb-2 w-full">{faculty.name || 'Unknown'}</h3>
-    <div class="flex items-start gap-4">
-      <div class="photo-wrapper mt-2">
+    <div class="flex items-start gap-4 mb-2">
+      <div class="photo-wrapper">
         <img
           src={faculty.photo_url}
           alt={`Photo of ${faculty.name || 'Unknown'}`}
@@ -15,24 +14,29 @@ const { faculty } = Astro.props;
           class="faculty-photo"
         />
       </div>
-      <div class="flex flex-col items-start flex-1">
- 
-        <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
-          <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
-            <RatingWidget rating={faculty.teaching_rating} client:load />
-            <span class="text-xs font-medium">Teaching</span>
-          </div>
-          <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
-            <RatingWidget rating={faculty.attendance_rating} client:load />
-            <span class="text-xs font-medium">Attendance</span>
-          </div>
-          <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
-            <RatingWidget rating={faculty.correction_rating} client:load />
-            <span class="text-xs font-medium">Correction</span>
-          </div>
-        </div>
-        <p class="text-sm mt-1 text-gray-500 dark:text-gray-400">Rated by {faculty.total_ratings} student{faculty.total_ratings === 1 ? '' : 's'}</p>
+      <div class="flex flex-col flex-1">
+        <h3 class="text-lg font-bold">{faculty.name || 'Unknown'}</h3>
+        {faculty.dept && (
+          <p class="clamp-three-lines text-xs text-gray-600 dark:text-gray-400">
+            {faculty.dept}
+          </p>
+        )}
       </div>
     </div>
+    <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
+      <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+        <RatingWidget rating={faculty.teaching_rating} client:load />
+        <span class="text-xs font-medium">Teaching</span>
+      </div>
+      <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+        <RatingWidget rating={faculty.attendance_rating} client:load />
+        <span class="text-xs font-medium">Attendance</span>
+      </div>
+      <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+        <RatingWidget rating={faculty.correction_rating} client:load />
+        <span class="text-xs font-medium">Correction</span>
+      </div>
+    </div>
+    <p class="text-sm text-gray-500 dark:text-gray-400">Rated by {faculty.total_ratings} student{faculty.total_ratings === 1 ? '' : 's'}</p>
   </article>
 </a>
