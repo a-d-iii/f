@@ -1,24 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
 import FacultyCard from '../components/FacultyCard.astro';
-import { paginate, PER_PAGE } from '../utils/pagination';
-import MiniSearch from 'minisearch';
+import { paginate } from '../utils/pagination';
 import { fetchLists } from '../utils/supabase';
 const page = 1;
-const url = new URL(Astro.request.url);
-const query = url.searchParams.get('q') ?? '';
 const faculty = await fetchLists();
-let list = faculty;
-if (query) {
-  const miniSearch = new MiniSearch({
-    fields: ['name'],
-    storeFields: ['id']
-  });
-  miniSearch.addAll(faculty.map(f => ({ id: f.id, name: f.name })));
-  const results = miniSearch.search(query, { prefix: true, fuzzy: 0.2 });
-  const map = new Map(faculty.map(f => [f.id, f]));
-  list = results.map(r => map.get(r.id)).filter(Boolean);
-}
+const list = faculty;
 ---
 <Base>
   <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
