@@ -1,5 +1,5 @@
 ---
-import { getColor } from './RatingWidget.tsx';
+import RatingWidget from './RatingWidget.tsx';
 const { faculty } = Astro.props;
 const photoUrl = faculty.photo_url || faculty.photo;
 const specializationRaw =
@@ -30,7 +30,7 @@ if (specializationRaw) {
         />
       </div>
 
-      <div class="flex-none flex flex-col h-36 overflow-hidden border border-gray-300 dark:border-gray-600 p-2 w-56">
+      <div class="flex flex-col flex-1 h-36 overflow-hidden">
  
         <h3 class="text-lg font-bold mb-1 clamp-two-lines faculty-name">{faculty.name || 'Unknown'}</h3>
         {specialization && (
@@ -41,20 +41,17 @@ if (specializationRaw) {
         )}
       </div>
     </div>
-    <div class="flex justify-center gap-2 mb-2 w-full">
-      <div class={`p-2 rounded-lg w-20 flex flex-col items-center gap-1 shadow ${getColor(faculty.teaching_rating ?? 0)}`}> 
-        <span class="font-bold text-sm">{(faculty.teaching_rating ?? 0).toFixed(1)}</span>
-        <span class="text-[10px]">{faculty.total_ratings} votes</span>
+    <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
+      <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+        <RatingWidget rating={faculty.teaching_rating} client:load />
         <span class="text-xs font-medium">Teaching</span>
       </div>
-      <div class={`p-2 rounded-lg w-20 flex flex-col items-center gap-1 shadow ${getColor(faculty.attendance_rating ?? 0)}`}> 
-        <span class="font-bold text-sm">{(faculty.attendance_rating ?? 0).toFixed(1)}</span>
-        <span class="text-[10px]">{faculty.total_ratings} votes</span>
+      <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+        <RatingWidget rating={faculty.attendance_rating} client:load />
         <span class="text-xs font-medium">Attendance</span>
       </div>
-      <div class={`p-2 rounded-lg w-20 flex flex-col items-center gap-1 shadow ${getColor(faculty.correction_rating ?? 0)}`}> 
-        <span class="font-bold text-sm">{(faculty.correction_rating ?? 0).toFixed(1)}</span>
-        <span class="text-[10px]">{faculty.total_ratings} votes</span>
+      <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+        <RatingWidget rating={faculty.correction_rating} client:load />
         <span class="text-xs font-medium">Correction</span>
       </div>
     </div>
