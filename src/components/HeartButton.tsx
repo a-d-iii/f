@@ -13,7 +13,7 @@ export default function HeartButton() {
     <svg
       onClick={toggle}
       onAnimationEnd={() => setAnimate(false)}
-      className={`w-6 h-6 cursor-pointer absolute bottom-2 right-2 transition-colors ${
+      className={`w-6 h-6 cursor-pointer absolute bottom-1 right-2 transition-colors ${
         liked ? 'text-red-500' : 'text-gray-400'
       } ${animate ? 'animate-pop' : ''}`}
       viewBox="0 0 24 24"
