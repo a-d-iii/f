@@ -71,12 +71,12 @@ const RatingBar: FC<Props> = ({ rating, label }) => {
   const width = `${Math.min(Math.max(value, 0), 5) / 5 * 100}%`;
   const icon = icons[label] || null;
   return (
-    <div className="w-full my-1">
+    <div className="w-full my-1 drop-shadow-lg">
       <div className="flex justify-between items-baseline px-1">
-        <span className={`flex items-center gap-1 text-sm font-semibold ${text}`}>{icon}{label}</span>
-        <span className={`text-base font-bold ${text}`}>{value.toFixed(1)}</span>
+        <span className={`flex items-center gap-1 text-sm font-semibold drop-shadow-md ${text}`}>{icon}{label}</span>
+        <span className={`text-base font-bold drop-shadow-md ${text}`}>{value.toFixed(1)}</span>
       </div>
-      <div className="w-11/12 mx-auto h-2 rounded bg-gray-300 dark:bg-gray-700 overflow-hidden shadow-lg">
+      <div className="w-11/12 mx-auto h-2 rounded bg-gray-300 dark:bg-gray-700 overflow-hidden shadow-2xl drop-shadow-xl">
         <div className={`${bg} h-full shadow-inner brightness-110`} style={{ width }}></div>
       </div>
     </div>
