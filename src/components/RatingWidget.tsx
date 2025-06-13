@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
 interface Props {
-  rating: number;
+  rating: number | null | undefined;
   showValue?: boolean; // retained for compatibility but ignored
   disabled?: boolean;
 }
@@ -16,10 +16,11 @@ const getColor = (rating: number) => {
 };
 
 const RatingWidget: FC<Props> = ({ rating }) => {
-  const classes = `px-2 py-1 rounded-lg font-bold text-sm ${getColor(rating)}`;
+  const value = typeof rating === 'number' ? rating : 0;
+  const classes = `px-2 py-1 rounded-lg font-bold text-sm ${getColor(value)}`;
   return (
-    <div aria-label={`Rating ${rating}`} className={classes}>
-      {rating.toFixed(1)}
+    <div aria-label={`Rating ${value}`} className={classes}>
+      {value.toFixed(1)}
     </div>
   );
 };
