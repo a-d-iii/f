@@ -1,5 +1,6 @@
 ---
 import FacultyRatings from './FacultyRatings.tsx';
+import RateFaculty from './RateFaculty.tsx';
 const { faculty } = Astro.props;
 const photoUrl = faculty.photo_url || faculty.photo;
 const specializationRaw =
@@ -47,5 +48,5 @@ if (specializationRaw) {
       count={faculty.total_ratings}
       client:visible
     />
-    <p class="text-sm text-gray-500 dark:text-gray-400">Rated by {faculty.total_ratings} student{faculty.total_ratings === 1 ? '' : 's'}</p>
+    <RateFaculty client:visible />
 </article>
