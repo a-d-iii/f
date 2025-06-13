@@ -5,7 +5,9 @@ type Props = {
   teaching: number | null | undefined;
   attendance: number | null | undefined;
   correction: number | null | undefined;
-  count?: number | null | undefined;
+  tCount?: number | null | undefined;
+  aCount?: number | null | undefined;
+  cCount?: number | null | undefined;
 };
 
 function Star({ filled }: { filled: boolean }) {
@@ -40,7 +42,7 @@ function StarRow({ label, value, count }: { label: string; value: number; count?
       {typeof count === 'number' && (
         <span className="text-sm text-gray-500 flex items-center gap-1 ml-1">
           <svg className="w-3 h-3" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM5 13a4 4 0 018 0v1H5v-1zM15 12h2a2 2 0 012 2v2h-4v-4z" />
+            <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
           </svg>
           {count}
         </span>
@@ -58,7 +60,7 @@ function getTextColor(rating: number) {
   return 'text-red-700';
 }
 
-export default function FacultyRatings({ teaching, attendance, correction, count }: Props) {
+export default function FacultyRatings({ teaching, attendance, correction, tCount, aCount, cCount }: Props) {
   const [detailed, setDetailed] = useState<boolean>(
     typeof window !== 'undefined' && (window as any).showDetailedRatings === true
   );
@@ -76,9 +78,9 @@ export default function FacultyRatings({ teaching, attendance, correction, count
     <div>
       {detailed ? (
         <div className="flex flex-col gap-1 mb-2">
-          <StarRow label="Teaching" value={typeof teaching === 'number' ? teaching : 0} count={count} />
-          <StarRow label="Attendance" value={typeof attendance === 'number' ? attendance : 0} count={count} />
-          <StarRow label="Correction" value={typeof correction === 'number' ? correction : 0} count={count} />
+          <StarRow label="Teaching" value={typeof teaching === 'number' ? teaching : 0} count={tCount} />
+          <StarRow label="Attendance" value={typeof attendance === 'number' ? attendance : 0} count={aCount} />
+          <StarRow label="Correction" value={typeof correction === 'number' ? correction : 0} count={cCount} />
         </div>
       ) : (
         <div className="grid grid-cols-3 gap-2 mb-2 w-full text-center">
@@ -90,12 +92,12 @@ export default function FacultyRatings({ teaching, attendance, correction, count
               <span className="text-sm text-gray-500 dark:text-gray-300 font-segoe">Teaching</span>
  
             </div>
-            {typeof count === 'number' && (
+            {typeof tCount === 'number' && (
               <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
                 <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM5 13a4 4 0 018 0v1H5v-1zM15 12h2a2 2 0 012 2v2h-4v-4z" />
+                  <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
                 </svg>
-                {count}
+                {tCount}
               </span>
             )}
           </div>
@@ -107,12 +109,12 @@ export default function FacultyRatings({ teaching, attendance, correction, count
               <span className="text-sm text-gray-500 dark:text-gray-300 font-segoe">Attendance</span>
  
             </div>
-            {typeof count === 'number' && (
+            {typeof aCount === 'number' && (
               <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
                 <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM5 13a4 4 0 018 0v1H5v-1zM15 12h2a2 2 0 012 2v2h-4v-4z" />
+                  <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
                 </svg>
-                {count}
+                {aCount}
               </span>
             )}
           </div>
@@ -124,12 +126,12 @@ export default function FacultyRatings({ teaching, attendance, correction, count
               <span className="text-sm text-gray-500 dark:text-gray-300 font-segoe">Correction</span>
  
             </div>
-            {typeof count === 'number' && (
+            {typeof cCount === 'number' && (
               <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
                 <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM5 13a4 4 0 018 0v1H5v-1zM15 12h2a2 2 0 012 2v2h-4v-4z" />
+                  <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
                 </svg>
-                {count}
+                {cCount}
               </span>
             )}
           </div>

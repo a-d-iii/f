@@ -9,6 +9,9 @@
     "teachingRating": 4.3,
     "attendanceRating": 3.9,
     "correctionRating": 4.1,
+    "numTeachingRatings": 10,
+    "numAttendanceRatings": 10,
+    "numCorrectionRatings": 10,
     "email": "ananthu.s.hari@vitap.ac.in",
     "phone": "5919",
     "cabin": "416D, AB2"
@@ -23,6 +26,9 @@
     "teachingRating": 2.3,
     "attendanceRating": 2.21,
     "correctionRating": 1.93,
+    "numTeachingRatings": 71,
+    "numAttendanceRatings": 71,
+    "numCorrectionRatings": 68,
     "email": "abhishekh@vitap.ac.in",
     "phone": null,
     "cabin": "202, AB2"
@@ -37,6 +43,9 @@
     "teachingRating": 2.7,
     "attendanceRating": 2.18,
     "correctionRating": 1.89,
+    "numTeachingRatings": 86,
+    "numAttendanceRatings": 83,
+    "numCorrectionRatings": 81,
     "email": "rama.satish@vitap.ac.in",
     "phone": "5353",
     "cabin": "328-E, AB-1"
@@ -51,6 +60,9 @@
     "teachingRating": 3.28,
     "attendanceRating": 3.62,
     "correctionRating": 2.98,
+    "numTeachingRatings": 53,
+    "numAttendanceRatings": 53,
+    "numCorrectionRatings": 53,
     "email": "arenkala.k@vitap.ac.in",
     "phone": "5715",
     "cabin": "225H, AB-2"
@@ -65,6 +77,9 @@
     "teachingRating": 3.5,
     "attendanceRating": 3.02,
     "correctionRating": 2.5,
+    "numTeachingRatings": 40,
+    "numAttendanceRatings": 40,
+    "numCorrectionRatings": 42,
     "email": "arunkumar.b@vitap.ac.in",
     "phone": null,
     "cabin": "327-A, CB"
@@ -79,6 +94,9 @@
     "teachingRating": 3.1,
     "attendanceRating": 2.72,
     "correctionRating": 3.05,
+    "numTeachingRatings": 21,
+    "numAttendanceRatings": 18,
+    "numCorrectionRatings": 21,
     "email": "anurag.de@vitap.ac.in",
     "phone": null,
     "cabin": "141, AB-1"
@@ -93,6 +111,9 @@
     "teachingRating": 2.24,
     "attendanceRating": 1.64,
     "correctionRating": 1.68,
+    "numTeachingRatings": 98,
+    "numAttendanceRatings": 97,
+    "numCorrectionRatings": 97,
     "email": "arun.yadav@vitap.ac.in",
     "phone": null,
     "cabin": "204-B, CB"
@@ -107,6 +128,9 @@
     "teachingRating": 3.2,
     "attendanceRating": 3.0,
     "correctionRating": 2.64,
+    "numTeachingRatings": 44,
+    "numAttendanceRatings": 43,
+    "numCorrectionRatings": 44,
     "email": "anupama.ap@vitap.ac.in",
     "phone": "5849",
     "cabin": "203 D- CB"
@@ -121,6 +145,9 @@
     "teachingRating": 5.16,
     "attendanceRating": 2.57,
     "correctionRating": 3.0,
+    "numTeachingRatings": 19,
+    "numAttendanceRatings": 21,
+    "numCorrectionRatings": 21,
     "email": "anupriya.e@vitap.ac.in",
     "phone": null,
     "cabin": "CB 312"
@@ -135,6 +162,9 @@
     "teachingRating": 3.75,
     "attendanceRating": 4.38,
     "correctionRating": 4.36,
+    "numTeachingRatings": 40,
+    "numAttendanceRatings": 40,
+    "numCorrectionRatings": 39,
     "email": "ashish.gupta@vitap.ac.in",
     "phone": "5867",
     "cabin": "CB-204 -D"
@@ -149,6 +179,9 @@
     "teachingRating": 1.28,
     "attendanceRating": 1.32,
     "correctionRating": 1.3,
+    "numTeachingRatings": 134,
+    "numAttendanceRatings": 136,
+    "numCorrectionRatings": 135,
     "email": "arunkumar.s@vitap.ac.in",
     "phone": "5351",
     "cabin": "AB1-328D"
@@ -163,6 +196,9 @@
     "teachingRating": 2.5,
     "attendanceRating": 3.58,
     "correctionRating": 3.82,
+    "numTeachingRatings": 12,
+    "numAttendanceRatings": 12,
+    "numCorrectionRatings": 11,
     "email": "arindam.dey@vitap.ac.in",
     "phone": null,
     "cabin": "G07F, CB"
@@ -177,6 +213,9 @@
     "teachingRating": 3.41,
     "attendanceRating": 4.78,
     "correctionRating": 4.19,
+    "numTeachingRatings": 27,
+    "numAttendanceRatings": 27,
+    "numCorrectionRatings": 27,
     "email": "atul.tripathi@vitap.ac.in",
     "phone": "5828",
     "cabin": "CB-103-F"
@@ -191,6 +230,9 @@
     "teachingRating": 3.52,
     "attendanceRating": 3.81,
     "correctionRating": 3.32,
+    "numTeachingRatings": 65,
+    "numAttendanceRatings": 63,
+    "numCorrectionRatings": 63,
     "email": "archana.tiwari@vitap.ac.in",
     "phone": "5838",
     "cabin": "CB 128D"
@@ -205,6 +247,9 @@
     "teachingRating": 4.55,
     "attendanceRating": 4.38,
     "correctionRating": 4.31,
+    "numTeachingRatings": 71,
+    "numAttendanceRatings": 71,
+    "numCorrectionRatings": 71,
     "email": "arpana.venu@vitap.ac.in",
     "phone": null,
     "cabin": "Faculty room 103-B, CB"
@@ -219,6 +264,9 @@
     "teachingRating": 4.88,
     "attendanceRating": 4.88,
     "correctionRating": 4.38,
+    "numTeachingRatings": 8,
+    "numAttendanceRatings": 8,
+    "numCorrectionRatings": 8,
     "email": "arunkumar.sivakumar@vitap.ac.in",
     "phone": "5847",
     "cabin": "410, AB-1"
@@ -233,6 +281,9 @@
     "teachingRating": 4.02,
     "attendanceRating": 3.93,
     "correctionRating": 3.88,
+    "numTeachingRatings": 43,
+    "numAttendanceRatings": 42,
+    "numCorrectionRatings": 40,
     "email": "anubendu.a@vitap.ac.in",
     "phone": "5699",
     "cabin": "AB2 125J"
@@ -247,6 +298,9 @@
     "teachingRating": 4.0,
     "attendanceRating": 3.27,
     "correctionRating": 3.38,
+    "numTeachingRatings": 16,
+    "numAttendanceRatings": 15,
+    "numCorrectionRatings": 16,
     "email": "prashanth.rajam@vitap.ac.in",
     "phone": "5856",
     "cabin": "201-E, CB"
@@ -261,6 +315,9 @@
     "teachingRating": 4.29,
     "attendanceRating": 4.21,
     "correctionRating": 4.54,
+    "numTeachingRatings": 48,
+    "numAttendanceRatings": 48,
+    "numCorrectionRatings": 48,
     "email": "rajesh.duvvuru@vitap.ac.in",
     "phone": "5329",
     "cabin": "313-A, AB-1"
@@ -275,6 +332,9 @@
     "teachingRating": 2.35,
     "attendanceRating": 2.46,
     "correctionRating": 2.37,
+    "numTeachingRatings": 26,
+    "numAttendanceRatings": 26,
+    "numCorrectionRatings": 27,
     "email": "pratheep.kumar@vitap.ac.in",
     "phone": "5855",
     "cabin": "CB116G"
@@ -289,6 +349,9 @@
     "teachingRating": 4.27,
     "attendanceRating": 4.15,
     "correctionRating": 4.25,
+    "numTeachingRatings": 49,
+    "numAttendanceRatings": 47,
+    "numCorrectionRatings": 48,
     "email": null,
     "phone": null,
     "cabin": null
@@ -303,6 +366,9 @@
     "teachingRating": 2.94,
     "attendanceRating": 2.94,
     "correctionRating": 3.38,
+    "numTeachingRatings": 17,
+    "numAttendanceRatings": 17,
+    "numCorrectionRatings": 16,
     "email": "praveen.maurya@vitap.ac.in",
     "phone": "5839",
     "cabin": "CB-128-F"
@@ -317,6 +383,9 @@
     "teachingRating": 2.65,
     "attendanceRating": 2.84,
     "correctionRating": 2.26,
+    "numTeachingRatings": 20,
+    "numAttendanceRatings": 19,
+    "numCorrectionRatings": 19,
     "email": null,
     "phone": null,
     "cabin": null
@@ -331,6 +400,9 @@
     "teachingRating": 4.56,
     "attendanceRating": 4.89,
     "correctionRating": 3.67,
+    "numTeachingRatings": 9,
+    "numAttendanceRatings": 9,
+    "numCorrectionRatings": 9,
     "email": "rafael.gonzalez@vitap.ac.in",
     "phone": "5512",
     "cabin": "G24 I, AB-2"
@@ -345,6 +417,9 @@
     "teachingRating": 2.98,
     "attendanceRating": 3.58,
     "correctionRating": 3.51,
+    "numTeachingRatings": 45,
+    "numAttendanceRatings": 43,
+    "numCorrectionRatings": 43,
     "email": null,
     "phone": null,
     "cabin": null
@@ -359,6 +434,9 @@
     "teachingRating": 3.14,
     "attendanceRating": 2.86,
     "correctionRating": 2.59,
+    "numTeachingRatings": 28,
+    "numAttendanceRatings": 28,
+    "numCorrectionRatings": 29,
     "email": "rakhi.nk@vitap.ac.in",
     "phone": null,
     "cabin": "225 N, AB-2"
@@ -373,6 +451,9 @@
     "teachingRating": 3.65,
     "attendanceRating": 3.2,
     "correctionRating": 3.33,
+    "numTeachingRatings": 20,
+    "numAttendanceRatings": 20,
+    "numCorrectionRatings": 21,
     "email": "rajeev.sharma@vitap.ac.in",
     "phone": "5706",
     "cabin": "AB2-225D"
@@ -387,6 +468,9 @@
     "teachingRating": 3.67,
     "attendanceRating": 1.67,
     "correctionRating": 2.67,
+    "numTeachingRatings": 3,
+    "numAttendanceRatings": 3,
+    "numCorrectionRatings": 3,
     "email": "seethalakshmi@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -401,6 +485,9 @@
     "teachingRating": 3.23,
     "attendanceRating": 1.97,
     "correctionRating": 2.48,
+    "numTeachingRatings": 31,
+    "numAttendanceRatings": 31,
+    "numCorrectionRatings": 31,
     "email": "radhamohan.pattanayak@vitap.ac.in",
     "phone": "5885",
     "cabin": "227-A, CB"
@@ -415,6 +502,9 @@
     "teachingRating": 3.47,
     "attendanceRating": 3.16,
     "correctionRating": 2.7,
+    "numTeachingRatings": 19,
+    "numAttendanceRatings": 19,
+    "numCorrectionRatings": 20,
     "email": "raghavi.rk@vitap.ac.in",
     "phone": "5804",
     "cabin": "325 D, AB-2"
@@ -429,6 +519,9 @@
     "teachingRating": 4.57,
     "attendanceRating": 4.97,
     "correctionRating": 5.2,
+    "numTeachingRatings": 35,
+    "numAttendanceRatings": 36,
+    "numCorrectionRatings": 35,
     "email": null,
     "phone": null,
     "cabin": null
@@ -443,6 +536,9 @@
     "teachingRating": 3.7,
     "attendanceRating": 4.5,
     "correctionRating": 4.09,
+    "numTeachingRatings": 10,
+    "numAttendanceRatings": 10,
+    "numCorrectionRatings": 11,
     "email": "nandha.r@vitap.ac.in",
     "phone": "5451",
     "cabin": "424-A, AB-1"
@@ -457,6 +553,9 @@
     "teachingRating": 4.0,
     "attendanceRating": 3.75,
     "correctionRating": 4.0,
+    "numTeachingRatings": 4,
+    "numAttendanceRatings": 4,
+    "numCorrectionRatings": 4,
     "email": "priyanka.ghosh@vitap.ac.in",
     "phone": "5133",
     "cabin": "Faculty Area 104, First Floor, AB-1"
@@ -471,6 +570,9 @@
     "teachingRating": 5.0,
     "attendanceRating": 5.0,
     "correctionRating": 5.0,
+    "numTeachingRatings": 2,
+    "numAttendanceRatings": 2,
+    "numCorrectionRatings": 2,
     "email": "raghavendra@vitap.ac.in",
     "phone": "5412",
     "cabin": "410, AB-1"
@@ -485,6 +587,9 @@
     "teachingRating": 4.43,
     "attendanceRating": 3.16,
     "correctionRating": 4.33,
+    "numTeachingRatings": 37,
+    "numAttendanceRatings": 37,
+    "numCorrectionRatings": 36,
     "email": "dasaradharamarao.s@vitap.ac.in",
     "phone": null,
     "cabin": "326 B, CB"
@@ -499,6 +604,9 @@
     "teachingRating": 3.41,
     "attendanceRating": 3.08,
     "correctionRating": 4.1,
+    "numTeachingRatings": 27,
+    "numAttendanceRatings": 26,
+    "numCorrectionRatings": 29,
     "email": "ramkumar.d@vitap.ac.in",
     "phone": "5898",
     "cabin": "229-F, CB"
@@ -513,6 +621,9 @@
     "teachingRating": 2.75,
     "attendanceRating": 4.06,
     "correctionRating": 4.39,
+    "numTeachingRatings": 36,
+    "numAttendanceRatings": 35,
+    "numCorrectionRatings": 33,
     "email": "rohit.lorenzo@vitap.ac.in",
     "phone": "5158",
     "cabin": "AB1-158"
@@ -527,6 +638,9 @@
     "teachingRating": 4.79,
     "attendanceRating": 4.95,
     "correctionRating": 5.0,
+    "numTeachingRatings": 39,
+    "numAttendanceRatings": 38,
+    "numCorrectionRatings": 36,
     "email": "ranjan.kumar@vitap.ac.in",
     "phone": "5605",
     "cabin": "124E-AB2"
@@ -541,6 +655,9 @@
     "teachingRating": 2.87,
     "attendanceRating": 2.66,
     "correctionRating": 2.53,
+    "numTeachingRatings": 31,
+    "numAttendanceRatings": 32,
+    "numCorrectionRatings": 32,
     "email": "rohitkumar.d@vitap.ac.in",
     "phone": null,
     "cabin": "418-H, Central Block"
@@ -555,6 +672,9 @@
     "teachingRating": 4.7,
     "attendanceRating": 4.15,
     "correctionRating": 3.89,
+    "numTeachingRatings": 27,
+    "numAttendanceRatings": 26,
+    "numCorrectionRatings": 27,
     "email": "gopikrishnan.s@vitap.ac.in",
     "phone": "5356",
     "cabin": "126, AB-1"
@@ -569,6 +689,9 @@
     "teachingRating": 3.5,
     "attendanceRating": 3.5,
     "correctionRating": 3.9,
+    "numTeachingRatings": 10,
+    "numAttendanceRatings": 10,
+    "numCorrectionRatings": 10,
     "email": "ramesh.v@vitap.ac.in",
     "phone": "5884",
     "cabin": "128-I, CB"
@@ -583,6 +706,9 @@
     "teachingRating": 2.67,
     "attendanceRating": 2.9,
     "correctionRating": 2.75,
+    "numTeachingRatings": 21,
+    "numAttendanceRatings": 20,
+    "numCorrectionRatings": 20,
     "email": null,
     "phone": null,
     "cabin": null
@@ -597,6 +723,9 @@
     "teachingRating": 4.85,
     "attendanceRating": 4.94,
     "correctionRating": 4.84,
+    "numTeachingRatings": 34,
+    "numAttendanceRatings": 34,
+    "numCorrectionRatings": 32,
     "email": "ravi.barpanda@vitap.ac.in",
     "phone": "5354",
     "cabin": "328-F, AB-1"
@@ -611,6 +740,9 @@
     "teachingRating": 1.86,
     "attendanceRating": 1.8,
     "correctionRating": 2.03,
+    "numTeachingRatings": 35,
+    "numAttendanceRatings": 35,
+    "numCorrectionRatings": 34,
     "email": "priyanka.s@vitap.ac.in",
     "phone": "5829",
     "cabin": "CB-103-G"
@@ -625,6 +757,9 @@
     "teachingRating": 2.69,
     "attendanceRating": 2.94,
     "correctionRating": 2.88,
+    "numTeachingRatings": 32,
+    "numAttendanceRatings": 33,
+    "numCorrectionRatings": 33,
     "email": "ramesh.panda@vitap.ac.in",
     "phone": null,
     "cabin": "124B, AB-2"
@@ -639,6 +774,9 @@
     "teachingRating": 4.5,
     "attendanceRating": 2.25,
     "correctionRating": 1.75,
+    "numTeachingRatings": 4,
+    "numAttendanceRatings": 4,
+    "numCorrectionRatings": 4,
     "email": "ravindra.d@vitap.ac.in",
     "phone": "5363",
     "cabin": "313, AB1"
@@ -653,6 +791,9 @@
     "teachingRating": 3.21,
     "attendanceRating": 2.77,
     "correctionRating": 2.69,
+    "numTeachingRatings": 14,
+    "numAttendanceRatings": 13,
+    "numCorrectionRatings": 13,
     "email": "sanjit.chakraborty@vitap.ac.in",
     "phone": "5825",
     "cabin": "Faculty Area- 326/L, CB"
@@ -667,6 +808,9 @@
     "teachingRating": 3.14,
     "attendanceRating": 4.05,
     "correctionRating": 2.68,
+    "numTeachingRatings": 21,
+    "numAttendanceRatings": 20,
+    "numCorrectionRatings": 22,
     "email": "rasheda.p@vitap.ac.in",
     "phone": "5581",
     "cabin": "G24 C, AB-2"
@@ -681,6 +825,9 @@
     "teachingRating": 4.54,
     "attendanceRating": 3.08,
     "correctionRating": 2.54,
+    "numTeachingRatings": 13,
+    "numAttendanceRatings": 13,
+    "numCorrectionRatings": 13,
     "email": "renuprasad.patki@vitap.ac.in",
     "phone": "5810",
     "cabin": "325F, AB-2"
@@ -695,6 +842,9 @@
     "teachingRating": 1.48,
     "attendanceRating": 1.19,
     "correctionRating": 1.24,
+    "numTeachingRatings": 21,
+    "numAttendanceRatings": 21,
+    "numCorrectionRatings": 21,
     "email": "sachinandan.m@vitap.ac.in",
     "phone": null,
     "cabin": "205-G, CB"
@@ -709,6 +859,9 @@
     "teachingRating": 1.88,
     "attendanceRating": 1.81,
     "correctionRating": 1.81,
+    "numTeachingRatings": 16,
+    "numAttendanceRatings": 16,
+    "numCorrectionRatings": 16,
     "email": null,
     "phone": null,
     "cabin": "CB G01"
@@ -723,6 +876,9 @@
     "teachingRating": 3.61,
     "attendanceRating": 3.17,
     "correctionRating": 3.3,
+    "numTeachingRatings": 23,
+    "numAttendanceRatings": 23,
+    "numCorrectionRatings": 23,
     "email": "saritha.saladi@vitap.ac.in",
     "phone": "5968",
     "cabin": "CB 326-I"
@@ -737,6 +893,9 @@
     "teachingRating": 4.74,
     "attendanceRating": 4.18,
     "correctionRating": 4.12,
+    "numTeachingRatings": 35,
+    "numAttendanceRatings": 33,
+    "numCorrectionRatings": 32,
     "email": null,
     "phone": null,
     "cabin": null
@@ -751,6 +910,9 @@
     "teachingRating": 3.97,
     "attendanceRating": 4.3,
     "correctionRating": 4.48,
+    "numTeachingRatings": 30,
+    "numAttendanceRatings": 30,
+    "numCorrectionRatings": 31,
     "email": "sambhudutta.n@vitap.ac.in",
     "phone": null,
     "cabin": "CB-327-K"
@@ -765,6 +927,9 @@
     "teachingRating": 2.68,
     "attendanceRating": 3.47,
     "correctionRating": 2.95,
+    "numTeachingRatings": 19,
+    "numAttendanceRatings": 19,
+    "numCorrectionRatings": 19,
     "email": null,
     "phone": null,
     "cabin": null
@@ -779,6 +944,9 @@
     "teachingRating": 3.76,
     "attendanceRating": 4.09,
     "correctionRating": 3.94,
+    "numTeachingRatings": 37,
+    "numAttendanceRatings": 35,
+    "numCorrectionRatings": 34,
     "email": null,
     "phone": null,
     "cabin": null
@@ -793,6 +961,9 @@
     "teachingRating": 3.25,
     "attendanceRating": 3.5,
     "correctionRating": 3.5,
+    "numTeachingRatings": 4,
+    "numAttendanceRatings": 4,
+    "numCorrectionRatings": 4,
     "email": "santoshkumar.sahu@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -807,6 +978,9 @@
     "teachingRating": 3.6,
     "attendanceRating": 4.07,
     "correctionRating": 4.0,
+    "numTeachingRatings": 15,
+    "numAttendanceRatings": 15,
+    "numCorrectionRatings": 15,
     "email": "srinivas.s@vitap.ac.in",
     "phone": "5331",
     "cabin": "G23-A, AB-2"
@@ -821,6 +995,9 @@
     "teachingRating": 3.77,
     "attendanceRating": 2.82,
     "correctionRating": 2.7,
+    "numTeachingRatings": 13,
+    "numAttendanceRatings": 11,
+    "numCorrectionRatings": 10,
     "email": "shanthakumari.ss@vitap.ac.in",
     "phone": null,
     "cabin": "418 J, CB"
@@ -835,6 +1012,9 @@
     "teachingRating": 2.19,
     "attendanceRating": 3.06,
     "correctionRating": 3.07,
+    "numTeachingRatings": 16,
+    "numAttendanceRatings": 16,
+    "numCorrectionRatings": 15,
     "email": "samineni.peddakrishna@vitap.ac.in",
     "phone": "5464",
     "cabin": "AB1-422D"
@@ -849,6 +1029,9 @@
     "teachingRating": 4.13,
     "attendanceRating": 4.06,
     "correctionRating": 3.88,
+    "numTeachingRatings": 15,
+    "numAttendanceRatings": 16,
+    "numCorrectionRatings": 16,
     "email": "santanu.mandal@vitap.ac.in",
     "phone": "5566",
     "cabin": null
@@ -863,6 +1046,9 @@
     "teachingRating": 3.5,
     "attendanceRating": 3.57,
     "correctionRating": 3.36,
+    "numTeachingRatings": 14,
+    "numAttendanceRatings": 14,
+    "numCorrectionRatings": 14,
     "email": "sandipan.maiti@vitap.ac.in",
     "phone": "5681",
     "cabin": "124-C, AB-2"
@@ -877,6 +1063,9 @@
     "teachingRating": 4.37,
     "attendanceRating": 4.2,
     "correctionRating": 2.85,
+    "numTeachingRatings": 19,
+    "numAttendanceRatings": 20,
+    "numCorrectionRatings": 20,
     "email": "sanket.mishra@vitap.ac.in",
     "phone": "5402",
     "cabin": "110, AB-1"
@@ -891,6 +1080,9 @@
     "teachingRating": 3.85,
     "attendanceRating": 3.0,
     "correctionRating": 2.93,
+    "numTeachingRatings": 13,
+    "numAttendanceRatings": 14,
+    "numCorrectionRatings": 14,
     "email": "selvakumar.s@vitap.ac.in",
     "phone": "5819",
     "cabin": "115-A, CB"
@@ -905,6 +1097,9 @@
     "teachingRating": 4.26,
     "attendanceRating": 4.68,
     "correctionRating": 3.72,
+    "numTeachingRatings": 31,
+    "numAttendanceRatings": 31,
+    "numCorrectionRatings": 32,
     "email": "sheela.j@vitap.ac.in",
     "phone": "5727",
     "cabin": "225-F, AB2"
@@ -919,6 +1114,9 @@
     "teachingRating": 4.29,
     "attendanceRating": 3.86,
     "correctionRating": 4.8,
+    "numTeachingRatings": 14,
+    "numAttendanceRatings": 14,
+    "numCorrectionRatings": 15,
     "email": "siddique.ibrahim@vitap.ac.in",
     "phone": "5817",
     "cabin": "115-D, CB"
@@ -933,6 +1131,9 @@
     "teachingRating": 2.45,
     "attendanceRating": 4.2,
     "correctionRating": 2.4,
+    "numTeachingRatings": 20,
+    "numAttendanceRatings": 20,
+    "numCorrectionRatings": 20,
     "email": "soubhagya.barpanda@vitap.ac.in",
     "phone": "5171",
     "cabin": "171, AB-1"
@@ -947,6 +1148,9 @@
     "teachingRating": 1.47,
     "attendanceRating": 1.67,
     "correctionRating": 1.27,
+    "numTeachingRatings": 15,
+    "numAttendanceRatings": 15,
+    "numCorrectionRatings": 15,
     "email": "saroj.panigrahy@vitap.ac.in",
     "phone": "5360",
     "cabin": "329-B, AB-1"
@@ -961,6 +1165,9 @@
     "teachingRating": 4.89,
     "attendanceRating": 4.87,
     "correctionRating": 4.8,
+    "numTeachingRatings": 74,
+    "numAttendanceRatings": 75,
+    "numCorrectionRatings": 76,
     "email": "soumen.kundu@vitap.ac.in",
     "phone": "5874",
     "cabin": "CB 205 (B)"
@@ -975,6 +1182,9 @@
     "teachingRating": 4.35,
     "attendanceRating": 4.41,
     "correctionRating": 3.65,
+    "numTeachingRatings": 17,
+    "numAttendanceRatings": 17,
+    "numCorrectionRatings": 17,
     "email": "chakkaravarthy.sibi@vitap.ac.in",
     "phone": "5456",
     "cabin": "222, CB"
@@ -989,6 +1199,9 @@
     "teachingRating": 2.27,
     "attendanceRating": 2.34,
     "correctionRating": 1.97,
+    "numTeachingRatings": 37,
+    "numAttendanceRatings": 38,
+    "numCorrectionRatings": 38,
     "email": "sonali.k@vitap.ac.in",
     "phone": null,
     "cabin": "326-F, CB"
@@ -1003,6 +1216,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": null,
     "phone": null,
     "cabin": null
@@ -1017,6 +1233,9 @@
     "teachingRating": 1.8,
     "attendanceRating": 1.69,
     "correctionRating": 1.58,
+    "numTeachingRatings": 44,
+    "numAttendanceRatings": 48,
+    "numCorrectionRatings": 45,
     "email": "shobhit.srivastava@vitap.ac.in",
     "phone": "5811",
     "cabin": "325-G, AB-2"
@@ -1031,6 +1250,9 @@
     "teachingRating": 4.5,
     "attendanceRating": 2.75,
     "correctionRating": 4.0,
+    "numTeachingRatings": 4,
+    "numAttendanceRatings": 4,
+    "numCorrectionRatings": 2,
     "email": "shahid.sk@vitap.ac.in",
     "phone": null,
     "cabin": "422-E, AB-1"
@@ -1045,6 +1267,9 @@
     "teachingRating": 3.42,
     "attendanceRating": 3.25,
     "correctionRating": 3.18,
+    "numTeachingRatings": 12,
+    "numAttendanceRatings": 12,
+    "numCorrectionRatings": 11,
     "email": "somyaranjan.sahoo@vitap.ac.in",
     "phone": "5745",
     "cabin": "225-E, AB-2"
@@ -1059,6 +1284,9 @@
     "teachingRating": 3.85,
     "attendanceRating": 3.62,
     "correctionRating": 3.77,
+    "numTeachingRatings": 13,
+    "numAttendanceRatings": 13,
+    "numCorrectionRatings": 13,
     "email": "shahparth.m@vitap.ac.in",
     "phone": "5540",
     "cabin": "G-24 (D), AB2"
@@ -1073,6 +1301,9 @@
     "teachingRating": 3.47,
     "attendanceRating": 2.94,
     "correctionRating": 2.35,
+    "numTeachingRatings": 36,
+    "numAttendanceRatings": 34,
+    "numCorrectionRatings": 37,
     "email": null,
     "phone": null,
     "cabin": null
@@ -1087,6 +1318,9 @@
     "teachingRating": 4.14,
     "attendanceRating": 4.43,
     "correctionRating": 4.14,
+    "numTeachingRatings": 7,
+    "numAttendanceRatings": 7,
+    "numCorrectionRatings": 7,
     "email": "faizan.ali@vitap.ac.in",
     "phone": null,
     "cabin": "CB-G07-H"
@@ -1101,6 +1335,9 @@
     "teachingRating": 4.54,
     "attendanceRating": 4.85,
     "correctionRating": 4.6,
+    "numTeachingRatings": 41,
+    "numAttendanceRatings": 40,
+    "numCorrectionRatings": 40,
     "email": "shubhra.ghoshal@vitap.ac.in",
     "phone": "5096",
     "cabin": "G 04, E, Central Block, VIT-AP"
@@ -1115,6 +1352,9 @@
     "teachingRating": 2.19,
     "attendanceRating": 2.76,
     "correctionRating": 2.03,
+    "numTeachingRatings": 59,
+    "numAttendanceRatings": 58,
+    "numCorrectionRatings": 59,
     "email": "surendrareddy.vinta@vitap.ac.in",
     "phone": "5893",
     "cabin": "229-A, CB"
@@ -1129,6 +1369,9 @@
     "teachingRating": 4.73,
     "attendanceRating": 4.93,
     "correctionRating": 4.93,
+    "numTeachingRatings": 15,
+    "numAttendanceRatings": 14,
+    "numCorrectionRatings": 14,
     "email": "sumakamalesh.g@vitap.ac.in",
     "phone": "5337",
     "cabin": "203G, CB"
@@ -1143,6 +1386,9 @@
     "teachingRating": 3.05,
     "attendanceRating": 3.32,
     "correctionRating": 2.9,
+    "numTeachingRatings": 22,
+    "numAttendanceRatings": 22,
+    "numCorrectionRatings": 21,
     "email": "sudesh.manger@vitap.ac.in",
     "phone": "5582",
     "cabin": "G24 F, AB-2"
@@ -1157,6 +1403,9 @@
     "teachingRating": 2.0,
     "attendanceRating": 1.5,
     "correctionRating": 2.5,
+    "numTeachingRatings": 2,
+    "numAttendanceRatings": 2,
+    "numCorrectionRatings": 2,
     "email": "suyog.jhavar@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -1171,6 +1420,9 @@
     "teachingRating": 2.69,
     "attendanceRating": 2.69,
     "correctionRating": 2.46,
+    "numTeachingRatings": 13,
+    "numAttendanceRatings": 13,
+    "numCorrectionRatings": 13,
     "email": "sunil.singh@vitap.ac.in",
     "phone": "5682",
     "cabin": "223, CB"
@@ -1185,6 +1437,9 @@
     "teachingRating": 4.56,
     "attendanceRating": 4.0,
     "correctionRating": 3.78,
+    "numTeachingRatings": 9,
+    "numAttendanceRatings": 9,
+    "numCorrectionRatings": 9,
     "email": null,
     "phone": null,
     "cabin": null
@@ -1199,6 +1454,9 @@
     "teachingRating": 5.02,
     "attendanceRating": 5.02,
     "correctionRating": 4.98,
+    "numTeachingRatings": 44,
+    "numAttendanceRatings": 44,
+    "numCorrectionRatings": 43,
     "email": "suseela.v@vitap.ac.in",
     "phone": "5709",
     "cabin": "AB2-202C"
@@ -1213,6 +1471,9 @@
     "teachingRating": 4.67,
     "attendanceRating": 4.33,
     "correctionRating": 4.47,
+    "numTeachingRatings": 15,
+    "numAttendanceRatings": 15,
+    "numCorrectionRatings": 15,
     "email": "suresh.jagannadham@vitap.ac.in",
     "phone": "5109",
     "cabin": "Faculty Area 1, Room 104, Cabin 107, AB 1"
@@ -1227,6 +1488,9 @@
     "teachingRating": 4.68,
     "attendanceRating": 3.74,
     "correctionRating": 4.21,
+    "numTeachingRatings": 19,
+    "numAttendanceRatings": 19,
+    "numCorrectionRatings": 19,
     "email": "ellison.mathe@vitap.ac.in",
     "phone": "5348",
     "cabin": "AB1-422E"
@@ -1241,6 +1505,9 @@
     "teachingRating": 2.22,
     "attendanceRating": 2.14,
     "correctionRating": 2.05,
+    "numTeachingRatings": 37,
+    "numAttendanceRatings": 36,
+    "numCorrectionRatings": 37,
     "email": "soumyakanta.p@vitap.ac.in",
     "phone": null,
     "cabin": "AB2, 125-I"
@@ -1255,6 +1522,9 @@
     "teachingRating": 4.34,
     "attendanceRating": 4.52,
     "correctionRating": 4.59,
+    "numTeachingRatings": 44,
+    "numAttendanceRatings": 44,
+    "numCorrectionRatings": 44,
     "email": "sumesh.ep@vitap.ac.in",
     "phone": null,
     "cabin": "CB-327-G"
@@ -1269,6 +1539,9 @@
     "teachingRating": 4.64,
     "attendanceRating": 4.55,
     "correctionRating": 4.55,
+    "numTeachingRatings": 11,
+    "numAttendanceRatings": 11,
+    "numCorrectionRatings": 11,
     "email": "srinivasareddy.k@vitap.ac.in",
     "phone": null,
     "cabin": "214-A, AB-1"
@@ -1283,6 +1556,9 @@
     "teachingRating": 2.89,
     "attendanceRating": 2.89,
     "correctionRating": 2.67,
+    "numTeachingRatings": 9,
+    "numAttendanceRatings": 9,
+    "numCorrectionRatings": 9,
     "email": "sudhir.verma@vitap.ac.in",
     "phone": "5231",
     "cabin": "329 E, AB1"
@@ -1297,6 +1573,9 @@
     "teachingRating": 4.75,
     "attendanceRating": 5.0,
     "correctionRating": 4.0,
+    "numTeachingRatings": 4,
+    "numAttendanceRatings": 4,
+    "numCorrectionRatings": 4,
     "email": "sunil.khosla@vitap.ac.in",
     "phone": "5204",
     "cabin": "307-E, AB2"
@@ -1311,6 +1590,9 @@
     "teachingRating": 4.74,
     "attendanceRating": 4.88,
     "correctionRating": 3.9,
+    "numTeachingRatings": 34,
+    "numAttendanceRatings": 32,
+    "numCorrectionRatings": 30,
     "email": "subhasish.m@vitap.ac.in",
     "phone": "5711",
     "cabin": "AB2-202D"
@@ -1325,6 +1607,9 @@
     "teachingRating": 4.29,
     "attendanceRating": 4.18,
     "correctionRating": 4.67,
+    "numTeachingRatings": 17,
+    "numAttendanceRatings": 17,
+    "numCorrectionRatings": 18,
     "email": "sudharshan.v@vitap.ac.in",
     "phone": null,
     "cabin": "CB-326C"
@@ -1339,6 +1624,9 @@
     "teachingRating": 1.65,
     "attendanceRating": 1.42,
     "correctionRating": 1.69,
+    "numTeachingRatings": 26,
+    "numAttendanceRatings": 26,
+    "numCorrectionRatings": 26,
     "email": "sudhakar.ilango@vitap.ac.in",
     "phone": "5459",
     "cabin": "424-I, AB-1"
@@ -1353,6 +1641,9 @@
     "teachingRating": 3.39,
     "attendanceRating": 3.65,
     "correctionRating": 3.54,
+    "numTeachingRatings": 23,
+    "numAttendanceRatings": 23,
+    "numCorrectionRatings": 24,
     "email": "tufan.ghosh@vitap.ac.in",
     "phone": "5693",
     "cabin": "125D, AB2"
@@ -1367,6 +1658,9 @@
     "teachingRating": 3.15,
     "attendanceRating": 2.88,
     "correctionRating": 2.38,
+    "numTeachingRatings": 34,
+    "numAttendanceRatings": 34,
+    "numCorrectionRatings": 34,
     "email": "triveni.mandlimath@vitap.ac.in",
     "phone": "5834",
     "cabin": null
@@ -1381,6 +1675,9 @@
     "teachingRating": 2.13,
     "attendanceRating": 2.23,
     "correctionRating": 1.87,
+    "numTeachingRatings": 30,
+    "numAttendanceRatings": 30,
+    "numCorrectionRatings": 30,
     "email": null,
     "phone": null,
     "cabin": null
@@ -1395,6 +1692,9 @@
     "teachingRating": 3.83,
     "attendanceRating": 3.28,
     "correctionRating": 3.72,
+    "numTeachingRatings": 30,
+    "numAttendanceRatings": 29,
+    "numCorrectionRatings": 29,
     "email": "swati.shukla@vitap.ac.in",
     "phone": null,
     "cabin": "CB-327-J"
@@ -1409,6 +1709,9 @@
     "teachingRating": 5.0,
     "attendanceRating": 4.75,
     "correctionRating": 5.0,
+    "numTeachingRatings": 4,
+    "numAttendanceRatings": 4,
+    "numCorrectionRatings": 4,
     "email": "umakanta.n@vitap.ac.in",
     "phone": "5362",
     "cabin": "AB1-422G"
@@ -1423,6 +1726,9 @@
     "teachingRating": 4.67,
     "attendanceRating": 4.16,
     "correctionRating": 4.16,
+    "numTeachingRatings": 33,
+    "numAttendanceRatings": 32,
+    "numCorrectionRatings": 32,
     "email": "tauseef.khan@vitap.ac.in",
     "phone": "5017",
     "cabin": "162, AB-1"
@@ -1437,6 +1743,9 @@
     "teachingRating": 3.61,
     "attendanceRating": 3.15,
     "correctionRating": 3.29,
+    "numTeachingRatings": 41,
+    "numAttendanceRatings": 41,
+    "numCorrectionRatings": 41,
     "email": null,
     "phone": null,
     "cabin": null
@@ -1451,6 +1760,9 @@
     "teachingRating": 3.0,
     "attendanceRating": 3.69,
     "correctionRating": 3.15,
+    "numTeachingRatings": 30,
+    "numAttendanceRatings": 29,
+    "numCorrectionRatings": 27,
     "email": "pujitha.v@vitap.ac.in",
     "phone": null,
     "cabin": "CB-203A"
@@ -1465,6 +1777,9 @@
     "teachingRating": 2.95,
     "attendanceRating": 3.05,
     "correctionRating": 3.17,
+    "numTeachingRatings": 19,
+    "numAttendanceRatings": 21,
+    "numCorrectionRatings": 18,
     "email": "raja.v@vitap.ac.in",
     "phone": "5506",
     "cabin": "AB2, G24 H"
@@ -1479,6 +1794,9 @@
     "teachingRating": 2.71,
     "attendanceRating": 2.24,
     "correctionRating": 2.24,
+    "numTeachingRatings": 21,
+    "numAttendanceRatings": 21,
+    "numCorrectionRatings": 21,
     "email": null,
     "phone": null,
     "cabin": null
@@ -1493,6 +1811,9 @@
     "teachingRating": 4.44,
     "attendanceRating": 4.32,
     "correctionRating": 3.85,
+    "numTeachingRatings": 34,
+    "numAttendanceRatings": 34,
+    "numCorrectionRatings": 34,
     "email": "dasgupta.tannistha@vitap.ac.in",
     "phone": "5580",
     "cabin": "G24 B, AB-2"
@@ -1507,6 +1828,9 @@
     "teachingRating": 2.94,
     "attendanceRating": 3.14,
     "correctionRating": 3.21,
+    "numTeachingRatings": 35,
+    "numAttendanceRatings": 35,
+    "numCorrectionRatings": 34,
     "email": null,
     "phone": null,
     "cabin": null
@@ -1521,6 +1845,9 @@
     "teachingRating": 3.0,
     "attendanceRating": 3.0,
     "correctionRating": 3.0,
+    "numTeachingRatings": 2,
+    "numAttendanceRatings": 2,
+    "numCorrectionRatings": 2,
     "email": "usha.seshadri@vitap.ac.in",
     "phone": "5410",
     "cabin": "227-G, CB"
@@ -1535,6 +1862,9 @@
     "teachingRating": 3.88,
     "attendanceRating": 4.0,
     "correctionRating": 3.06,
+    "numTeachingRatings": 52,
+    "numAttendanceRatings": 51,
+    "numCorrectionRatings": 52,
     "email": "Uditnarayana.k@vitap.ac.in",
     "phone": "5315",
     "cabin": "310-F, AB-1"
@@ -1549,6 +1879,9 @@
     "teachingRating": 3.0,
     "attendanceRating": 3.75,
     "correctionRating": 3.62,
+    "numTeachingRatings": 8,
+    "numAttendanceRatings": 8,
+    "numCorrectionRatings": 8,
     "email": "gopalkrishna.um@vitap.ac.in",
     "phone": "5892",
     "cabin": "410, AB-1"
@@ -1563,6 +1896,9 @@
     "teachingRating": 3.06,
     "attendanceRating": 2.62,
     "correctionRating": 3.06,
+    "numTeachingRatings": 16,
+    "numAttendanceRatings": 16,
+    "numCorrectionRatings": 16,
     "email": "vikash.singh@vitap.ac.in",
     "phone": "5108",
     "cabin": "G36-E, AB-1"
@@ -1577,6 +1913,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": null,
     "phone": null,
     "cabin": null
@@ -1591,6 +1930,9 @@
     "teachingRating": 4.77,
     "attendanceRating": 4.64,
     "correctionRating": 4.47,
+    "numTeachingRatings": 47,
+    "numAttendanceRatings": 47,
+    "numCorrectionRatings": 47,
     "email": "ankita.swetaparna@vitap.ac.in",
     "phone": "5813",
     "cabin": "325 C, AB-2"
@@ -1605,6 +1947,9 @@
     "teachingRating": 4.33,
     "attendanceRating": 3.67,
     "correctionRating": 3.89,
+    "numTeachingRatings": 9,
+    "numAttendanceRatings": 9,
+    "numCorrectionRatings": 9,
     "email": "md.sirajudeen@vitap.ac.in",
     "phone": "5611",
     "cabin": "124-D, AB-2"
@@ -1619,6 +1964,9 @@
     "teachingRating": 2.71,
     "attendanceRating": 4.31,
     "correctionRating": 4.31,
+    "numTeachingRatings": 14,
+    "numAttendanceRatings": 13,
+    "numCorrectionRatings": 13,
     "email": "visalakshi.a@vitap.ac.in",
     "phone": "7010359989",
     "cabin": "CB-415k"
@@ -1633,6 +1981,9 @@
     "teachingRating": 2.69,
     "attendanceRating": 4.0,
     "correctionRating": 3.06,
+    "numTeachingRatings": 16,
+    "numAttendanceRatings": 16,
+    "numCorrectionRatings": 16,
     "email": "afzal.hussain@vitap.ac.in",
     "phone": "5970",
     "cabin": "111, AB-1"
@@ -1647,6 +1998,9 @@
     "teachingRating": 2.08,
     "attendanceRating": 2.22,
     "correctionRating": 1.72,
+    "numTeachingRatings": 24,
+    "numAttendanceRatings": 23,
+    "numCorrectionRatings": 25,
     "email": "pradip.patle@vitap.ac.in",
     "phone": null,
     "cabin": "124 F AB-2"
@@ -1661,6 +2015,9 @@
     "teachingRating": 4.9,
     "attendanceRating": 4.8,
     "correctionRating": 4.84,
+    "numTeachingRatings": 69,
+    "numAttendanceRatings": 69,
+    "numCorrectionRatings": 68,
     "email": "anindita.shome@vitap.ac.in",
     "phone": "5990",
     "cabin": "G-04, A, Central Block"
@@ -1675,6 +2032,9 @@
     "teachingRating": 3.08,
     "attendanceRating": 2.62,
     "correctionRating": 2.26,
+    "numTeachingRatings": 25,
+    "numAttendanceRatings": 24,
+    "numCorrectionRatings": 23,
     "email": null,
     "phone": null,
     "cabin": null
@@ -1689,6 +2049,9 @@
     "teachingRating": 3.0,
     "attendanceRating": 5.0,
     "correctionRating": 4.0,
+    "numTeachingRatings": 3,
+    "numAttendanceRatings": 3,
+    "numCorrectionRatings": 3,
     "email": "avadhesh.kumar@vitap.ac.in",
     "phone": "5844",
     "cabin": "307-D, AB2"
@@ -1703,6 +2066,9 @@
     "teachingRating": 3.12,
     "attendanceRating": 3.81,
     "correctionRating": 3.81,
+    "numTeachingRatings": 16,
+    "numAttendanceRatings": 16,
+    "numCorrectionRatings": 16,
     "email": "y.narasimharao@vitap.ac.in",
     "phone": "5340",
     "cabin": "CB 415-A"
@@ -1717,6 +2083,9 @@
     "teachingRating": 4.95,
     "attendanceRating": 4.66,
     "correctionRating": 4.91,
+    "numTeachingRatings": 58,
+    "numAttendanceRatings": 56,
+    "numCorrectionRatings": 58,
     "email": "vinod.k@vitap.ac.in",
     "phone": null,
     "cabin": "CB-327-D"
@@ -1731,6 +2100,9 @@
     "teachingRating": 4.26,
     "attendanceRating": 3.49,
     "correctionRating": 3.07,
+    "numTeachingRatings": 47,
+    "numAttendanceRatings": 41,
+    "numCorrectionRatings": 41,
     "email": null,
     "phone": null,
     "cabin": null
@@ -1745,6 +2117,9 @@
     "teachingRating": 2.48,
     "attendanceRating": 2.82,
     "correctionRating": 2.28,
+    "numTeachingRatings": 40,
+    "numAttendanceRatings": 38,
+    "numCorrectionRatings": 39,
     "email": "naresh.s@vitap.ac.in",
     "phone": null,
     "cabin": "AB1 157"
@@ -1759,6 +2134,9 @@
     "teachingRating": 4.22,
     "attendanceRating": 4.88,
     "correctionRating": 3.7,
+    "numTeachingRatings": 9,
+    "numAttendanceRatings": 8,
+    "numCorrectionRatings": 10,
     "email": null,
     "phone": null,
     "cabin": null
@@ -1773,6 +2151,9 @@
     "teachingRating": 4.92,
     "attendanceRating": 4.83,
     "correctionRating": 4.33,
+    "numTeachingRatings": 24,
+    "numAttendanceRatings": 24,
+    "numCorrectionRatings": 24,
     "email": "pavankumar.yv@vitap.ac.in",
     "phone": "5155",
     "cabin": "AB1-155"
@@ -1787,6 +2168,9 @@
     "teachingRating": 5.17,
     "attendanceRating": 5.0,
     "correctionRating": 4.68,
+    "numTeachingRatings": 36,
+    "numAttendanceRatings": 37,
+    "numCorrectionRatings": 37,
     "email": "linet.thomas@vitap.ac.in",
     "phone": null,
     "cabin": "224-H, AB-2"
@@ -1801,6 +2185,9 @@
     "teachingRating": 3.71,
     "attendanceRating": 4.38,
     "correctionRating": 4.12,
+    "numTeachingRatings": 7,
+    "numAttendanceRatings": 8,
+    "numCorrectionRatings": 8,
     "email": "beebi.naseeba@vitap.ac.in",
     "phone": "5414",
     "cabin": "425-B, AB-1"
@@ -1815,6 +2202,9 @@
     "teachingRating": 4.12,
     "attendanceRating": 4.33,
     "correctionRating": 3.75,
+    "numTeachingRatings": 17,
+    "numAttendanceRatings": 15,
+    "numCorrectionRatings": 16,
     "email": "reeja.sr@vitap.ac.in",
     "phone": "5967",
     "cabin": "132, AB-1"
@@ -1829,6 +2219,9 @@
     "teachingRating": 3.5,
     "attendanceRating": 3.62,
     "correctionRating": 2.44,
+    "numTeachingRatings": 16,
+    "numAttendanceRatings": 16,
+    "numCorrectionRatings": 16,
     "email": "pranavanand.o@vitap.ac.in",
     "phone": null,
     "cabin": "415-G, AB-2"
@@ -1843,6 +2236,9 @@
     "teachingRating": 4.35,
     "attendanceRating": 4.68,
     "correctionRating": 4.57,
+    "numTeachingRatings": 23,
+    "numAttendanceRatings": 25,
+    "numCorrectionRatings": 23,
     "email": "sukanta.nayak@vitap.ac.in",
     "phone": "5724",
     "cabin": "225 K, AB2"
@@ -1857,6 +2253,9 @@
     "teachingRating": 4.12,
     "attendanceRating": 3.62,
     "correctionRating": 4.08,
+    "numTeachingRatings": 24,
+    "numAttendanceRatings": 24,
+    "numCorrectionRatings": 24,
     "email": "virendra.verma@vitap.ac.in",
     "phone": "5869",
     "cabin": null
@@ -1871,6 +2270,9 @@
     "teachingRating": 2.96,
     "attendanceRating": 2.69,
     "correctionRating": 2.46,
+    "numTeachingRatings": 27,
+    "numAttendanceRatings": 26,
+    "numCorrectionRatings": 26,
     "email": "sanziou.b@vitap.ac.in",
     "phone": null,
     "cabin": "CB- 201/G"
@@ -1885,6 +2287,9 @@
     "teachingRating": 3.33,
     "attendanceRating": 2.83,
     "correctionRating": 3.6,
+    "numTeachingRatings": 6,
+    "numAttendanceRatings": 6,
+    "numCorrectionRatings": 5,
     "email": "ashraf.p@vitap.ac.in",
     "phone": null,
     "cabin": "225-J, AB-2"
@@ -1899,6 +2304,9 @@
     "teachingRating": 3.2,
     "attendanceRating": 2.75,
     "correctionRating": 3.1,
+    "numTeachingRatings": 10,
+    "numAttendanceRatings": 12,
+    "numCorrectionRatings": 10,
     "email": "balaram.ch@vitap.ac.in",
     "phone": "9000959099",
     "cabin": "128-E CB"
@@ -1913,6 +2321,9 @@
     "teachingRating": 3.8,
     "attendanceRating": 3.47,
     "correctionRating": 2.6,
+    "numTeachingRatings": 15,
+    "numAttendanceRatings": 15,
+    "numCorrectionRatings": 15,
     "email": "carlin.pouamou@vitap.ac.in",
     "phone": "5579",
     "cabin": "G24 A, AB-2"
@@ -1927,6 +2338,9 @@
     "teachingRating": 4.67,
     "attendanceRating": 4.18,
     "correctionRating": 3.55,
+    "numTeachingRatings": 12,
+    "numAttendanceRatings": 11,
+    "numCorrectionRatings": 11,
     "email": "amrita.gulshan@vitap.ac.in",
     "phone": "5473",
     "cabin": "Room No 416, 4th Floor AB2"
@@ -1941,6 +2355,9 @@
     "teachingRating": 4.73,
     "attendanceRating": 4.73,
     "correctionRating": 5.0,
+    "numTeachingRatings": 11,
+    "numAttendanceRatings": 11,
+    "numCorrectionRatings": 10,
     "email": "manimaran.s@vitap.ac.in",
     "phone": null,
     "cabin": "CB 203-F"
@@ -1955,6 +2372,9 @@
     "teachingRating": 3.36,
     "attendanceRating": 3.64,
     "correctionRating": 3.27,
+    "numTeachingRatings": 11,
+    "numAttendanceRatings": 11,
+    "numCorrectionRatings": 11,
     "email": "suhail.a@vitap.ac.in",
     "phone": null,
     "cabin": " 425-A, AB-1"
@@ -1969,6 +2389,9 @@
     "teachingRating": 5.0,
     "attendanceRating": 4.83,
     "correctionRating": 5.0,
+    "numTeachingRatings": 6,
+    "numAttendanceRatings": 6,
+    "numCorrectionRatings": 6,
     "email": "avin.tiwari@vitap.ac.in",
     "phone": "5827",
     "cabin": "415 C, AB-2"
@@ -1983,6 +2406,9 @@
     "teachingRating": 3.7,
     "attendanceRating": 3.82,
     "correctionRating": 3.31,
+    "numTeachingRatings": 33,
+    "numAttendanceRatings": 33,
+    "numCorrectionRatings": 32,
     "email": "asish.d@vitap.ac.in",
     "phone": "5361",
     "cabin": "329-C, AB-1"
@@ -1997,6 +2423,9 @@
     "teachingRating": 2.14,
     "attendanceRating": 2.09,
     "correctionRating": 2.0,
+    "numTeachingRatings": 21,
+    "numAttendanceRatings": 22,
+    "numCorrectionRatings": 23,
     "email": "balasingh.v@vitap.ac.in",
     "phone": "5984",
     "cabin": "G07 B, Mahathma Gandhi Central Block"
@@ -2011,6 +2440,9 @@
     "teachingRating": 3.09,
     "attendanceRating": 2.91,
     "correctionRating": 2.82,
+    "numTeachingRatings": 11,
+    "numAttendanceRatings": 11,
+    "numCorrectionRatings": 11,
     "email": "riti.naik@vitap.ac.in",
     "phone": null,
     "cabin": "415-A, AB-2"
@@ -2025,6 +2457,9 @@
     "teachingRating": 4.75,
     "attendanceRating": 5.0,
     "correctionRating": 4.75,
+    "numTeachingRatings": 8,
+    "numAttendanceRatings": 8,
+    "numCorrectionRatings": 8,
     "email": "kirtika.s@vitap.ac.in",
     "phone": "5920",
     "cabin": "Room No. 203 F, Central Block"
@@ -2039,6 +2474,9 @@
     "teachingRating": 3.8,
     "attendanceRating": 4.0,
     "correctionRating": 3.4,
+    "numTeachingRatings": 5,
+    "numAttendanceRatings": 5,
+    "numCorrectionRatings": 5,
     "email": "malavika.g@vitap.ac.in",
     "phone": null,
     "cabin": "328-G, AB-1"
@@ -2053,6 +2491,9 @@
     "teachingRating": 5.0,
     "attendanceRating": 3.67,
     "correctionRating": 5.0,
+    "numTeachingRatings": 3,
+    "numAttendanceRatings": 3,
+    "numCorrectionRatings": 3,
     "email": "kshama.p@vitap.ac.in",
     "phone": "5885",
     "cabin": "203 G, CB"
@@ -2067,6 +2508,9 @@
     "teachingRating": 5.06,
     "attendanceRating": 5.09,
     "correctionRating": 5.06,
+    "numTeachingRatings": 32,
+    "numAttendanceRatings": 33,
+    "numCorrectionRatings": 32,
     "email": "neethup.antony@vitap.ac.in",
     "phone": null,
     "cabin": "G04-G Central Block"
@@ -2081,6 +2525,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "mudiganti.jc@vitap.ac.in",
     "phone": "5157",
     "cabin": "AB1-157"
@@ -2095,6 +2542,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "phani.m@vitap.ac.in",
     "phone": "5568",
     "cabin": "AB 2 - G23-C"
@@ -2109,6 +2559,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "deepak.ch@vitap.ac.in",
     "phone": "5586",
     "cabin": "AB1-229C"
@@ -2123,6 +2576,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "sunny.dayal@vitap.ac.in",
     "phone": "5462",
     "cabin": "214, AB-1"
@@ -2137,6 +2593,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "selvakumar.k@vitap.ac.in",
     "phone": "5696",
     "cabin": "125G, AB2"
@@ -2151,6 +2610,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "rajasekhar.venkata@vitap.ac.in",
     "phone": "5453",
     "cabin": "AB1-424C"
@@ -2165,6 +2627,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": null,
     "phone": null,
     "cabin": null
@@ -2179,6 +2644,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "kishan.kondaveeti@vitap.ac.in",
     "phone": "5341",
     "cabin": "326-A, AB-1"
@@ -2193,6 +2661,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": null,
     "phone": null,
     "cabin": null
@@ -2207,6 +2678,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "suresh.d@vitap.ac.in",
     "phone": null,
     "cabin": "418L CB"
@@ -2221,6 +2695,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "ravindra.v@vitap.ac.in",
     "phone": "5145",
     "cabin": "145, AB-1"
@@ -2235,6 +2712,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "sameeulla.k@vitap.ac.in",
     "phone": "5368",
     "cabin": "AB1-329A"
@@ -2249,6 +2729,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "john.darsy@vitap.ac.in",
     "phone": "5444",
     "cabin": "AB1-G30"
@@ -2263,6 +2746,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": null,
     "phone": null,
     "cabin": null
@@ -2277,6 +2763,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "ravikumar.bandaru@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -2291,6 +2780,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "purnachand.n@vitap.ac.in",
     "phone": "5160",
     "cabin": "AB1-160"
@@ -2305,6 +2797,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "kalyanchakravarthi.m@vitap.ac.in",
     "phone": "5156",
     "cabin": "AB1-156"
@@ -2319,6 +2814,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "sudhakar.matle@vitap.ac.in",
     "phone": null,
     "cabin": "G23B, AB2"
@@ -2333,6 +2831,9 @@
     "teachingRating": 2.31,
     "attendanceRating": 2.44,
     "correctionRating": 2.94,
+    "numTeachingRatings": 16,
+    "numAttendanceRatings": 16,
+    "numCorrectionRatings": 16,
     "email": "sivakumar.reddy@vitap.ac.in",
     "phone": "5908",
     "cabin": "G05-E, CB"
@@ -2347,6 +2848,9 @@
     "teachingRating": 3.77,
     "attendanceRating": 3.03,
     "correctionRating": 2.85,
+    "numTeachingRatings": 35,
+    "numAttendanceRatings": 34,
+    "numCorrectionRatings": 34,
     "email": "bibhabbandhu.m@vitap.ac.in",
     "phone": "5878",
     "cabin": "Central Block, 205F"
@@ -2361,6 +2865,9 @@
     "teachingRating": 3.78,
     "attendanceRating": 4.34,
     "correctionRating": 2.89,
+    "numTeachingRatings": 36,
+    "numAttendanceRatings": 35,
+    "numCorrectionRatings": 36,
     "email": "chiranjeev.s@vitap.ac.in",
     "phone": null,
     "cabin": "CB 418E"
@@ -2375,6 +2882,9 @@
     "teachingRating": 2.89,
     "attendanceRating": 3.88,
     "correctionRating": 3.69,
+    "numTeachingRatings": 37,
+    "numAttendanceRatings": 34,
+    "numCorrectionRatings": 35,
     "email": "bharathi.vc@vitap.ac.in",
     "phone": "5304",
     "cabin": "329-J, AB-1"
@@ -2389,6 +2899,9 @@
     "teachingRating": 4.0,
     "attendanceRating": 2.67,
     "correctionRating": 2.78,
+    "numTeachingRatings": 9,
+    "numAttendanceRatings": 9,
+    "numCorrectionRatings": 9,
     "email": "benarji.chakka@vitap.ac.in",
     "phone": null,
     "cabin": "Room No 416, 4th Floor AB2"
@@ -2403,6 +2916,9 @@
     "teachingRating": 2.29,
     "attendanceRating": 2.65,
     "correctionRating": 2.52,
+    "numTeachingRatings": 45,
+    "numAttendanceRatings": 46,
+    "numCorrectionRatings": 48,
     "email": null,
     "phone": null,
     "cabin": null
@@ -2417,6 +2933,9 @@
     "teachingRating": 4.24,
     "attendanceRating": 4.45,
     "correctionRating": 4.36,
+    "numTeachingRatings": 54,
+    "numAttendanceRatings": 53,
+    "numCorrectionRatings": 53,
     "email": "chandan.nayak@vitap.ac.in",
     "phone": "5416",
     "cabin": "AB1-425-E"
@@ -2431,6 +2950,9 @@
     "teachingRating": 3.0,
     "attendanceRating": 2.5,
     "correctionRating": 2.55,
+    "numTeachingRatings": 21,
+    "numAttendanceRatings": 20,
+    "numCorrectionRatings": 20,
     "email": "gokulnath.b@vitap.ac.in",
     "phone": null,
     "cabin": "CB 327 F "
@@ -2445,6 +2967,9 @@
     "teachingRating": 2.51,
     "attendanceRating": 2.11,
     "correctionRating": 2.42,
+    "numTeachingRatings": 37,
+    "numAttendanceRatings": 36,
+    "numCorrectionRatings": 36,
     "email": "lokesh.bommareddy@vitap.ac.in",
     "phone": "5890",
     "cabin": "227-E, CB"
@@ -2459,6 +2984,9 @@
     "teachingRating": 3.87,
     "attendanceRating": 4.23,
     "correctionRating": 4.27,
+    "numTeachingRatings": 31,
+    "numAttendanceRatings": 31,
+    "numCorrectionRatings": 33,
     "email": "chandan.pandey@vitap.ac.in",
     "phone": "5865",
     "cabin": "AB2-320E"
@@ -2473,6 +3001,9 @@
     "teachingRating": 4.56,
     "attendanceRating": 3.84,
     "correctionRating": 4.31,
+    "numTeachingRatings": 18,
+    "numAttendanceRatings": 19,
+    "numCorrectionRatings": 16,
     "email": "chandan.vishwas@vitap.ac.in",
     "phone": "5801",
     "cabin": "307 B, AB-2"
@@ -2487,6 +3018,9 @@
     "teachingRating": 3.54,
     "attendanceRating": 4.46,
     "correctionRating": 3.11,
+    "numTeachingRatings": 13,
+    "numAttendanceRatings": 13,
+    "numCorrectionRatings": 9,
     "email": null,
     "phone": null,
     "cabin": null
@@ -2501,6 +3035,9 @@
     "teachingRating": 3.1,
     "attendanceRating": 2.63,
     "correctionRating": 2.87,
+    "numTeachingRatings": 31,
+    "numAttendanceRatings": 30,
+    "numCorrectionRatings": 30,
     "email": "saichandana.bolem@vitap.ac.in",
     "phone": "5991",
     "cabin": null
@@ -2515,6 +3052,9 @@
     "teachingRating": 1.5,
     "attendanceRating": 1.5,
     "correctionRating": 1.27,
+    "numTeachingRatings": 10,
+    "numAttendanceRatings": 10,
+    "numCorrectionRatings": 11,
     "email": "pradeep.ch@vitap.ac.in",
     "phone": "5162",
     "cabin": "AB-1 326"
@@ -2529,6 +3069,9 @@
     "teachingRating": 5.0,
     "attendanceRating": 4.75,
     "correctionRating": 4.25,
+    "numTeachingRatings": 12,
+    "numAttendanceRatings": 12,
+    "numCorrectionRatings": 12,
     "email": "chandu.ds@vitap.ac.in",
     "phone": "5105",
     "cabin": "AB1-151"
@@ -2543,6 +3086,9 @@
     "teachingRating": 3.09,
     "attendanceRating": 3.18,
     "correctionRating": 3.24,
+    "numTeachingRatings": 22,
+    "numAttendanceRatings": 22,
+    "numCorrectionRatings": 21,
     "email": "marychandini.y@vit.ac.in",
     "phone": null,
     "cabin": "202 F , AB2"
@@ -2557,6 +3103,9 @@
     "teachingRating": 2.67,
     "attendanceRating": 3.57,
     "correctionRating": 3.38,
+    "numTeachingRatings": 21,
+    "numAttendanceRatings": 21,
+    "numCorrectionRatings": 21,
     "email": "bappadittya.roy@vitap.ac.in",
     "phone": "5328",
     "cabin": "AB1-313E"
@@ -2571,6 +3120,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "girishkumar.m@vitap.ac.in",
     "phone": null,
     "cabin": "310-F, AB1"
@@ -2585,6 +3137,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "kothandaraman.d@vitap.ac.in",
     "phone": null,
     "cabin": "CB 418k"
@@ -2599,6 +3154,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "bharathbhushan.s@vitap.ac.in",
     "phone": null,
     "cabin": "CB-415 F"
@@ -2613,6 +3171,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "premkumar.ch@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -2627,6 +3188,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "somasekhar.g@vitap.ac.in",
     "phone": "5852",
     "cabin": "425-H, AB-1"
@@ -2641,6 +3205,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "rajesh.k@vitap.ac.in",
     "phone": null,
     "cabin": "AB2-225-I"
@@ -2655,6 +3222,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "abdulkalam.a@vitap.ac.in",
     "phone": "5163",
     "cabin": "AB1-214"
@@ -2669,6 +3239,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "karuna.y@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -2683,6 +3256,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "naresh.ch@vitap.ac.in",
     "phone": null,
     "cabin": "AB2-125-N"
@@ -2697,6 +3273,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": null,
     "phone": null,
     "cabin": null
@@ -2711,6 +3290,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "sivaramakrishna.pillutla@vitap.ac.in",
     "phone": "5836",
     "cabin": "CB-128-C"
@@ -2725,6 +3307,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "mohan.allam@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -2739,6 +3324,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "yellareswararao.k@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -2753,6 +3341,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "anjali.y@vitap.ac.in",
     "phone": null,
     "cabin": "415 H, AB-2"
@@ -2767,6 +3358,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "santhadevi.d@vitap.ac.in",
     "phone": "5602",
     "cabin": "CB 418- I"
@@ -2781,6 +3375,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "vasavi.b@vitap.ac.in",
     "phone": "5457",
     "cabin": "160, Academic Block-1"
@@ -2795,6 +3392,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "sanjeev.dwivedi@vitap.ac",
     "phone": "5130",
     "cabin": "408-B, CB"
@@ -2809,6 +3409,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "deepanramkumar.p@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -2823,6 +3426,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "hajarathaiah.k@vitap.ac.in",
     "phone": null,
     "cabin": "418-F, CB"
@@ -2837,6 +3443,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "helensharmila.a@vitap.ac.in",
     "phone": null,
     "cabin": "CB 408 D"
@@ -2851,6 +3460,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "sudheer.d@vitap.ac.in",
     "phone": "5361",
     "cabin": "CB-205C"
@@ -2865,6 +3477,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": null,
     "phone": "5894",
     "cabin": null
@@ -2879,6 +3494,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "pokuri.srinivasarao@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -2893,6 +3511,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "prabhakar.n@vitap.ac.in",
     "phone": null,
     "cabin": "425 I , AB-1"
@@ -2907,6 +3528,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "abdulraffie.naik@vitap.ac.in",
     "phone": null,
     "cabin": "225 I, AB -2"
@@ -2921,6 +3545,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "rajesh.chilukamari@vitap.ac.in",
     "phone": null,
     "cabin": "204 E, CB"
@@ -2935,6 +3562,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "bharathkumar.t@vitap.ac.in",
     "phone": null,
     "cabin": "CB-426-D"
@@ -2949,6 +3579,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "kalyani.s@vitap.ac.in",
     "phone": null,
     "cabin": "408H Central Block"
@@ -2963,6 +3596,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "priyanka.singh@vitap.ac.in",
     "phone": null,
     "cabin": "407 B, CB"
@@ -2977,6 +3613,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": null,
     "phone": null,
     "cabin": null
@@ -2991,6 +3630,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "ramesh.a@vitap.ac.in",
     "phone": null,
     "cabin": "327-I, CB"
@@ -3005,6 +3647,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "kailashchandra.mishra@vitap.ac.in",
     "phone": null,
     "cabin": "CB 326-E"
@@ -3019,6 +3664,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "karunakar.perumandla@vitap.ac.in",
     "phone": "5857",
     "cabin": "CB 203-C"
@@ -3033,6 +3681,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "shirin.patil@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -3047,6 +3698,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "suresh.garimella@vitap.ac.in",
     "phone": null,
     "cabin": "224 (I), AB II"
@@ -3061,6 +3715,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": null,
     "phone": null,
     "cabin": null
@@ -3075,6 +3732,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "amrita.p@vitap.ac.in",
     "phone": null,
     "cabin": "124-M, AB 2"
@@ -3089,6 +3749,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "anjitha.g@vitap.ac.in",
     "phone": null,
     "cabin": "327 E- Central Block"
@@ -3103,6 +3766,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "sekharmandal.d@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -3117,6 +3783,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "nagarjuna.vasili@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -3131,6 +3800,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "navaneethakrishnan.k@vitap.ac.in",
     "phone": null,
     "cabin": "425-G, AB-1"
@@ -3145,6 +3817,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "saista.tabssum@vitap.ac.in",
     "phone": "5746",
     "cabin": "307 H, AB"
@@ -3159,6 +3834,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "aswathy.m@vitap.ac.in",
     "phone": null,
     "cabin": "201 G- Central Block"
@@ -3173,6 +3851,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "ritu.v@vitap.ac.in",
     "phone": null,
     "cabin": "418-C, Central Block"
@@ -3187,6 +3868,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": null,
     "phone": null,
     "cabin": null
@@ -3201,6 +3885,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "kashyapi.g@vitap.ac.in",
     "phone": null,
     "cabin": "AB2 224 D"
@@ -3215,6 +3902,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "siva.g@vitap.ac.in",
     "phone": "5753",
     "cabin": "225M, AB2"
@@ -3229,6 +3919,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "panduranga.k@vitap.ac.in",
     "phone": "5891",
     "cabin": "CB-227F"
@@ -3243,6 +3936,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "satyendra.chauhan@vitap.ac.in",
     "phone": null,
     "cabin": "320E- AB2"
@@ -3257,6 +3953,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "durgaorasad.k@vitap.ac.in",
     "phone": null,
     "cabin": "AB2, 124L"
@@ -3271,6 +3970,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "tanmoy.das@vitap.ac.in",
     "phone": null,
     "cabin": "224-E, AB-2"
@@ -3285,6 +3987,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "neelima.adapa@vitap.ac.in",
     "phone": "5997",
     "cabin": "G-04 F, CB"
@@ -3299,6 +4004,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "subhasis.panda@vitap.ac.in",
     "phone": null,
     "cabin": "408, CB"
@@ -3313,6 +4021,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "senthamizhselvi.a@vitap.ac.in",
     "phone": null,
     "cabin": "329-G, AB-1"
@@ -3327,6 +4038,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "rajashree.naik@vitap.ac.in",
     "phone": null,
     "cabin": "225G, AB-2"
@@ -3341,6 +4055,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": null,
     "phone": null,
     "cabin": null
@@ -3355,6 +4072,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "jabeen.yasmeen@vitap.ac.in",
     "phone": null,
     "cabin": "408- C, CB"
@@ -3369,6 +4089,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "gaurav.sonik@vitap.ac.in",
     "phone": null,
     "cabin": "AB2-225F"
@@ -3383,6 +4106,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "umermushtaq.lone@vitap.ac.in",
     "phone": null,
     "cabin": "425-B, AB-1"
@@ -3397,6 +4123,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "ankit.yadav@vitap.ac.in",
     "phone": null,
     "cabin": "408-G, CB"
@@ -3411,6 +4140,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "pragnyaparimita.ch@vitap.ac.in",
     "phone": null,
     "cabin": "408A, CB"
@@ -3425,6 +4157,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "prakash.s@vitap.ac.in",
     "phone": null,
     "cabin": "124-D, AB2"
@@ -3439,6 +4174,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "soumik.sarkar@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -3453,6 +4191,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "venkatab.chenam@vitap.ac.in",
     "phone": "5827",
     "cabin": "CB, 103-E"
@@ -3467,6 +4208,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "kanaka.himabindu@vitap.ac.in",
     "phone": "9949858838",
     "cabin": "425 A, AB-1"
@@ -3481,6 +4225,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "pemachoden.bhutia@vitap.ac.in",
     "phone": null,
     "cabin": "AB 2, 124 H"
@@ -3495,6 +4242,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "srinivas.a@vitap.ac.n",
     "phone": null,
     "cabin": "CB 229C"
@@ -3509,6 +4259,9 @@
     "teachingRating": 0.0,
     "attendanceRating": 0.0,
     "correctionRating": 0.0,
+    "numTeachingRatings": 0,
+    "numAttendanceRatings": 0,
+    "numCorrectionRatings": 0,
     "email": "faheem.mo@vitap.ac.in",
     "phone": null,
     "cabin": null
@@ -3523,6 +4276,9 @@
     "teachingRating": 4.63,
     "attendanceRating": 4.26,
     "correctionRating": 4.21,
+    "numTeachingRatings": 19,
+    "numAttendanceRatings": 19,
+    "numCorrectionRatings": 19,
     "email": "sumathi.d@vitap.ac.in",
     "phone": "5324",
     "cabin": "G-05, AB-2"
@@ -3537,6 +4293,9 @@
     "teachingRating": 4.94,
     "attendanceRating": 4.85,
     "correctionRating": 4.82,
+    "numTeachingRatings": 35,
+    "numAttendanceRatings": 34,
+    "numCorrectionRatings": 34,
     "email": "divyameena.s@vitap.ac.in",
     "phone": "5718",
     "cabin": "224-C, AB-2"
@@ -3551,6 +4310,9 @@
     "teachingRating": 4.14,
     "attendanceRating": 3.91,
     "correctionRating": 4.27,
+    "numTeachingRatings": 22,
+    "numAttendanceRatings": 22,
+    "numCorrectionRatings": 22,
     "email": "koteswararao.ch@vitap.ac.in",
     "phone": "5010",
     "cabin": "148, AB-1"
@@ -3565,6 +4327,9 @@
     "teachingRating": 3.35,
     "attendanceRating": 3.17,
     "correctionRating": 2.53,
+    "numTeachingRatings": 127,
+    "numAttendanceRatings": 127,
+    "numCorrectionRatings": 123,
     "email": "deepasikha.mishra@vitap.ac.in",
     "phone": "5170",
     "cabin": "170, AB-1"
@@ -3579,6 +4344,9 @@
     "teachingRating": 4.0,
     "attendanceRating": 3.0,
     "correctionRating": 3.33,
+    "numTeachingRatings": 9,
+    "numAttendanceRatings": 9,
+    "numCorrectionRatings": 9,
     "email": "dheeraj.kumar@vitap.ac.in",
     "phone": "5909",
     "cabin": "G-05, CB"
@@ -3593,6 +4361,9 @@
     "teachingRating": 4.67,
     "attendanceRating": 4.67,
     "correctionRating": 4.67,
+    "numTeachingRatings": 3,
+    "numAttendanceRatings": 3,
+    "numCorrectionRatings": 3,
     "email": "deepanjan.k@vitap.ac.in",
     "phone": null,
     "cabin": "224B, Academic Block II"
@@ -3607,6 +4378,9 @@
     "teachingRating": 3.43,
     "attendanceRating": 4.45,
     "correctionRating": 3.7,
+    "numTeachingRatings": 42,
+    "numAttendanceRatings": 42,
+    "numCorrectionRatings": 43,
     "email": "ajith.jubilson@vitap.ac.in",
     "phone": "5165",
     "cabin": "G-05, AB-2"
@@ -3621,6 +4395,9 @@
     "teachingRating": 4.2,
     "attendanceRating": 3.66,
     "correctionRating": 3.34,
+    "numTeachingRatings": 41,
+    "numAttendanceRatings": 41,
+    "numCorrectionRatings": 41,
     "email": "debosmita.b@vitap.ac.in",
     "phone": null,
     "cabin": "CB 418 B"
@@ -3635,6 +4412,9 @@
     "teachingRating": 2.97,
     "attendanceRating": 2.36,
     "correctionRating": 1.88,
+    "numTeachingRatings": 31,
+    "numAttendanceRatings": 33,
+    "numCorrectionRatings": 33,
     "email": null,
     "phone": null,
     "cabin": null
@@ -3649,6 +4429,9 @@
     "teachingRating": 4.0,
     "attendanceRating": 4.12,
     "correctionRating": 4.31,
+    "numTeachingRatings": 17,
+    "numAttendanceRatings": 16,
+    "numCorrectionRatings": 16,
     "email": "venkatalakshmi.d@vitap.ac.in",
     "phone": "5413",
     "cabin": "424-J, AB-1"
@@ -3663,6 +4446,9 @@
     "teachingRating": 5.04,
     "attendanceRating": 4.81,
     "correctionRating": 4.69,
+    "numTeachingRatings": 48,
+    "numAttendanceRatings": 48,
+    "numCorrectionRatings": 48,
     "email": "deepjoy.katuwal@vitap.ac.in",
     "phone": "5714",
     "cabin": "202G, AB-2"
@@ -3677,6 +4463,9 @@
     "teachingRating": 4.05,
     "attendanceRating": 3.81,
     "correctionRating": 3.45,
+    "numTeachingRatings": 21,
+    "numAttendanceRatings": 21,
+    "numCorrectionRatings": 22,
     "email": "eswaraiah.rayachoti@vitap.ac.in",
     "phone": "5117",
     "cabin": "127, AB-1"
@@ -3691,6 +4480,9 @@
     "teachingRating": 2.07,
     "attendanceRating": 2.21,
     "correctionRating": 1.79,
+    "numTeachingRatings": 14,
+    "numAttendanceRatings": 14,
+    "numCorrectionRatings": 14,
     "email": "mohanty.dk@vitap.ac.in",
     "phone": "5147",
     "cabin": "147, AB-1"
@@ -3705,6 +4497,9 @@
     "teachingRating": 4.73,
     "attendanceRating": 3.73,
     "correctionRating": 4.09,
+    "numTeachingRatings": 11,
+    "numAttendanceRatings": 11,
+    "numCorrectionRatings": 11,
     "email": null,
     "phone": null,
     "cabin": null
@@ -3719,6 +4514,9 @@
     "teachingRating": 4.55,
     "attendanceRating": 4.4,
     "correctionRating": 4.53,
+    "numTeachingRatings": 31,
+    "numAttendanceRatings": 30,
+    "numCorrectionRatings": 30,
     "email": "deepthi.g@vitap.ac.in",
     "phone": null,
     "cabin": "327-C, CB"
@@ -3733,6 +4531,9 @@
     "teachingRating": 3.06,
     "attendanceRating": 3.33,
     "correctionRating": 3.27,
+    "numTeachingRatings": 16,
+    "numAttendanceRatings": 15,
+    "numCorrectionRatings": 15,
     "email": "d.khasimvali@vitap.ac.in",
     "phone": "5419",
     "cabin": "424-B, AB-1"
@@ -3747,6 +4548,9 @@
     "teachingRating": 2.74,
     "attendanceRating": 2.83,
     "correctionRating": 2.58,
+    "numTeachingRatings": 31,
+    "numAttendanceRatings": 29,
+    "numCorrectionRatings": 31,
     "email": null,
     "phone": null,
     "cabin": null
@@ -3761,6 +4565,9 @@
     "teachingRating": 2.54,
     "attendanceRating": 2.68,
     "correctionRating": 2.4,
+    "numTeachingRatings": 46,
+    "numAttendanceRatings": 47,
+    "numCorrectionRatings": 47,
     "email": "debanjali.sarkar@vitap.ac.in",
     "phone": null,
     "cabin": "CB-G04-D"
@@ -3775,6 +4582,9 @@
     "teachingRating": 3.07,
     "attendanceRating": 2.69,
     "correctionRating": 3.29,
+    "numTeachingRatings": 15,
+    "numAttendanceRatings": 16,
+    "numCorrectionRatings": 14,
     "email": "ganesh.kotagiri@vitap.ac.in",
     "phone": "5786",
     "cabin": "205-D, CB"
@@ -3789,6 +4599,9 @@
     "teachingRating": 3.68,
     "attendanceRating": 3.11,
     "correctionRating": 3.79,
+    "numTeachingRatings": 19,
+    "numAttendanceRatings": 19,
+    "numCorrectionRatings": 19,
     "email": "faizan.danish@vitap.ac.in",
     "phone": "5809",
     "cabin": null
@@ -3803,6 +4616,9 @@
     "teachingRating": 3.97,
     "attendanceRating": 5.03,
     "correctionRating": 4.5,
+    "numTeachingRatings": 39,
+    "numAttendanceRatings": 39,
+    "numCorrectionRatings": 40,
     "email": "bharathreddy.gudibandi@vitap.ac.in",
     "phone": "5870",
     "cabin": "CB-204-G"
@@ -3817,6 +4633,9 @@
     "teachingRating": 4.27,
     "attendanceRating": 4.73,
     "correctionRating": 4.78,
+    "numTeachingRatings": 22,
+    "numAttendanceRatings": 22,
+    "numCorrectionRatings": 23,
     "email": "gouranga.mandal@vitap.ac.in",
     "phone": "5317",
     "cabin": "313-F, AB-1"
@@ -3831,6 +4650,9 @@
     "teachingRating": 1.5,
     "attendanceRating": 1.43,
     "correctionRating": 1.43,
+    "numTeachingRatings": 8,
+    "numAttendanceRatings": 7,
+    "numCorrectionRatings": 7,
     "email": "ilakkiya.l@vitap.ac.in",
     "phone": null,
     "cabin": "Faculty Area- 103-A CB"
@@ -3845,6 +4667,9 @@
     "teachingRating": 4.62,
     "attendanceRating": 4.5,
     "correctionRating": 4.61,
+    "numTeachingRatings": 40,
+    "numAttendanceRatings": 40,
+    "numCorrectionRatings": 41,
     "email": "muneeswari.g@vitap.ac.in",
     "phone": null,
     "cabin": "205-E, CB"
@@ -3859,6 +4684,9 @@
     "teachingRating": 2.19,
     "attendanceRating": 3.88,
     "correctionRating": 3.67,
+    "numTeachingRatings": 16,
+    "numAttendanceRatings": 17,
+    "numCorrectionRatings": 18,
     "email": "santhosh.gdv@vitap.ac.in",
     "phone": null,
     "cabin": "AB-1, 168"
@@ -3873,6 +4701,9 @@
     "teachingRating": 1.59,
     "attendanceRating": 3.27,
     "correctionRating": 1.68,
+    "numTeachingRatings": 22,
+    "numAttendanceRatings": 22,
+    "numCorrectionRatings": 22,
     "email": "harikiran.j@vitap.ac.in",
     "phone": "5166",
     "cabin": null
@@ -3887,6 +4718,9 @@
     "teachingRating": 3.3,
     "attendanceRating": 2.2,
     "correctionRating": 2.64,
+    "numTeachingRatings": 10,
+    "numAttendanceRatings": 10,
+    "numCorrectionRatings": 11,
     "email": "seetha.hari@vitap.ac.in",
     "phone": null,
     "cabin": "CB;222"
@@ -3901,6 +4735,9 @@
     "teachingRating": 3.14,
     "attendanceRating": 3.5,
     "correctionRating": 3.33,
+    "numTeachingRatings": 7,
+    "numAttendanceRatings": 6,
+    "numCorrectionRatings": 6,
     "email": "jagadeesh.ms@vitap.ac.in",
     "phone": "5821",
     "cabin": "115-E, CB"
@@ -3915,6 +4752,9 @@
     "teachingRating": 3.66,
     "attendanceRating": 4.45,
     "correctionRating": 4.17,
+    "numTeachingRatings": 29,
+    "numAttendanceRatings": 29,
+    "numCorrectionRatings": 30,
     "email": "francis@vitap.ac.in",
     "phone": "5606",
     "cabin": "124K, AB2"
@@ -3929,6 +4769,9 @@
     "teachingRating": 2.25,
     "attendanceRating": 3.55,
     "correctionRating": 3.3,
+    "numTeachingRatings": 20,
+    "numAttendanceRatings": 20,
+    "numCorrectionRatings": 20,
     "email": "sudagar.jothi@vitap.ac.in",
     "phone": "5153",
     "cabin": "214, AB1"
@@ -3943,6 +4786,9 @@
     "teachingRating": 2.86,
     "attendanceRating": 2.38,
     "correctionRating": 2.43,
+    "numTeachingRatings": 29,
+    "numAttendanceRatings": 29,
+    "numCorrectionRatings": 28,
     "email": "hanumantharao.bitra@vitap.ac.in",
     "phone": null,
     "cabin": "AB-1, 310A"
@@ -3957,6 +4803,9 @@
     "teachingRating": 4.4,
     "attendanceRating": 4.1,
     "correctionRating": 3.92,
+    "numTeachingRatings": 40,
+    "numAttendanceRatings": 39,
+    "numCorrectionRatings": 39,
     "email": "gurumurthy.k@vitap.ac.in",
     "phone": "5707",
     "cabin": "AB2-202A"
@@ -3971,6 +4820,9 @@
     "teachingRating": 3.45,
     "attendanceRating": 3.55,
     "correctionRating": 3.64,
+    "numTeachingRatings": 11,
+    "numAttendanceRatings": 11,
+    "numCorrectionRatings": 11,
     "email": "hussain.syed@vitap.ac.in",
     "phone": "5167",
     "cabin": "167, AB-1"
@@ -3985,6 +4837,9 @@
     "teachingRating": 4.62,
     "attendanceRating": 4.81,
     "correctionRating": 4.75,
+    "numTeachingRatings": 16,
+    "numAttendanceRatings": 16,
+    "numCorrectionRatings": 16,
     "email": "ganesh.reddy@vitap.ac.in",
     "phone": "5323",
     "cabin": "221, CB"
@@ -3999,6 +4854,9 @@
     "teachingRating": 2.85,
     "attendanceRating": 2.18,
     "correctionRating": 2.27,
+    "numTeachingRatings": 33,
+    "numAttendanceRatings": 33,
+    "numCorrectionRatings": 33,
     "email": "gokulnath@vitap.ac.in",
     "phone": null,
     "cabin": "159, AB1"
@@ -4013,6 +4871,9 @@
     "teachingRating": 3.29,
     "attendanceRating": 3.35,
     "correctionRating": 3.21,
+    "numTeachingRatings": 24,
+    "numAttendanceRatings": 23,
+    "numCorrectionRatings": 24,
     "email": "ramakanth.illa@vitap.ac.in",
     "phone": "5859",
     "cabin": "204-A, CB"
@@ -4027,6 +4888,9 @@
     "teachingRating": 3.04,
     "attendanceRating": 2.88,
     "correctionRating": 3.0,
+    "numTeachingRatings": 26,
+    "numAttendanceRatings": 24,
+    "numCorrectionRatings": 24,
     "email": "hemanth.reddy@vitap.ac.in",
     "phone": "5116",
     "cabin": "163, AB-1"
@@ -4041,6 +4905,9 @@
     "teachingRating": 4.59,
     "attendanceRating": 4.77,
     "correctionRating": 4.62,
+    "numTeachingRatings": 29,
+    "numAttendanceRatings": 30,
+    "numCorrectionRatings": 29,
     "email": "senthil.k@vitap.ac.in",
     "phone": "5818",
     "cabin": "CB-115B"
@@ -4055,6 +4922,9 @@
     "teachingRating": 4.04,
     "attendanceRating": 4.14,
     "correctionRating": 3.73,
+    "numTeachingRatings": 57,
+    "numAttendanceRatings": 56,
+    "numCorrectionRatings": 56,
     "email": "kamalesh.kumar@vitap.ac.in",
     "phone": "5833",
     "cabin": "128-CB"
@@ -4069,6 +4939,9 @@
     "teachingRating": 4.14,
     "attendanceRating": 4.57,
     "correctionRating": 4.0,
+    "numTeachingRatings": 7,
+    "numAttendanceRatings": 7,
+    "numCorrectionRatings": 7,
     "email": "joseph.a@vitap.ac.in",
     "phone": "5370",
     "cabin": "327-H CB"
@@ -4083,6 +4956,9 @@
     "teachingRating": 3.43,
     "attendanceRating": 3.32,
     "correctionRating": 3.54,
+    "numTeachingRatings": 37,
+    "numAttendanceRatings": 38,
+    "numCorrectionRatings": 37,
     "email": "kaushik.bhuyan@vitap.ac.in",
     "phone": "5472",
     "cabin": "425 A, AB-1"
@@ -4097,6 +4973,9 @@
     "teachingRating": 4.33,
     "attendanceRating": 4.0,
     "correctionRating": 4.19,
+    "numTeachingRatings": 18,
+    "numAttendanceRatings": 18,
+    "numCorrectionRatings": 16,
     "email": "kumar.jayendra@vitap.ac.in",
     "phone": "5347",
     "cabin": "AB1-422F"
@@ -4111,6 +4990,9 @@
     "teachingRating": 4.53,
     "attendanceRating": 4.26,
     "correctionRating": 4.32,
+    "numTeachingRatings": 62,
+    "numAttendanceRatings": 62,
+    "numCorrectionRatings": 62,
     "email": "vikas.vishnu@vitap.ac.in",
     "phone": "5303",
     "cabin": "AB1-329H"
@@ -4125,6 +5007,9 @@
     "teachingRating": 2.45,
     "attendanceRating": 3.3,
     "correctionRating": 2.43,
+    "numTeachingRatings": 11,
+    "numAttendanceRatings": 10,
+    "numCorrectionRatings": 7,
     "email": "kalapraveen.b@vitap.ac.in",
     "phone": null,
     "cabin": "AB-1, 143"
@@ -4139,6 +5024,9 @@
     "teachingRating": 2.07,
     "attendanceRating": 2.95,
     "correctionRating": 1.9,
+    "numTeachingRatings": 60,
+    "numAttendanceRatings": 60,
+    "numCorrectionRatings": 60,
     "email": "karthika.n@vitap.ac.in",
     "phone": "5726",
     "cabin": "105, AB-1"
@@ -4153,6 +5041,9 @@
     "teachingRating": 4.31,
     "attendanceRating": 4.06,
     "correctionRating": 4.5,
+    "numTeachingRatings": 16,
+    "numAttendanceRatings": 16,
+    "numCorrectionRatings": 16,
     "email": "Kareemulla.shaik@vitap.ac.in",
     "phone": "5350",
     "cabin": "328-B, AB-1"
@@ -4167,6 +5058,9 @@
     "teachingRating": 2.35,
     "attendanceRating": 3.08,
     "correctionRating": 3.11,
+    "numTeachingRatings": 26,
+    "numAttendanceRatings": 26,
+    "numCorrectionRatings": 27,
     "email": "kingshuk.sarkar@vitap.ac.in",
     "phone": "5806",
     "cabin": "AB2, 325E"
@@ -4181,6 +5075,9 @@
     "teachingRating": 4.64,
     "attendanceRating": 4.16,
     "correctionRating": 3.76,
+    "numTeachingRatings": 25,
+    "numAttendanceRatings": 25,
+    "numCorrectionRatings": 25,
     "email": "srinivas.kankanala@vitap.ac.in",
     "phone": null,
     "cabin": "CB-326-D"
@@ -4195,6 +5092,9 @@
     "teachingRating": 4.08,
     "attendanceRating": 4.75,
     "correctionRating": 4.58,
+    "numTeachingRatings": 12,
+    "numAttendanceRatings": 12,
+    "numCorrectionRatings": 12,
     "email": "ka.asraarahmed@vitap.ac.in",
     "phone": null,
     "cabin": "410, AB-1"
@@ -4209,6 +5109,9 @@
     "teachingRating": 1.9,
     "attendanceRating": 2.65,
     "correctionRating": 2.68,
+    "numTeachingRatings": 20,
+    "numAttendanceRatings": 20,
+    "numCorrectionRatings": 19,
     "email": "kashif.beg@vitap.ac.in",
     "phone": null,
     "cabin": "425-D, AB-1"
@@ -4223,6 +5126,9 @@
     "teachingRating": 4.63,
     "attendanceRating": 3.84,
     "correctionRating": 3.67,
+    "numTeachingRatings": 57,
+    "numAttendanceRatings": 57,
+    "numCorrectionRatings": 57,
     "email": "karishma.b@vitap.ac.in",
     "phone": "5613",
     "cabin": "124I - AB-2"
@@ -4237,6 +5143,9 @@
     "teachingRating": 3.29,
     "attendanceRating": 2.29,
     "correctionRating": 3.29,
+    "numTeachingRatings": 7,
+    "numAttendanceRatings": 7,
+    "numCorrectionRatings": 7,
     "email": "syed.khasim@vitap.ac.in",
     "phone": "5962",
     "cabin": "164, AB-1"
@@ -4251,6 +5160,9 @@
     "teachingRating": 2.86,
     "attendanceRating": 2.86,
     "correctionRating": 2.95,
+    "numTeachingRatings": 21,
+    "numAttendanceRatings": 21,
+    "numCorrectionRatings": 21,
     "email": "krishnasamy@vitap.ac.in",
     "phone": null,
     "cabin": "AB1-424-G"
@@ -4265,6 +5177,9 @@
     "teachingRating": 4.5,
     "attendanceRating": 4.0,
     "correctionRating": 3.17,
+    "numTeachingRatings": 12,
+    "numAttendanceRatings": 12,
+    "numCorrectionRatings": 12,
     "email": "kumar.debasis@vitap.ac.in",
     "phone": "5864",
     "cabin": "320-D, AB-2"
@@ -4279,6 +5194,9 @@
     "teachingRating": 3.77,
     "attendanceRating": 4.47,
     "correctionRating": 3.88,
+    "numTeachingRatings": 40,
+    "numAttendanceRatings": 40,
+    "numCorrectionRatings": 40,
     "email": "lakhan.sharma@vitap.ac.in",
     "phone": "5154",
     "cabin": "AB1-154"
@@ -4293,6 +5211,9 @@
     "teachingRating": 2.78,
     "attendanceRating": 3.88,
     "correctionRating": 3.38,
+    "numTeachingRatings": 9,
+    "numAttendanceRatings": 8,
+    "numCorrectionRatings": 8,
     "email": "kishor.e@vitap.ac.in",
     "phone": null,
     "cabin": "326-C, AB-1"
@@ -4307,6 +5228,9 @@
     "teachingRating": 3.52,
     "attendanceRating": 2.52,
     "correctionRating": 3.0,
+    "numTeachingRatings": 25,
+    "numAttendanceRatings": 25,
+    "numCorrectionRatings": 25,
     "email": "azees.m@vitap.ac.in",
     "phone": "5872",
     "cabin": "204-F, CB"
@@ -4321,6 +5245,9 @@
     "teachingRating": 2.81,
     "attendanceRating": 3.16,
     "correctionRating": 2.77,
+    "numTeachingRatings": 31,
+    "numAttendanceRatings": 31,
+    "numCorrectionRatings": 31,
     "email": null,
     "phone": null,
     "cabin": null
@@ -4335,6 +5262,9 @@
     "teachingRating": 3.78,
     "attendanceRating": 4.23,
     "correctionRating": 4.32,
+    "numTeachingRatings": 23,
+    "numAttendanceRatings": 22,
+    "numCorrectionRatings": 22,
     "email": "mmv.chalapthi@vitap.ac.in",
     "phone": "5314",
     "cabin": "310-D, AB-1"
@@ -4349,6 +5279,9 @@
     "teachingRating": 4.1,
     "attendanceRating": 4.05,
     "correctionRating": 3.8,
+    "numTeachingRatings": 20,
+    "numAttendanceRatings": 20,
+    "numCorrectionRatings": 20,
     "email": "ganesh.kotnana@vitap.ac.in",
     "phone": "5904",
     "cabin": "G05-G, Central Block"
@@ -4363,6 +5296,9 @@
     "teachingRating": 4.48,
     "attendanceRating": 4.42,
     "correctionRating": 4.17,
+    "numTeachingRatings": 23,
+    "numAttendanceRatings": 24,
+    "numCorrectionRatings": 23,
     "email": "lalitha.p@vitap.ac.in",
     "phone": "5127",
     "cabin": "225-G, AB-2"
@@ -4377,6 +5313,9 @@
     "teachingRating": 2.44,
     "attendanceRating": 2.93,
     "correctionRating": 2.39,
+    "numTeachingRatings": 27,
+    "numAttendanceRatings": 28,
+    "numCorrectionRatings": 28,
     "email": "lisna.pc@vitap.ac.in",
     "phone": "5752",
     "cabin": "AB2, 225, L"
@@ -4391,6 +5330,9 @@
     "teachingRating": 2.94,
     "attendanceRating": 3.84,
     "correctionRating": 3.66,
+    "numTeachingRatings": 32,
+    "numAttendanceRatings": 32,
+    "numCorrectionRatings": 32,
     "email": "muneeswaran.m@vitap.ac.in",
     "phone": "5840",
     "cabin": " CB-128-G"
@@ -4405,6 +5347,9 @@
     "teachingRating": 1.91,
     "attendanceRating": 2.73,
     "correctionRating": 2.8,
+    "numTeachingRatings": 11,
+    "numAttendanceRatings": 11,
+    "numCorrectionRatings": 10,
     "email": "rajesh.kolluri@vitap.ac.in",
     "phone": "5886",
     "cabin": "227-B, CB"
@@ -4419,6 +5364,9 @@
     "teachingRating": 2.97,
     "attendanceRating": 2.3,
     "correctionRating": 2.61,
+    "numTeachingRatings": 34,
+    "numAttendanceRatings": 33,
+    "numCorrectionRatings": 33,
     "email": null,
     "phone": null,
     "cabin": null
@@ -4433,6 +5381,9 @@
     "teachingRating": 4.68,
     "attendanceRating": 4.63,
     "correctionRating": 4.69,
+    "numTeachingRatings": 31,
+    "numAttendanceRatings": 30,
+    "numCorrectionRatings": 29,
     "email": "mahesh.m@vitap.ac.in",
     "phone": "5327",
     "cabin": "AB1-313E"
@@ -4447,6 +5398,9 @@
     "teachingRating": 3.84,
     "attendanceRating": 4.0,
     "correctionRating": 3.42,
+    "numTeachingRatings": 25,
+    "numAttendanceRatings": 26,
+    "numCorrectionRatings": 26,
     "email": "mahipal.reddy@vitap.ac.in",
     "phone": null,
     "cabin": "G23,AB2"
@@ -4461,6 +5415,9 @@
     "teachingRating": 2.19,
     "attendanceRating": 2.08,
     "correctionRating": 2.17,
+    "numTeachingRatings": 36,
+    "numAttendanceRatings": 36,
+    "numCorrectionRatings": 36,
     "email": "kranthi.kl@vitap.ac.in",
     "phone": null,
     "cabin": "329-A, AB-1"
@@ -4475,6 +5432,9 @@
     "teachingRating": 2.84,
     "attendanceRating": 3.01,
     "correctionRating": 2.66,
+    "numTeachingRatings": 70,
+    "numAttendanceRatings": 70,
+    "numCorrectionRatings": 70,
     "email": "mahi.thavarathu@vitap.ac.in",
     "phone": "5987",
     "cabin": "GO7 E, CB"
@@ -4489,6 +5449,9 @@
     "teachingRating": 3.81,
     "attendanceRating": 3.81,
     "correctionRating": 3.88,
+    "numTeachingRatings": 16,
+    "numAttendanceRatings": 16,
+    "numCorrectionRatings": 16,
     "email": "mohitkumar@vitap.ac.in",
     "phone": null,
     "cabin": "AB-1, 328J"
@@ -4503,6 +5466,9 @@
     "teachingRating": 3.09,
     "attendanceRating": 4.57,
     "correctionRating": 3.14,
+    "numTeachingRatings": 22,
+    "numAttendanceRatings": 21,
+    "numCorrectionRatings": 22,
     "email": "mishachandar.b@vitap.ac.in",
     "phone": "5883",
     "cabin": null
@@ -4517,6 +5483,9 @@
     "teachingRating": 2.48,
     "attendanceRating": 2.48,
     "correctionRating": 1.96,
+    "numTeachingRatings": 25,
+    "numAttendanceRatings": 25,
+    "numCorrectionRatings": 25,
     "email": "manomita.c@vitap.ac.in",
     "phone": "5721",
     "cabin": "224-G, AB-2"
@@ -4531,6 +5500,9 @@
     "teachingRating": 2.32,
     "attendanceRating": 3.05,
     "correctionRating": 3.0,
+    "numTeachingRatings": 22,
+    "numAttendanceRatings": 22,
+    "numCorrectionRatings": 22,
     "email": "manoj.m@vitap.ac.in",
     "phone": "5443",
     "cabin": "G-31, AB-1"
@@ -4545,6 +5517,9 @@
     "teachingRating": 3.23,
     "attendanceRating": 2.79,
     "correctionRating": 3.09,
+    "numTeachingRatings": 47,
+    "numAttendanceRatings": 48,
+    "numCorrectionRatings": 47,
     "email": "mksingh@vitap.ac.in",
     "phone": "5889",
     "cabin": "CB-227-C"
@@ -4559,6 +5534,9 @@
     "teachingRating": 4.31,
     "attendanceRating": 3.75,
     "correctionRating": 3.44,
+    "numTeachingRatings": 16,
+    "numAttendanceRatings": 16,
+    "numCorrectionRatings": 16,
     "email": "monali.b@vitap.ac.in",
     "phone": "5720",
     "cabin": "224-A, AB-2"
@@ -4573,6 +5551,9 @@
     "teachingRating": 3.77,
     "attendanceRating": 2.54,
     "correctionRating": 3.64,
+    "numTeachingRatings": 13,
+    "numAttendanceRatings": 13,
+    "numCorrectionRatings": 11,
     "email": "muqeet.maaz@vitap.ac.in",
     "phone": "5418",
     "cabin": "410, AB-1"
@@ -4587,6 +5568,9 @@
     "teachingRating": 4.29,
     "attendanceRating": 4.5,
     "correctionRating": 4.86,
+    "numTeachingRatings": 14,
+    "numAttendanceRatings": 14,
+    "numCorrectionRatings": 14,
     "email": "sucharitha.jackson@vitap.ac.in",
     "phone": "5854",
     "cabin": "CB-116-A"
@@ -4601,6 +5585,9 @@
     "teachingRating": 3.67,
     "attendanceRating": 5.0,
     "correctionRating": 5.0,
+    "numTeachingRatings": 3,
+    "numAttendanceRatings": 3,
+    "numCorrectionRatings": 3,
     "email": "madhusmita.m@vit.ac.in",
     "phone": "5405",
     "cabin": "425 C, AB-1"
@@ -4615,6 +5602,9 @@
     "teachingRating": 3.8,
     "attendanceRating": 4.2,
     "correctionRating": 4.0,
+    "numTeachingRatings": 5,
+    "numAttendanceRatings": 5,
+    "numCorrectionRatings": 5,
     "email": "manimaran.a@vitap.ac.in",
     "phone": "5961",
     "cabin": "AB-2 (G24-G)"
@@ -4629,6 +5619,9 @@
     "teachingRating": 4.56,
     "attendanceRating": 4.11,
     "correctionRating": 3.67,
+    "numTeachingRatings": 9,
+    "numAttendanceRatings": 9,
+    "numCorrectionRatings": 9,
     "email": "manas.pal@vitap.ac.in",
     "phone": "5190",
     "cabin": "146, AB-1"
@@ -4643,6 +5636,9 @@
     "teachingRating": 4.22,
     "attendanceRating": 3.44,
     "correctionRating": 3.12,
+    "numTeachingRatings": 27,
+    "numAttendanceRatings": 25,
+    "numCorrectionRatings": 25,
     "email": "manisha.m@vitap.ac.in",
     "phone": "5846",
     "cabin": "307F, AB-2"
@@ -4657,6 +5653,9 @@
     "teachingRating": 4.97,
     "attendanceRating": 4.9,
     "correctionRating": 4.73,
+    "numTeachingRatings": 40,
+    "numAttendanceRatings": 40,
+    "numCorrectionRatings": 41,
     "email": "mohamediqbal.m@vitap.ac.in",
     "phone": "5964",
     "cabin": "424-E, AB-1"
@@ -4671,6 +5670,9 @@
     "teachingRating": 3.86,
     "attendanceRating": 3.33,
     "correctionRating": 3.0,
+    "numTeachingRatings": 7,
+    "numAttendanceRatings": 6,
+    "numCorrectionRatings": 6,
     "email": "manoj.gupta@vitap.ac.in",
     "phone": "5454",
     "cabin": "AB1 424D"
@@ -4685,6 +5687,9 @@
     "teachingRating": 4.0,
     "attendanceRating": 4.59,
     "correctionRating": 4.41,
+    "numTeachingRatings": 21,
+    "numAttendanceRatings": 22,
+    "numCorrectionRatings": 22,
     "email": "nihar.pradhan@vitap.ac.in",
     "phone": null,
     "cabin": "327-B, CB"
@@ -4699,6 +5704,9 @@
     "teachingRating": 4.41,
     "attendanceRating": 4.47,
     "correctionRating": 4.22,
+    "numTeachingRatings": 17,
+    "numAttendanceRatings": 17,
+    "numCorrectionRatings": 18,
     "email": "nagendra.challa@vitap.ac.in",
     "phone": "5417",
     "cabin": "425-I, AB-1"
@@ -4713,6 +5721,9 @@
     "teachingRating": 4.12,
     "attendanceRating": 4.78,
     "correctionRating": 4.85,
+    "numTeachingRatings": 59,
+    "numAttendanceRatings": 59,
+    "numCorrectionRatings": 59,
     "email": "nallamuthu.s@vitap.ac.in",
     "phone": "5965",
     "cabin": "CB-103G"
@@ -4727,6 +5738,9 @@
     "teachingRating": 4.2,
     "attendanceRating": 4.33,
     "correctionRating": 4.39,
+    "numTeachingRatings": 45,
+    "numAttendanceRatings": 45,
+    "numCorrectionRatings": 44,
     "email": "neeraj.misra@vitap.ac.in",
     "phone": "5862",
     "cabin": "CB-204-C"
@@ -4741,6 +5755,9 @@
     "teachingRating": 4.73,
     "attendanceRating": 4.87,
     "correctionRating": 5.0,
+    "numTeachingRatings": 15,
+    "numAttendanceRatings": 15,
+    "numCorrectionRatings": 15,
     "email": "nagajagadesh.bommagani@vitap.ac.in",
     "phone": "5855",
     "cabin": "201-F, CB"
@@ -4755,6 +5772,9 @@
     "teachingRating": 4.33,
     "attendanceRating": 4.91,
     "correctionRating": 4.81,
+    "numTeachingRatings": 46,
+    "numAttendanceRatings": 46,
+    "numCorrectionRatings": 47,
     "email": "nagarjuna.neela@vitap.ac.in",
     "phone": "5730",
     "cabin": "225C-AB2"
@@ -4769,6 +5789,9 @@
     "teachingRating": 3.75,
     "attendanceRating": 3.5,
     "correctionRating": 3.0,
+    "numTeachingRatings": 8,
+    "numAttendanceRatings": 8,
+    "numCorrectionRatings": 8,
     "email": "naveen.cherupelly@vitap.ac.in",
     "phone": null,
     "cabin": "CB - 115C"
@@ -4783,6 +5806,9 @@
     "teachingRating": 4.0,
     "attendanceRating": 3.5,
     "correctionRating": 3.62,
+    "numTeachingRatings": 8,
+    "numAttendanceRatings": 8,
+    "numCorrectionRatings": 8,
     "email": "naveen.ranjan@vitap.ac.in",
     "phone": "5709",
     "cabin": "202C, AB-2"
@@ -4797,6 +5823,9 @@
     "teachingRating": 4.18,
     "attendanceRating": 4.43,
     "correctionRating": 4.17,
+    "numTeachingRatings": 38,
+    "numAttendanceRatings": 37,
+    "numCorrectionRatings": 36,
     "email": "neha.gupta@vitap.ac.in",
     "phone": "5685",
     "cabin": "AB2-124G"
@@ -4811,6 +5840,9 @@
     "teachingRating": 4.1,
     "attendanceRating": 4.2,
     "correctionRating": 4.38,
+    "numTeachingRatings": 29,
+    "numAttendanceRatings": 30,
+    "numCorrectionRatings": 29,
     "email": null,
     "phone": null,
     "cabin": null
@@ -4825,6 +5857,9 @@
     "teachingRating": 4.08,
     "attendanceRating": 4.43,
     "correctionRating": 3.94,
+    "numTeachingRatings": 13,
+    "numAttendanceRatings": 14,
+    "numCorrectionRatings": 16,
     "email": "nagaraju.devarakonda@vitap.ac.in",
     "phone": "5352",
     "cabin": "328-C, AB-1"
@@ -4839,6 +5874,9 @@
     "teachingRating": 1.57,
     "attendanceRating": 1.55,
     "correctionRating": 1.62,
+    "numTeachingRatings": 28,
+    "numAttendanceRatings": 29,
+    "numCorrectionRatings": 29,
     "email": "madhusudhana.n@vitap.ac.in",
     "phone": "5157",
     "cabin": " G36, AB1"
@@ -4853,6 +5891,9 @@
     "teachingRating": 3.23,
     "attendanceRating": 3.73,
     "correctionRating": 3.59,
+    "numTeachingRatings": 30,
+    "numAttendanceRatings": 30,
+    "numCorrectionRatings": 29,
     "email": null,
     "phone": null,
     "cabin": null
@@ -4867,6 +5908,9 @@
     "teachingRating": 4.27,
     "attendanceRating": 4.68,
     "correctionRating": 4.53,
+    "numTeachingRatings": 30,
+    "numAttendanceRatings": 31,
+    "numCorrectionRatings": 30,
     "email": "muthuprabhu.s@vitap.ac.in",
     "phone": "5831",
     "cabin": " CB 116-B"
@@ -4881,6 +5925,9 @@
     "teachingRating": 3.0,
     "attendanceRating": 3.12,
     "correctionRating": 2.92,
+    "numTeachingRatings": 26,
+    "numAttendanceRatings": 25,
+    "numCorrectionRatings": 25,
     "email": "satyanarayana.moru@vitap.ac.in",
     "phone": "5896",
     "cabin": "229-D,CB"
@@ -4895,6 +5942,9 @@
     "teachingRating": 4.36,
     "attendanceRating": 4.32,
     "correctionRating": 4.73,
+    "numTeachingRatings": 22,
+    "numAttendanceRatings": 22,
+    "numCorrectionRatings": 22,
     "email": "nandam.ashok@vitap.ac.in",
     "phone": "5691",
     "cabin": "125-B, AB2"
@@ -4909,6 +5959,9 @@
     "teachingRating": 3.26,
     "attendanceRating": 3.43,
     "correctionRating": 3.09,
+    "numTeachingRatings": 46,
+    "numAttendanceRatings": 46,
+    "numCorrectionRatings": 46,
     "email": null,
     "phone": null,
     "cabin": null
@@ -4923,6 +5976,9 @@
     "teachingRating": 2.87,
     "attendanceRating": 2.83,
     "correctionRating": 2.39,
+    "numTeachingRatings": 23,
+    "numAttendanceRatings": 23,
+    "numCorrectionRatings": 23,
     "email": "muthu.krishnammal@vitap.ac.in",
     "phone": "5853",
     "cabin": "CB-201-H"
@@ -4937,6 +5993,9 @@
     "teachingRating": 3.1,
     "attendanceRating": 2.9,
     "correctionRating": 3.13,
+    "numTeachingRatings": 31,
+    "numAttendanceRatings": 30,
+    "numCorrectionRatings": 31,
     "email": "kuppusamy.p@vitap.ac.in",
     "phone": "5316",
     "cabin": "329-D, AB-1"
@@ -4951,6 +6010,9 @@
     "teachingRating": 3.6,
     "attendanceRating": 4.2,
     "correctionRating": 4.4,
+    "numTeachingRatings": 10,
+    "numAttendanceRatings": 10,
+    "numCorrectionRatings": 10,
     "email": "piu.kundu@vitap.ac.in",
     "phone": "5873",
     "cabin": "CB-205A"
@@ -4965,6 +6027,9 @@
     "teachingRating": 2.84,
     "attendanceRating": 2.75,
     "correctionRating": 2.41,
+    "numTeachingRatings": 32,
+    "numAttendanceRatings": 32,
+    "numCorrectionRatings": 32,
     "email": "prabha.s@vitap.ac.in",
     "phone": "5376",
     "cabin": null
@@ -4979,6 +6044,9 @@
     "teachingRating": 2.6,
     "attendanceRating": 2.02,
     "correctionRating": 2.46,
+    "numTeachingRatings": 40,
+    "numAttendanceRatings": 40,
+    "numCorrectionRatings": 39,
     "email": "prashant.p@vitap.ac.in",
     "phone": "5525",
     "cabin": "G23-G, AB2"
@@ -4993,6 +6061,9 @@
     "teachingRating": 4.43,
     "attendanceRating": 4.0,
     "correctionRating": 3.86,
+    "numTeachingRatings": 7,
+    "numAttendanceRatings": 7,
+    "numCorrectionRatings": 7,
     "email": "sreekanth.p@vitap.ac.in",
     "phone": "5148",
     "cabin": null
@@ -5007,6 +6078,9 @@
     "teachingRating": 1.0,
     "attendanceRating": 1.0,
     "correctionRating": 1.0,
+    "numTeachingRatings": 1,
+    "numAttendanceRatings": 1,
+    "numCorrectionRatings": 1,
     "email": "pankaj.tambe@vitap.ac.in",
     "phone": null,
     "cabin": "310H, AB1 Block"
@@ -5021,6 +6095,9 @@
     "teachingRating": 2.89,
     "attendanceRating": 2.5,
     "correctionRating": 3.25,
+    "numTeachingRatings": 9,
+    "numAttendanceRatings": 10,
+    "numCorrectionRatings": 8,
     "email": null,
     "phone": null,
     "cabin": null
@@ -5035,6 +6112,9 @@
     "teachingRating": 2.84,
     "attendanceRating": 3.05,
     "correctionRating": 2.95,
+    "numTeachingRatings": 19,
+    "numAttendanceRatings": 19,
+    "numCorrectionRatings": 19,
     "email": "nusrat.begum@vitap.ac.in",
     "phone": null,
     "cabin": "201C - CB"
@@ -5049,6 +6129,9 @@
     "teachingRating": 4.08,
     "attendanceRating": 4.5,
     "correctionRating": 4.33,
+    "numTeachingRatings": 38,
+    "numAttendanceRatings": 38,
+    "numCorrectionRatings": 39,
     "email": "peeyush.singh@vitap.ac.in",
     "phone": "5800",
     "cabin": "AB2 307 A"
@@ -5063,6 +6146,9 @@
     "teachingRating": 2.91,
     "attendanceRating": 2.18,
     "correctionRating": 2.32,
+    "numTeachingRatings": 34,
+    "numAttendanceRatings": 34,
+    "numCorrectionRatings": 34,
     "email": "prabhakaran.thandapani@vitap.ac.in",
     "phone": "5985",
     "cabin": "CB-G07 C"
@@ -5077,6 +6163,9 @@
     "teachingRating": 2.07,
     "attendanceRating": 1.6,
     "correctionRating": 1.87,
+    "numTeachingRatings": 15,
+    "numAttendanceRatings": 15,
+    "numCorrectionRatings": 15,
     "email": "paramasivam.r@vitap.ac.in",
     "phone": "5694",
     "cabin": null
@@ -5091,6 +6180,9 @@
     "teachingRating": 3.81,
     "attendanceRating": 4.32,
     "correctionRating": 3.72,
+    "numTeachingRatings": 26,
+    "numAttendanceRatings": 28,
+    "numCorrectionRatings": 25,
     "email": "nimai.s@vitap.ac.in",
     "phone": "5814",
     "cabin": "AB2, 307G"
@@ -5105,6 +6197,9 @@
     "teachingRating": 3.1,
     "attendanceRating": 3.34,
     "correctionRating": 2.2,
+    "numTeachingRatings": 40,
+    "numAttendanceRatings": 41,
+    "numCorrectionRatings": 40,
     "email": "pradosh.sahoo@vitap.ac.in",
     "phone": "5826",
     "cabin": "CB-103-D"
@@ -5119,6 +6214,9 @@
     "teachingRating": 3.1,
     "attendanceRating": 2.61,
     "correctionRating": 2.12,
+    "numTeachingRatings": 41,
+    "numAttendanceRatings": 41,
+    "numCorrectionRatings": 41,
     "email": "sengupta.pragya@vitap.ac.in",
     "phone": "5697",
     "cabin": "125H, AB-2"
