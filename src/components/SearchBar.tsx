@@ -75,11 +75,11 @@ export default function SearchBar() {
       {!loading && !error && query.trim() && results.length === 0 && (
         <p className="text-gray-500">No results found.</p>
       )}
-      {/* Use the same grid as the main listings so cards keep a fixed width. */}
-      <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+      {/* Wrap search results with fixed-width cards */}
+      <div className="flex flex-wrap justify-center gap-x-4 gap-y-6">
         {results.map((item) => (
 
-          <article key={item.name} className="card pb-32">
+          <article key={item.name} className="card pb-32 w-80">
             <div className="flex items-start gap-4 mb-2 h-40">
               <div className="photo-wrapper">
                 <img
