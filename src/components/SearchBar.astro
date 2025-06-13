@@ -1,5 +1,7 @@
 ---
 import faculty from '../data/faculty.json';
+import MiniSearch from 'minisearch';
+
 const { query = '', placeholder = 'Search by name...' } = Astro.props;
 const names = faculty.map(f => ({ name: f.name, id: f.id }));
 ---
@@ -10,17 +12,25 @@ const names = faculty.map(f => ({ name: f.name, id: f.id }));
 </form>
 <script type="module">
   const list = {JSON.stringify(names)};
+  const miniSearch = new MiniSearch({
+    fields: ['name'],
+    storeFields: ['name', 'id']
+  });
+  miniSearch.addAll(list);
+
   const input = document.getElementById('search-input');
   const suggestions = document.getElementById('suggestions');
   const form = document.getElementById('search-form');
+
   function update(){
-    const q = input.value.trim().toLowerCase();
+    const q = input.value.trim();
     suggestions.innerHTML = '';
     if(!q){
       suggestions.classList.add('hidden');
       return;
     }
-    const matches = list.filter(i => i.name.toLowerCase().includes(q)).slice(0,10);
+    const results = miniSearch.search(q, { prefix: true, fuzzy: 0.2 }).slice(0,10);
+    const matches = results.map(r => ({ name: r.name, id: r.id }));
     if(matches.length === 0){
       suggestions.classList.add('hidden');
       return;
