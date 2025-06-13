@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import FacultyCard from '../components/FacultyCard.astro';
+import DetailedToggle from '../components/DetailedToggle.tsx';
 import { paginate } from '../utils/pagination';
 import { fetchLists } from '../utils/supabase';
 const page = 1;
@@ -8,6 +9,7 @@ const faculty = await fetchLists();
 const list = faculty;
 ---
 <Base>
+  <DetailedToggle client:load />
   <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
     {paginate(list, page).map(f => (
       <FacultyCard faculty={f} />

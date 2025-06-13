@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import RatingWidget from './RatingWidget';
 
 type Props = {
@@ -57,19 +57,21 @@ function getTextColor(rating: number) {
 }
 
 export default function FacultyRatings({ teaching, attendance, correction, count }: Props) {
-  const [detailed, setDetailed] = useState(false);
+  const [detailed, setDetailed] = useState<boolean>(
+    typeof window !== 'undefined' && (window as any).showDetailedRatings === true
+  );
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const ev = e as CustomEvent<{ show: boolean }>;
+      setDetailed(ev.detail.show);
+    };
+    window.addEventListener('detailed-ratings-change', handler);
+    return () => window.removeEventListener('detailed-ratings-change', handler);
+  }, []);
  
   return (
     <div>
-      <div className="flex justify-between mb-1">
-        <button
-          type="button"
-          onClick={() => setDetailed(!detailed)}
-          className="text-xs px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"
-        >
-          {detailed ? 'Compact ratings' : 'Detailed ratings'}
-        </button>
-      </div>
       {detailed ? (
         <div className="flex flex-col gap-1 mb-2">
           <StarRow label="Teaching" value={typeof teaching === 'number' ? teaching : 0} count={count} />
