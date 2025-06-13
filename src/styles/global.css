@@ -4,7 +4,7 @@
 
 /* Critical styles for cards */
 .card {
-  @apply bg-gray-100 dark:bg-gray-800 p-4 transition-shadow animate-fade;
+  @apply bg-gray-100 dark:bg-gray-800 p-4 rounded-lg transition-shadow animate-fade;
 }
 
 /* Utility class to keep multiline text from growing cards */
@@ -58,6 +58,16 @@
   min-width: 2rem;
   text-align: right;
   font-size: 0.875rem;
+}
+
+/* Consistent photo shadow */
+.faculty-photo {
+  @apply rounded-lg shadow-lg;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+
+.dark .faculty-photo {
+  box-shadow: 0 10px 15px rgba(255,255,255,0.2);
 }
 
 html.no-scroll,

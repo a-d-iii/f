@@ -1,7 +1,45 @@
 ---
+import faculty from '../data/faculty.json';
 const { query = '', placeholder = 'Search by name...' } = Astro.props;
+const names = faculty.map(f => ({ name: f.name, id: f.id }));
 ---
-<form action="/" method="get" class="flex w-full gap-2">
-  <input type="search" name="q" value={query} aria-label="Search faculty" class="flex-1 p-2 border rounded" placeholder={placeholder} />
-  <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded shadow">Search</button>
+<form id="search-form" action="/" method="get" class="relative flex w-full gap-2">
+  <input id="search-input" type="search" name="q" value={query} aria-label="Search faculty" class="flex-1 p-2 border rounded-lg" placeholder={placeholder} autocomplete="off" />
+  <button type="submit" class="px-4 py-2 bg-gray-600 text-white rounded-lg shadow dark:bg-black">Search</button>
+  <ul id="suggestions" class="hidden absolute left-0 top-full mt-1 w-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 rounded-lg shadow-lg max-h-60 overflow-auto z-10"></ul>
 </form>
+<script type="module">
+  const list = {JSON.stringify(names)};
+  const input = document.getElementById('search-input');
+  const suggestions = document.getElementById('suggestions');
+  const form = document.getElementById('search-form');
+  function update(){
+    const q = input.value.trim().toLowerCase();
+    suggestions.innerHTML = '';
+    if(!q){
+      suggestions.classList.add('hidden');
+      return;
+    }
+    const matches = list.filter(i => i.name.toLowerCase().includes(q)).slice(0,10);
+    if(matches.length === 0){
+      suggestions.classList.add('hidden');
+      return;
+    }
+    for(const m of matches){
+      const li = document.createElement('li');
+      li.className = 'px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg';
+      const a = document.createElement('a');
+      a.href = `/faculty/${m.id}`;
+      a.textContent = m.name;
+      li.appendChild(a);
+      suggestions.appendChild(li);
+    }
+    suggestions.classList.remove('hidden');
+  }
+  input.addEventListener('input', update);
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const first = suggestions.querySelector('a');
+    if(first) window.location.href = first.href;
+  });
+</script>

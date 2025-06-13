@@ -16,7 +16,7 @@ const getColor = (rating: number) => {
 };
 
 const RatingWidget: FC<Props> = ({ rating }) => {
-  const classes = `px-2 py-1 rounded font-bold text-sm ${getColor(rating)}`;
+  const classes = `px-2 py-1 rounded-lg font-bold text-sm ${getColor(rating)}`;
   return (
     <div aria-label={`Rating ${rating}`} className={classes}>
       {rating.toFixed(1)}
