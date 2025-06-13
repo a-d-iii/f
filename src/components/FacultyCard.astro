@@ -18,8 +18,9 @@ if (specializationRaw) {
     specialization = words.slice(0, 12).join(' ') + '...';
   }
 }
-
-<article class="card pb-10">
+ 
+<article class="card pb-12">
+ 
     <div class="flex items-start gap-4 mb-2 h-36">
       <div class="photo-wrapper">
         <img
@@ -35,8 +36,10 @@ if (specializationRaw) {
  
         <h3 class="text-lg font-bold mb-1 clamp-two-lines faculty-name font-segoe">{faculty.name || 'Unknown'}</h3>
         {specialization && (
+ 
 
           <p class="text-sm italic text-gray-500 dark:text-gray-300 leading-snug overflow-hidden flex-grow clamp-four-lines font-segoe">
+ 
  
             {specialization}
           </p>
