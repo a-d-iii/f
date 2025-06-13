@@ -1,6 +1,7 @@
 ---
 import FacultyRatings from './FacultyRatings.tsx';
 import RateFaculty from './RateFaculty.tsx';
+import HeartButton from './HeartButton.tsx';
 const { faculty } = Astro.props;
 const photoUrl = faculty.photo_url || faculty.photo;
 const specializationRaw =
@@ -49,4 +50,5 @@ if (specializationRaw) {
       client:visible
     />
     <RateFaculty client:visible />
+    <HeartButton client:visible />
 </article>
