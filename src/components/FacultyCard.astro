@@ -1,5 +1,5 @@
 ---
-import RatingWidget from './RatingWidget.tsx';
+import FacultyRatings from './FacultyRatings.tsx';
 const { faculty } = Astro.props;
 const photoUrl = faculty.photo_url || faculty.photo;
 const specializationRaw =
@@ -17,8 +17,7 @@ if (specializationRaw) {
   }
 }
 ---
-<a href={`/faculty/${faculty.id}`} class="block" data-id={faculty.id} data-name={faculty.name}>
-  <article class="card" view-transition-name={`card-${faculty.id}`}>
+<article class="card">
     <div class="flex items-start gap-4 mb-2 h-36">
       <div class="photo-wrapper">
         <img
@@ -41,20 +40,12 @@ if (specializationRaw) {
         )}
       </div>
     </div>
-    <div class="grid grid-cols-3 gap-2 mb-2 w-full text-center">
-      <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
-        <RatingWidget rating={faculty.teaching_rating} client:load />
-        <span class="text-xs font-medium">Teaching</span>
-      </div>
-      <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
-        <RatingWidget rating={faculty.attendance_rating} client:load />
-        <span class="text-xs font-medium">Attendance</span>
-      </div>
-      <div class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
-        <RatingWidget rating={faculty.correction_rating} client:load />
-        <span class="text-xs font-medium">Correction</span>
-      </div>
-    </div>
+    <FacultyRatings
+      teaching={faculty.teaching_rating}
+      attendance={faculty.attendance_rating}
+      correction={faculty.correction_rating}
+      count={faculty.total_ratings}
+      client:visible
+    />
     <p class="text-sm text-gray-500 dark:text-gray-400">Rated by {faculty.total_ratings} student{faculty.total_ratings === 1 ? '' : 's'}</p>
-  </article>
-</a>
+</article>
