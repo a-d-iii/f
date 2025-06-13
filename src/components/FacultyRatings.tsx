@@ -32,7 +32,9 @@ function StarRow({ label, value, count }: { label: string; value: number; count?
           <Star key={i} filled={i <= full || (i === full + 1 && half)} />
         ))}
       </span>
-      <span className="text-xs ml-1 w-8 text-right">{value.toFixed(1)}</span>
+
+      <span className={`text-xs ml-1 w-8 text-right font-semibold ${getTextColor(value)}`}>{value.toFixed(1)}</span>
+
       {typeof count === 'number' && (
         <span className="text-xs text-gray-500 flex items-center gap-1 ml-1">
           <svg className="w-3 h-3" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -45,8 +47,18 @@ function StarRow({ label, value, count }: { label: string; value: number; count?
   );
 }
 
+function getTextColor(rating: number) {
+  if (rating === 5) return 'text-violet-600';
+  if (rating > 4) return 'text-green-600';
+  if (rating > 3.5) return 'text-green-500';
+  if (rating >= 3) return 'text-yellow-400';
+  if (rating >= 2) return 'text-red-500';
+  return 'text-red-700';
+}
+
 export default function FacultyRatings({ teaching, attendance, correction, count }: Props) {
-  const [detailed, setDetailed] = useState(false);
+  const [detailed, setDetailed] = useState(true);
+
   return (
     <div>
       <div className="flex justify-end mb-1">
