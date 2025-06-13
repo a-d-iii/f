@@ -11,3 +11,13 @@ npm run build # build to ./dist
 ```
 
 Open `http://localhost:4321` while running `npm run dev`.
+
+## Installing new dependencies
+
+This project now relies on the Supabase JavaScript client. After pulling the
+latest changes, make sure to reinstall dependencies so that `@supabase/supabase-js`
+is available:
+
+```bash
+npm install
+```
