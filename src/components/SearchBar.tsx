@@ -75,8 +75,8 @@ export default function SearchBar() {
       {!loading && !error && query.trim() && results.length === 0 && (
         <p className="text-gray-500">No results found.</p>
       )}
-      {/* Wrap search results with fixed-width cards */}
-      <div className="flex flex-wrap justify-center gap-x-4 gap-y-6">
+      {/* Display search results in a three-column grid */}
+      <div className="grid grid-cols-3 gap-x-4 gap-y-6 justify-items-center">
         {results.map((item) => (
 
           <article key={item.name} className="card pb-32 card-wrapper">
