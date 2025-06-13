@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import type { FC, JSX } from 'react';
 
 interface Props {
   rating: number | null | undefined;
