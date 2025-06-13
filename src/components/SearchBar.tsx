@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
+import FacultyRatings from './FacultyRatings.tsx';
+import RateFaculty from './RateFaculty.tsx';
+import HeartButton from './HeartButton.tsx';
+
+
 interface ListItem {
   name: string;
   photo_url: string | null;
@@ -72,6 +77,44 @@ export default function SearchBar() {
       )}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {results.map((item) => (
+
+          <article key={item.name} className="card pb-32">
+            <div className="flex items-start gap-4 mb-2 h-40">
+              <div className="photo-wrapper">
+                <img
+                  src={item.photo_url || 'https://placehold.co/300x400?text=No+Photo'}
+                  alt={`Photo of ${item.name}`}
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    target.src = 'https://placehold.co/300x400?text=No+Photo';
+                    target.onerror = null;
+                  }}
+                  className="faculty-photo"
+                />
+              </div>
+              <div className="flex flex-col flex-1 h-40 overflow-hidden">
+                <h3 className="text-lg font-bold mb-1 clamp-two-lines faculty-name font-poppins">{item.name}</h3>
+                {item.specialization && (
+                  <p className="text-sm italic text-gray-400 dark:text-gray-400 leading-snug overflow-hidden flex-grow clamp-four-lines font-segoe">
+                    {item.specialization}
+                  </p>
+                )}
+              </div>
+            </div>
+            <div className="mb-4">
+              <FacultyRatings
+                teaching={item.teaching_rating ?? 0}
+                attendance={item.attendance_rating ?? 0}
+                correction={item.correction_rating ?? 0}
+                tCount={item.total_ratings ?? null}
+                aCount={item.total_ratings ?? null}
+                cCount={item.total_ratings ?? null}
+              />
+            </div>
+            <RateFaculty />
+            <HeartButton />
+          </article>
+
           <div key={item.name} className="card flex flex-col items-center">
             <img
               src={item.photo_url || 'https://placehold.co/300x400?text=No+Photo'}
@@ -91,6 +134,7 @@ export default function SearchBar() {
               <p>Total ratings: {item.total_ratings ?? 'N/A'}</p>
             </div>
           </div>
+
         ))}
       </div>
     </div>
