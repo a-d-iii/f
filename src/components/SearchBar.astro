@@ -1,6 +1,9 @@
----
+ 
+import { fetchLists } from '../utils/supabase';
+
+ 
 const { query = '', placeholder = 'Search by name...' } = Astro.props;
----
+ 
 <form id="search-form" action="/" method="get" class="relative flex w-full gap-2">
   <input id="search-input" type="search" name="q" value={query} aria-label="Search faculty" class="flex-1 p-2 border rounded-lg" placeholder={placeholder} autocomplete="off" />
   <button type="submit" class="px-4 py-2 bg-gray-600 text-white rounded-lg shadow dark:bg-black">Search</button>
@@ -8,6 +11,27 @@ const { query = '', placeholder = 'Search by name...' } = Astro.props;
 </form>
 <script type="module">
   import MiniSearch from 'minisearch';
+ 
+  const list = {JSON.stringify(names)};
+  const miniSearch = new MiniSearch({
+    fields: ['name'],
+    storeFields: ['name', 'id']
+  });
+  miniSearch.addAll(list);
+
+  const cards = Array.from(document.querySelectorAll('[data-id]'));
+
+  function filterPage(ids){
+    cards.forEach(card => {
+      if(!ids || ids.has(card.dataset.id)){
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+ 
   const input = document.getElementById('search-input');
   const suggestions = document.getElementById('suggestions');
   const form = document.getElementById('search-form');
@@ -36,6 +60,7 @@ const { query = '', placeholder = 'Search by name...' } = Astro.props;
       });
     }
 
+ 
     function renderMatches(matches){
       suggestions.innerHTML = '';
       for(const m of matches){
@@ -52,8 +77,22 @@ const { query = '', placeholder = 'Search by name...' } = Astro.props;
       } else {
         suggestions.classList.add('hidden');
       }
+ 
+  function update(){
+    const q = input.value.trim();
+    let matches;
+    if(q){
+      const results = miniSearch.search(q, { prefix: true, fuzzy: 0.2 });
+      const ids = new Set(results.map(r => String(r.id)));
+      matches = results.slice(0,10).map(r => ({ name: r.name, id: r.id }));
+      filterPage(ids);
+    }else{
+      matches = list.slice(0,10);
+      filterPage(null);
+ 
     }
 
+ 
     function update(){
       const q = input.value.trim();
       let matches;
@@ -67,6 +106,15 @@ const { query = '', placeholder = 'Search by name...' } = Astro.props;
         filterPage(null);
       }
       renderMatches(matches);
+ 
+  input.addEventListener('focus', update);
+  input.addEventListener('input', update);
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const first = suggestions.querySelector('a');
+    if(first){
+      window.location.href = first.href;
+ 
     }
 
     input.addEventListener('focus', update);
