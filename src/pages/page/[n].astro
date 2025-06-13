@@ -19,10 +19,12 @@ if (page < 1 || page > pages) {
 ---
 <Base title={`Page ${page} - Faculty Ranker`}>
   <DetailedToggle client:load />
-  <!-- Keep four cards per row on wider screens for consistent sizing -->
-  <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+  <!-- Wrap cards with fixed width using flex -->
+  <div class="flex flex-wrap justify-center gap-x-4 gap-y-6">
     {paginate(faculty, page).map(f => (
-      <FacultyCard faculty={f} />
+      <div class="w-72">
+        <FacultyCard faculty={f} />
+      </div>
     ))}
   </div>
   <nav class="mt-4 flex justify-center gap-2">
