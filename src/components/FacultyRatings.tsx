@@ -32,7 +32,9 @@ function StarRow({ label, value, count }: { label: string; value: number; count?
           <Star key={i} filled={i <= full || (i === full + 1 && half)} />
         ))}
       </span>
+
       <span className={`text-xs ml-1 w-8 text-right font-semibold ${getTextColor(value)}`}>{value.toFixed(1)}</span>
+
       {typeof count === 'number' && (
         <span className="text-xs text-gray-500 flex items-center gap-1 ml-1">
           <svg className="w-3 h-3" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -56,6 +58,7 @@ function getTextColor(rating: number) {
 
 export default function FacultyRatings({ teaching, attendance, correction, count }: Props) {
   const [detailed, setDetailed] = useState(true);
+
   return (
     <div>
       <div className="flex justify-end mb-1">
