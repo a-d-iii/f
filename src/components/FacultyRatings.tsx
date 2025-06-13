@@ -26,7 +26,7 @@ function StarRow({ label, value, count }: { label: string; value: number; count?
   const half = value - full >= 0.5;
   return (
     <div className="flex items-center justify-between gap-2">
-      <span className="text-base font-light text-gray-700 flex-1">{label}</span>
+      <span className="text-base italic text-gray-500 dark:text-gray-300 flex-1 leading-snug">{label}</span>
       <span className="flex">
         {[1,2,3,4,5].map(i => (
           <Star key={i} filled={i <= full || (i === full + 1 && half)} />
@@ -84,7 +84,7 @@ export default function FacultyRatings({ teaching, attendance, correction, count
           <div className="flex flex-col items-center gap-1">
             <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
               <RatingWidget rating={teaching} />
-              <span className="text-sm font-light text-gray-700">Teaching</span>
+              <span className="text-sm italic text-gray-500 dark:text-gray-300 leading-snug">Teaching</span>
             </div>
             {typeof count === 'number' && (
               <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
@@ -99,7 +99,7 @@ export default function FacultyRatings({ teaching, attendance, correction, count
           <div className="flex flex-col items-center gap-1">
             <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
               <RatingWidget rating={attendance} />
-              <span className="text-sm font-light text-gray-700">Attendance</span>
+              <span className="text-sm italic text-gray-500 dark:text-gray-300 leading-snug">Attendance</span>
             </div>
             {typeof count === 'number' && (
               <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
@@ -114,7 +114,7 @@ export default function FacultyRatings({ teaching, attendance, correction, count
           <div className="flex flex-col items-center gap-1">
             <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
               <RatingWidget rating={correction} />
-              <span className="text-sm font-light text-gray-700">Correction</span>
+              <span className="text-sm italic text-gray-500 dark:text-gray-300 leading-snug">Correction</span>
             </div>
             {typeof count === 'number' && (
               <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
