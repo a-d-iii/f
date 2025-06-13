@@ -32,7 +32,6 @@ function StarRow({ label, value, count }: { label: string; value: number; count?
           <Star key={i} filled={i <= full || (i === full + 1 && half)} />
         ))}
       </span>
-
       <span className={`text-xs ml-1 w-8 text-right font-semibold ${getTextColor(value)}`}>{value.toFixed(1)}</span>
 
       {typeof count === 'number' && (
@@ -57,7 +56,8 @@ function getTextColor(rating: number) {
 }
 
 export default function FacultyRatings({ teaching, attendance, correction, count }: Props) {
-  const [detailed, setDetailed] = useState(true);
+
+  const [detailed, setDetailed] = useState(false);
 
   return (
     <div>
@@ -78,15 +78,17 @@ export default function FacultyRatings({ teaching, attendance, correction, count
         </div>
       ) : (
         <div className="grid grid-cols-3 gap-2 mb-2 w-full text-center">
-          <div className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+
+          <div className="p-2 aspect-square rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center justify-center gap-1 shadow">
             <RatingWidget rating={teaching} />
             <span className="text-xs font-medium">Teaching</span>
           </div>
-          <div className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+          <div className="p-2 aspect-square rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center justify-center gap-1 shadow">
             <RatingWidget rating={attendance} />
             <span className="text-xs font-medium">Attendance</span>
           </div>
-          <div className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow">
+          <div className="p-2 aspect-square rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center justify-center gap-1 shadow">
+
             <RatingWidget rating={correction} />
             <span className="text-xs font-medium">Correction</span>
           </div>
