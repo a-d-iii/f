@@ -19,8 +19,15 @@ const { title = 'Faculty Ranker', headerTitle = 'Faculty Ranker' } = Astro.props
   <link rel="preload" as="image" href="https://placehold.co/300x400?text=Faculty+4" />
   <script type="module" src="/viewTransitions.js"></script>
   <script type="module" src="/ratingSlider.js"></script>
+  <script>
+    const stored = localStorage.getItem('theme');
+    const prefers = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (stored === 'dark' || (!stored && prefers)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
 </head>
-<body class="min-h-screen text-gray-900 dark:text-gray-100">
+<body class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 dark:from-darkpurple dark:to-darkpurple text-gray-900 dark:text-gray-100">
 
   <header class="relative p-4 mt-4 mb-2 flex flex-col items-center gap-2">
     <div class="w-full flex justify-center items-center">
