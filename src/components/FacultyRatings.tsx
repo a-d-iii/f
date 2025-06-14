@@ -9,6 +9,7 @@ type Props = {
   tCount?: number | null | undefined;
   aCount?: number | null | undefined;
   cCount?: number | null | undefined;
+  qCount?: number | null | undefined;
 };
 
 function Star({ filled }: { filled: boolean }) {
@@ -67,7 +68,9 @@ function getBoxDarkClasses(rating: number) {
   return 'dark:border-[#FF00C8] dark:text-[#FF00C8] dark:bg-[#FF00C8]20';
 }
 
-export default function FacultyRatings({ teaching, attendance, correction, quiz, tCount, aCount, cCount }: Props) {
+ 
+export default function FacultyRatings({ teaching, attendance, correction, quiz, tCount, aCount, cCount, qCount }: Props) {
+ 
   const [detailed, setDetailed] = useState<boolean>(
     typeof window !== 'undefined' && (window as any).showDetailedRatings === true
   );
@@ -150,6 +153,16 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
               <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Quiz</span>
 
             </div>
+ 
+            {typeof qCount === 'number' && (
+              <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
+                <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
+                </svg>
+                {qCount}
+              </span>
+            )}
+ 
           </div>
         </div>
       )}

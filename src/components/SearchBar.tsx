@@ -281,6 +281,7 @@ export default function SearchBar() {
                 tCount={item.total_ratings ?? null}
                 aCount={item.total_ratings ?? null}
                 cCount={item.total_ratings ?? null}
+                qCount={item.total_ratings ?? null}
               />
             </div>
             <RateFaculty />
