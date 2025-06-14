@@ -170,6 +170,7 @@ export default function SearchBar() {
         onChange={(e) => setQuery(e.target.value)}
       />
 
+ 
       <div className="mb-4 text-left w-full">
         <div className="flex gap-2">
           <div className="relative">
@@ -194,6 +195,7 @@ export default function SearchBar() {
                 }}
                 className="absolute z-10 mt-2 w-64 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700"
               >
+ 
             <div className="mb-3">
               <label className="block text-sm font-semibold mb-1 dark:text-gray-200">
                 Teaching rating
@@ -249,6 +251,7 @@ export default function SearchBar() {
             >
               Apply
             </button>
+ 
             </form>
             )}
           </div>
@@ -287,6 +290,7 @@ export default function SearchBar() {
             )}
           </div>
         </div>
+ 
       </div>
       {loading && <p className="text-gray-500">Loading...</p>}
       {error && <p className="text-red-500">Error: {error}</p>}
@@ -300,7 +304,9 @@ export default function SearchBar() {
           <p className="text-gray-500">No results found.</p>
         )}
       {/* Display search results using same layout as the homepage */}
+ 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mx-auto justify-center">
+ 
         {displayResults.map((item) => (
           <article
             key={item.name}
