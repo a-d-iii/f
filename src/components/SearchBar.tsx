@@ -338,6 +338,18 @@ export default function SearchBar() {
             >
               Apply
             </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                setTeachingFilter(0);
+                setAttendanceFilter(0);
+                setCorrectionFilter(0);
+              }}
+              className="mt-2 w-full px-3 py-2 rounded-md bg-gray-200 text-gray-800 dark:bg-[#1E2230] dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-[#374151]"
+            >
+              Clear filters
+            </button>
  
             </form>
             )}
@@ -396,7 +408,7 @@ export default function SearchBar() {
         )}
       {/* Display search results using same layout as the homepage */}
  
-      <div className="flex flex-wrap justify-center gap-x-4 gap-y-8">
+      <div className="flex flex-wrap justify-start gap-x-4 gap-y-8">
  
         {displayResults.map((item) => (
           <article
