@@ -1,16 +1,20 @@
-import { createClient } from '@supabase/supabase-js';
 import localData from '../data/faculty.json';
-
-const supabaseUrl = 'https://dwyojdeyfaozeeplpbyr.supabase.co';
-const supabaseAnonKey =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR3eW9qZGV5ZmFvemVlcGxwYnlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk3OTY5MTMsImV4cCI6MjA2NTM3MjkxM30.A3EWWal-iREIyXX6j2F5Dzdi9KBTJQXAF1GHVcpDHY8';
-
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
+import { supabaseAdmin } from '../../lib/supabaseAdmin';
 
 export async function fetchLists() {
   try {
-    const { data, error } = await supabase.from('lists').select('*');
-    if (error) throw error;
+    let data: any[] | null = null;
+
+    if (import.meta.env.SSR) {
+      const res = await supabaseAdmin.from('lists').select('*');
+      if (res.error) throw res.error;
+      data = res.data;
+    } else {
+      const resp = await fetch('/api/lists');
+      if (!resp.ok) throw new Error('Failed to fetch lists');
+      data = await resp.json();
+    }
+
     const list = data ?? [];
     const withName = list.filter((f: any) => f.name && String(f.name).trim());
     const withoutName = list.filter((f: any) => !f.name || !String(f.name).trim());
