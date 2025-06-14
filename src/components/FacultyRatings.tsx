@@ -98,71 +98,69 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
           <div className="flex flex-col items-center gap-1">
             <div className={`px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof teaching === 'number' ? teaching : 0)}`}>
               <RatingWidget rating={teaching} />
-
-              <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Teaching</span>
-              
             </div>
-            {typeof tCount === 'number' && (
-              <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
-                <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
-                </svg>
-                {tCount}
-              </span>
-            )}
+            <div className="flex items-center justify-between w-full">
+              <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Teaching</span>
+              {typeof tCount === 'number' && (
+                <span className="text-xs text-gray-500 flex items-center gap-1">
+                  <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
+                  </svg>
+                  {tCount}
+                </span>
+              )}
+            </div>
           </div>
 
           <div className="flex flex-col items-center gap-1">
             <div className={`px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof attendance === 'number' ? attendance : 0)}`}>
               <RatingWidget rating={attendance} />
-
-              <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Attendance</span>
-              
             </div>
-            {typeof aCount === 'number' && (
-              <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
-                <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
-                </svg>
-                {aCount}
-              </span>
-            )}
+            <div className="flex items-center justify-between w-full">
+              <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Attendance</span>
+              {typeof aCount === 'number' && (
+                <span className="text-xs text-gray-500 flex items-center gap-1">
+                  <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
+                  </svg>
+                  {aCount}
+                </span>
+              )}
+            </div>
           </div>
 
           <div className="flex flex-col items-center gap-1">
             <div className={`px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof correction === 'number' ? correction : 0)}`}>
               <RatingWidget rating={correction} />
-
-              <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Correction</span>
-
             </div>
-            {typeof cCount === 'number' && (
-              <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
-                <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
-                </svg>
-                {cCount}
-              </span>
-            )}
+            <div className="flex items-center justify-between w-full">
+              <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Correction</span>
+              {typeof cCount === 'number' && (
+                <span className="text-xs text-gray-500 flex items-center gap-1">
+                  <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
+                  </svg>
+                  {cCount}
+                </span>
+              )}
+            </div>
           </div>
 
           <div className="flex flex-col items-center gap-1">
             <div className={`px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof quiz === 'number' ? quiz : 0)}`}>
               <RatingWidget rating={quiz} />
-
-              <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Quiz</span>
-
             </div>
- 
-            {typeof qCount === 'number' && (
-              <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
-                <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
-                </svg>
-                {qCount}
-              </span>
-            )}
- 
+            <div className="flex items-center justify-between w-full">
+              <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Quiz</span>
+              {typeof qCount === 'number' && (
+                <span className="text-xs text-gray-500 flex items-center gap-1">
+                  <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
+                  </svg>
+                  {qCount}
+                </span>
+              )}
+            </div>
           </div>
         </div>
       )}
