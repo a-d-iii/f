@@ -124,9 +124,10 @@ body.no-scroll {
 
 /* Wrapper for faculty cards with adjustable width */
 .card-wrapper {
-  /* Stretch up to the configured width but shrink on small screens */
-  max-width: var(--card-width, 24rem);
-  width: 100%;
+  /* Fixed width so cards always occupy the first column */
+  width: var(--card-width, 24rem);
+  max-width: 100%;
+  flex: 0 0 auto;
 }
 
 /* Dark mode global background */
