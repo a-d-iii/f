@@ -61,9 +61,9 @@ function getTextColor(rating: number) {
 }
 
 function getBoxDarkClasses(rating: number) {
-  if (rating > 4) return 'dark:border-[#00FFD8] dark:text-[#00FFD8] dark:bg-[#00FFD8]20 dark:drop-shadow-[0_0_10px_#00FFD8]';
-  if (rating >= 3) return 'dark:border-[#FFD500] dark:text-[#FFD500] dark:bg-[#FFD500]20 dark:drop-shadow-[0_0_10px_#FFD500]';
-  return 'dark:border-[#FF00C8] dark:text-[#FF00C8] dark:bg-[#FF00C8]20 dark:drop-shadow-[0_0_10px_#FF00C8]';
+  if (rating > 4) return 'dark:border-[#00FFD8] dark:text-[#00FFD8] dark:bg-[#00FFD8]20';
+  if (rating >= 3) return 'dark:border-[#FFD500] dark:text-[#FFD500] dark:bg-[#FFD500]20';
+  return 'dark:border-[#FF00C8] dark:text-[#FF00C8] dark:bg-[#FF00C8]20';
 }
 
 export default function FacultyRatings({ teaching, attendance, correction, tCount, aCount, cCount }: Props) {
