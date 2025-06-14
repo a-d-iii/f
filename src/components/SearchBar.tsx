@@ -28,12 +28,18 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export default function SearchBar() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<ListItem[]>([]);
+  const [allResults, setAllResults] = useState<ListItem[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showFilters, setShowFilters] = useState(false);
+  const [teachingFilter, setTeachingFilter] = useState(0);
+  const [attendanceFilter, setAttendanceFilter] = useState(0);
+  const [correctionFilter, setCorrectionFilter] = useState(0);
 
   useEffect(() => {
     if (!query.trim()) {
       setResults([]);
+      setAllResults([]);
       return;
     }
 
@@ -49,8 +55,11 @@ export default function SearchBar() {
       if (error) {
         setError(error.message);
         setResults([]);
+        setAllResults([]);
       } else {
-        setResults((data as ListItem[]) || []);
+        const list = (data as ListItem[]) || [];
+        setAllResults(list);
+        setResults(list);
       }
       setLoading(false);
     }, 300);
@@ -61,8 +70,28 @@ export default function SearchBar() {
     };
   }, [query]);
 
+  useEffect(() => {
+    let filtered = allResults;
+    if (teachingFilter > 0) {
+      filtered = filtered.filter(
+        (f) => (f.teaching_rating ?? 0) >= teachingFilter
+      );
+    }
+    if (attendanceFilter > 0) {
+      filtered = filtered.filter(
+        (f) => (f.attendance_rating ?? 0) >= attendanceFilter
+      );
+    }
+    if (correctionFilter > 0) {
+      filtered = filtered.filter(
+        (f) => (f.correction_rating ?? 0) >= correctionFilter
+      );
+    }
+    setResults(filtered);
+  }, [allResults, teachingFilter, attendanceFilter, correctionFilter]);
+
   return (
-    <div className="mb-6">
+    <div className="mb-6 w-full">
       <input
         type="text"
         className="w-full h-12 px-4 rounded-md border border-[#1E2230] mb-4 bg-white text-gray-800 placeholder-gray-500 dark:bg-[#0A0F1E] dark:text-[#E4E9F0] dark:placeholder-[#5A5F7D] focus:outline-none focus:ring-2 focus:ring-[#00FFD8]"
@@ -70,6 +99,79 @@ export default function SearchBar() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
+      <div className="relative mb-4 text-left w-full">
+        <button
+          type="button"
+          onClick={() => setShowFilters(!showFilters)}
+          className="px-3 py-2 rounded-md bg-seablue text-white dark:bg-darkblue hover:bg-blue-600 dark:hover:bg-blue-800"
+        >
+          Filter
+        </button>
+        {showFilters && (
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              setShowFilters(false);
+            }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                setShowFilters(false);
+              }
+            }}
+            className="absolute z-10 mt-2 w-64 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700"
+          >
+            <div className="mb-3">
+              <label className="block text-sm font-semibold mb-1 dark:text-gray-200">Teaching rating</label>
+              <select
+                className="w-full p-2 border rounded-md bg-white dark:bg-[#1E2230] border-gray-300 dark:border-gray-600 dark:text-gray-100"
+                value={teachingFilter}
+                onChange={(e) => setTeachingFilter(Number(e.target.value))}
+              >
+                <option value={0}>Any</option>
+                <option value={5}>5 & up</option>
+                <option value={4}>4 & up</option>
+                <option value={3}>3 & up</option>
+                <option value={2}>2 & up</option>
+              </select>
+            </div>
+            <div className="mb-3">
+              <label className="block text-sm font-semibold mb-1 dark:text-gray-200">Attendance rating</label>
+              <select
+                className="w-full p-2 border rounded-md bg-white dark:bg-[#1E2230] border-gray-300 dark:border-gray-600 dark:text-gray-100"
+                value={attendanceFilter}
+                onChange={(e) => setAttendanceFilter(Number(e.target.value))}
+              >
+                <option value={0}>Any</option>
+                <option value={5}>5 & up</option>
+                <option value={4}>4 & up</option>
+                <option value={3}>3 & up</option>
+                <option value={2}>2 & up</option>
+              </select>
+            </div>
+            <div className="mb-2">
+              <label className="block text-sm font-semibold mb-1 dark:text-gray-200">Correction rating</label>
+              <select
+                className="w-full p-2 border rounded-md bg-white dark:bg-[#1E2230] border-gray-300 dark:border-gray-600 dark:text-gray-100"
+                value={correctionFilter}
+                onChange={(e) => setCorrectionFilter(Number(e.target.value))}
+              >
+                <option value={0}>Any</option>
+                <option value={5}>5 & up</option>
+                <option value={4}>4 & up</option>
+                <option value={3}>3 & up</option>
+                <option value={2}>2 & up</option>
+              </select>
+            </div>
+            <button
+              type="submit"
+              className="mt-3 w-full px-3 py-2 rounded-md bg-seablue text-white dark:bg-darkblue hover:bg-blue-600 dark:hover:bg-blue-800"
+            >
+              Apply
+            </button>
+          </form>
+        )}
+      </div>
       {loading && <p className="text-gray-500">Loading...</p>}
       {error && <p className="text-red-500">Error: {error}</p>}
       {!loading && !error && query.trim() && results.length === 0 && (
