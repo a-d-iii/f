@@ -130,12 +130,23 @@ body.no-scroll {
 }
 
 /* Dark mode global background */
+
 html.dark body {
   background-color: #000;
   background-image: radial-gradient(circle at 20% 30%, #8000ff40, transparent 60%), radial-gradient(circle at 80% 70%, #ff00c840, transparent 60%), linear-gradient(#0a0116, #000);
   background-attachment: fixed;
-  background-size: cover;
   background-position: center;
+}
+
+.animated-bg {
+  background-size: 200% 200%;
+  animation: background-move 30s ease infinite;
+}
+
+@keyframes background-move {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
 }
 
 .animated-shapes {
