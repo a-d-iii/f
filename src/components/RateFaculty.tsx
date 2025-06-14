@@ -52,7 +52,7 @@ export default function RateFaculty() {
         type="button"
         onClick={() => setOpen(true)}
  
-        className={`absolute bottom-2 left-2 px-2 py-0.5 rounded text-sm ${
+        className={`absolute bottom-2 left-2 rounded-full text-sm w-full h-12 ${
           isDark
             ? 'border border-[#00FFD8] text-[#00FFD8] hover:bg-white/10'
             : ratedAverage === null

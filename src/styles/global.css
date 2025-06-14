@@ -8,12 +8,11 @@
 
 /* Critical styles for cards */
 .card {
-  @apply relative bg-gray-50 p-4 rounded-lg shadow-md transition-shadow transition-transform transform animate-fade;
+  @apply relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-md transition-shadow transition-transform transform animate-fade;
 }
 
-.dark .card { 
-  @apply bg-white/5 text-[#E4E9F0] backdrop-blur-lg border border-white/20 rounded-2xl p-6;
- 
+.dark .card {
+  @apply bg-white/5 text-[#E4E9F0] border-white/20;
 }
 
 .card:hover {
@@ -99,15 +98,11 @@
 
 
 .photo-wrapper {
-  /* Increased size with maintained 3:4 ratio and stronger shadow */
-  /* Slightly taller to give the card more vertical room */
-  @apply w-28 h-40 rounded-lg overflow-hidden flex items-center justify-center bg-white shadow-lg ml-2;
+  @apply w-20 h-20 rounded-lg overflow-hidden flex items-center justify-center bg-white shadow-lg ml-2;
 }
- 
 
 .dark .photo-wrapper {
-  @apply w-28 h-40 rounded-lg overflow-hidden flex items-center justify-center bg-transparent border-2 border-[#1E2230];
- 
+  @apply w-20 h-20 rounded-lg overflow-hidden flex items-center justify-center bg-transparent border-2 border-[#1E2230];
 }
 
 html.no-scroll,
