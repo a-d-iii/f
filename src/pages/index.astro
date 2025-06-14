@@ -2,7 +2,6 @@
 import Base from '../layouts/Base.astro';
 import FacultyCard from '../components/FacultyCard.astro';
 import DetailedToggle from '../components/DetailedToggle.astro';
-import SearchBar from '../components/SearchBar.tsx';
 import { paginate } from '../utils/pagination';
 import { fetchLists } from '../utils/supabase';
 const page = 1;
@@ -16,7 +15,6 @@ const list = faculty;
     <div class="shape shape-three"></div>
   </div>
   <DetailedToggle />
-  <SearchBar slot="search" client:load />
   <!-- Wrap cards with fixed width using flex -->
   <div class="flex flex-wrap justify-center gap-x-4 gap-y-8">
     {paginate(list, page).map(f => (
