@@ -65,7 +65,7 @@ export default function SearchBar() {
     <div className="mb-6">
       <input
         type="text"
-        className="w-full px-4 py-2 border rounded-lg mb-4 dark:bg-seablue dark:text-white"
+        className="w-full h-12 px-4 mb-4 rounded-md border border-[#1E2230] bg-white text-gray-800 placeholder-gray-500 dark:bg-[#0A0F1E] dark:text-[#E4E9F0] dark:placeholder-[#5A5F7D] focus:outline-none focus:ring-2 focus:ring-[#00FFD8]"
         placeholder="Search..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
