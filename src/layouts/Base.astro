@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import SearchBar from '../components/SearchBar.tsx';
-import DarkModeToggle from '../components/DarkModeToggle.tsx';
+import DarkModeToggle from '../components/DarkModeToggle.astro';
 import WishlistIcon from '../components/WishlistIcon.tsx';
 const { title = 'Faculty Ranker', headerTitle = 'Faculty Ranker' } = Astro.props;
 ---
@@ -20,13 +20,7 @@ const { title = 'Faculty Ranker', headerTitle = 'Faculty Ranker' } = Astro.props
   <link rel="preload" as="image" href="https://placehold.co/300x400?text=Faculty+4" />
   <script type="module" src="/viewTransitions.js"></script>
   <script type="module" src="/ratingSlider.js"></script>
-  <script>
-    const stored = localStorage.getItem('theme');
-    const prefers = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (stored === 'dark' || (!stored && prefers)) {
-      document.documentElement.classList.add('dark');
-    }
-  </script>
+  <script src="/darkMode.js" is:inline></script>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 dark:from-darkpurple dark:via-darkblue dark:to-black text-gray-900 dark:text-gray-100 animated-bg">
 
@@ -38,7 +32,7 @@ const { title = 'Faculty Ranker', headerTitle = 'Faculty Ranker' } = Astro.props
       <div class="absolute right-4 flex items-center gap-4">
         <WishlistIcon client:load />
         <img src="https://placehold.co/40x40" alt="Profile" class="w-10 h-10 rounded-full border-2 border-gray-300 dark:border-gray-600" />
-        <DarkModeToggle client:load />
+        <DarkModeToggle />
       </div>
     </div>
     <SearchBar client:load />

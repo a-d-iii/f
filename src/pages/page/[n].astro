@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import FacultyCard from '../../components/FacultyCard.astro';
-import DetailedToggle from '../../components/DetailedToggle.tsx';
+import DetailedToggle from '../../components/DetailedToggle.astro';
 import { paginate, PER_PAGE } from '../../utils/pagination';
 import { fetchLists } from '../../utils/supabase';
 export async function getStaticPaths() {
@@ -18,7 +18,7 @@ if (page < 1 || page > pages) {
 }
 ---
 <Base title={`Page ${page} - Faculty Ranker`}>
-  <DetailedToggle client:load />
+  <DetailedToggle />
   <!-- Wrap cards with fixed width using flex -->
   <div class="flex flex-wrap justify-center gap-x-4 gap-y-8">
     {paginate(faculty, page).map(f => (
