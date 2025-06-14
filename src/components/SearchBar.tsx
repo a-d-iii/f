@@ -36,6 +36,7 @@ export default function SearchBar() {
   const [correctionFilter, setCorrectionFilter] = useState(0);
 
   useEffect(() => {
+ 
     if (
       !query.trim() &&
       teachingFilter === 0 &&
@@ -46,18 +47,21 @@ export default function SearchBar() {
       setAllResults([]);
       return;
     }
-
+ 
     const ctrl = { cancelled: false };
     setLoading(true);
     setError(null);
     const timer = setTimeout(async () => {
+ 
       const { data, error } = await supabase.from("lists").select("*");
+ 
       if (ctrl.cancelled) return;
       if (error) {
         setError(error.message);
         setResults([]);
         setAllResults([]);
       } else {
+ 
         let list = ((data as ListItem[]) || []).filter(
           (item) => item.name && item.name.trim() !== "",
         );
@@ -65,6 +69,7 @@ export default function SearchBar() {
           const term = query.toLowerCase();
           list = list.filter((item) => item.name.toLowerCase().includes(term));
         }
+ 
         setAllResults(list);
         setResults(list);
       }
@@ -78,7 +83,9 @@ export default function SearchBar() {
   }, [query, teachingFilter, attendanceFilter, correctionFilter]);
 
   useEffect(() => {
+ 
     let filtered = allResults.filter((f) => f.name && f.name.trim() !== "");
+ 
     if (teachingFilter > 0) {
       filtered = filtered.filter(
         (f) => (f.teaching_rating ?? 0) >= teachingFilter,
