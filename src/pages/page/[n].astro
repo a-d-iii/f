@@ -20,7 +20,9 @@ if (page < 1 || page > pages) {
 <Base title={`Page ${page} - Faculty Ranker`}>
   <DetailedToggle />
   <!-- Wrap cards with fixed width using flex -->
-  <div id="home-cards" class="flex flex-wrap justify-start gap-x-4 gap-y-8">
+ 
+  <div id="home-cards" class="flex flex-wrap justify-center gap-x-4 gap-y-8 w-fit mx-auto">
+ 
     {paginate(faculty, page).map((f, i) => (
       <div class="card-wrapper" data-index={i} data-name={f.name || ''} data-teach={f.teaching_rating ?? 0} data-attend={f.attendance_rating ?? 0} data-correct={f.correction_rating ?? 0} data-total={f.total_ratings ?? 0}>
         <FacultyCard faculty={f} />
