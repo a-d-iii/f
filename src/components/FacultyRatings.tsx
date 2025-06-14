@@ -5,7 +5,6 @@ type Props = {
   teaching: number | null | undefined;
   attendance: number | null | undefined;
   correction: number | null | undefined;
-  quiz?: number | null | undefined;
   tCount?: number | null | undefined;
   aCount?: number | null | undefined;
   cCount?: number | null | undefined;
@@ -67,7 +66,7 @@ function getBoxDarkClasses(rating: number) {
   return 'dark:border-[#FF00C8] dark:text-[#FF00C8] dark:bg-[#FF00C8]20';
 }
 
-export default function FacultyRatings({ teaching, attendance, correction, quiz, tCount, aCount, cCount }: Props) {
+export default function FacultyRatings({ teaching, attendance, correction, tCount, aCount, cCount }: Props) {
   const [detailed, setDetailed] = useState<boolean>(
     typeof window !== 'undefined' && (window as any).showDetailedRatings === true
   );
@@ -131,7 +130,7 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
               <RatingWidget rating={correction} />
 
               <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Correction</span>
-
+              
             </div>
             {typeof cCount === 'number' && (
               <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
@@ -141,15 +140,6 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
                 {cCount}
               </span>
             )}
-          </div>
-
-          <div className="flex flex-col items-center gap-1">
-            <div className={`px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof quiz === 'number' ? quiz : 0)}`}>
-              <RatingWidget rating={quiz} />
-
-              <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Quiz</span>
-
-            </div>
           </div>
         </div>
       )}
