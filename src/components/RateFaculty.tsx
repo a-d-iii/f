@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import useDarkMode from '../hooks/useDarkMode';
 
 function Star({ filled, onClick }: { filled: boolean; onClick: () => void }) {
   return (
@@ -28,6 +29,7 @@ function StarRow({ label, value, onChange }: { label: string; value: number; onC
 }
 
 export default function RateFaculty() {
+  const { isDark } = useDarkMode();
   const [open, setOpen] = useState(false);
   const [teaching, setTeaching] = useState(0);
   const [attendance, setAttendance] = useState(0);
@@ -49,11 +51,17 @@ export default function RateFaculty() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className={`absolute bottom-2 left-2 px-2 py-0.5 rounded text-sm ${
-          ratedAverage === null
-            ? 'bg-gray-400 text-white hover:bg-gray-500 dark:bg-transparent dark:border dark:border-[#00FFD8] dark:text-[#00FFD8] dark:hover:bg-white/10'
-            : 'bg-yellow-300 text-gray-900'
-        }`}
+ 
+        className={
+          isDark
+            ? 'w-full h-12 rounded-full border border-[#00FFD8] text-[#00FFD8] hover:bg-white/10'
+            : `absolute bottom-2 left-2 px-2 py-0.5 rounded text-sm ${
+                ratedAverage === null
+                  ? 'bg-gray-400 text-white hover:bg-gray-500'
+                  : 'bg-yellow-300 text-gray-900'
+              }`
+        }
+ 
       >
         {ratedAverage === null ? 'Rate' : ratedAverage.toFixed(1)}
       </button>

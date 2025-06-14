@@ -86,10 +86,10 @@ export default function FacultyRatings({ teaching, attendance, correction, tCoun
         <div className="grid grid-cols-3 gap-2 mb-2 w-full text-center">
 
           <div className="flex flex-col items-center gap-1">
-            <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
+            <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:w-16 dark:h-16 dark:justify-center dark:bg-transparent dark:border-2 dark:border-[#FF00C8] dark:text-[#FF00C8] dark:hover:bg-[#FF00C8]20 dark:hover:drop-shadow-[0_0_10px_#FF00C8]">
               <RatingWidget rating={teaching} />
  
-              <span className="text-sm text-gray-500 dark:text-gray-300 font-segoe">Teaching</span>
+              <span className="text-sm text-gray-500 dark:text-[#FF00C8] font-segoe">Teaching</span>
  
             </div>
             {typeof tCount === 'number' && (
@@ -103,10 +103,10 @@ export default function FacultyRatings({ teaching, attendance, correction, tCoun
           </div>
 
           <div className="flex flex-col items-center gap-1">
-            <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
+            <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:w-16 dark:h-16 dark:justify-center dark:bg-transparent dark:border-2 dark:border-[#00FFD8] dark:text-[#00FFD8] dark:hover:bg-[#00FFD8]20 dark:hover:drop-shadow-[0_0_10px_#00FFD8]">
               <RatingWidget rating={attendance} />
  
-              <span className="text-sm text-gray-500 dark:text-gray-300 font-segoe">Attendance</span>
+              <span className="text-sm text-gray-500 dark:text-[#00FFD8] font-segoe">Attendance</span>
  
             </div>
             {typeof aCount === 'number' && (
@@ -120,10 +120,10 @@ export default function FacultyRatings({ teaching, attendance, correction, tCoun
           </div>
 
           <div className="flex flex-col items-center gap-1">
-            <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 dark:bg-gray-700 flex flex-col items-center gap-1 shadow w-full">
+            <div className="px-2 py-2 md:py-1 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:w-16 dark:h-16 dark:justify-center dark:bg-transparent dark:border-2 dark:border-[#FFD500] dark:text-[#FFD500] dark:hover:bg-[#FFD500]20 dark:hover:drop-shadow-[0_0_10px_#FFD500]">
               <RatingWidget rating={correction} />
  
-              <span className="text-sm text-gray-500 dark:text-gray-300 font-segoe">Correction</span>
+              <span className="text-sm text-gray-500 dark:text-[#FFD500] font-segoe">Correction</span>
  
             </div>
             {typeof cCount === 'number' && (
