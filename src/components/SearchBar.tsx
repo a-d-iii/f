@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { createClient } from "@supabase/supabase-js";
 
 import FacultyRatings from "./FacultyRatings.tsx";
 import RateFaculty from "./RateFaculty.tsx";
@@ -15,14 +14,6 @@ interface ListItem {
   total_ratings: number | null;
 }
 
-const supabaseUrl =
-  (import.meta as any).env.PUBLIC_SUPABASE_URL ||
-  "https://dwyojdeyfaozeeplpbyr.supabase.co";
-const supabaseAnonKey =
-  (import.meta as any).env.PUBLIC_SUPABASE_ANON_KEY ||
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR3eW9qZGV5ZmFvemVlcGxwYnlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk3OTY5MTMsImV4cCI6MjA2NTM3MjkxM30.A3EWWal-iREIyXX6j2F5Dzdi9KBTJQXAF1GHVcpDHY8";
-
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export default function SearchBar() {
   const [query, setQuery] = useState("");
@@ -72,17 +63,14 @@ export default function SearchBar() {
     setLoading(true);
     setError(null);
     const timer = setTimeout(async () => {
-      const { data, error } = await supabase.from("lists").select("*");
+      try {
+        const res = await fetch('/api/lists');
+        if (!res.ok) throw new Error('Failed to fetch lists');
+        const data: ListItem[] = (await res.json()) || [];
 
-      if (ctrl.cancelled) return;
-      if (error) {
-        setError(error.message);
-        setResults([]);
-        setAllResults([]);
-      } else {
-        let list = ((data as ListItem[]) || []).filter(
-          (item) => item.name && item.name.trim() !== "",
-        );
+        if (ctrl.cancelled) return;
+
+        let list = data.filter((item) => item.name && item.name.trim() !== "");
         if (query.trim()) {
           const term = query.toLowerCase();
           list = list.filter((item) => item.name.toLowerCase().includes(term));
@@ -90,6 +78,11 @@ export default function SearchBar() {
 
         setAllResults(list);
         setResults(list);
+      } catch (err: any) {
+        if (ctrl.cancelled) return;
+        setError(err.message);
+        setResults([]);
+        setAllResults([]);
       }
       setLoading(false);
     }, 300);
