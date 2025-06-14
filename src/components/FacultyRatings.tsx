@@ -93,7 +93,7 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
           <StarRow label="Correction" value={typeof correction === 'number' ? correction : 0} count={cCount} />
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-2 mb-2 w-full text-center">
+        <div className="grid grid-cols-3 gap-2 mb-2 w-full text-center">
 
           <div className="flex flex-col items-center gap-1">
             <div className={`px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof teaching === 'number' ? teaching : 0)}`}>
