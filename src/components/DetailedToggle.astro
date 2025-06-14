@@ -1,0 +1,21 @@
+---
+const { } = Astro.props;
+---
+<div class="flex justify-end mb-2">
+  <button type="button" id="detailed-toggle" class="text-xs px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600">
+    Compact ratings
+  </button>
+</div>
+<script>
+  const btn = document.getElementById('detailed-toggle');
+  const init = typeof window !== 'undefined' && window.showDetailedRatings === true;
+  if (btn) {
+    btn.textContent = init ? 'Compact ratings' : 'Detailed ratings';
+    btn.addEventListener('click', () => {
+      const show = !(window.showDetailedRatings === true);
+      window.showDetailedRatings = show;
+      window.dispatchEvent(new CustomEvent('detailed-ratings-change', { detail: { show } }));
+      btn.textContent = show ? 'Compact ratings' : 'Detailed ratings';
+    });
+  }
+</script>
