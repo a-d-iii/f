@@ -55,13 +55,16 @@ const uid = faculty.id || Math.random().toString(36).slice(2, 8);
         )}
       </div>
     </div>
+
     <hr class="border-t border-gray-300 dark:border-gray-700 my-2" />
+
     <div class="flex gap-2 mb-2">
       <button type="button" id={`c-${uid}`} class="px-2 py-1 text-xs rounded bg-gray-200 dark:bg-gray-700">Change</button>
       <button type="button" id={`l-${uid}`} class="px-2 py-1 text-xs rounded bg-gray-200 dark:bg-gray-700">Lighter</button>
       <button type="button" id={`d-${uid}`} class="px-2 py-1 text-xs rounded bg-gray-200 dark:bg-gray-700">Darker</button>
     </div>
     <div id={`b-${uid}`} class="mb-4 p-2 rounded-md bg-gray-100 dark:bg-gray-800/40">
+
       <FacultyRatings
         teaching={faculty.teaching_rating ?? faculty.teachingRating}
         attendance={faculty.attendance_rating ?? faculty.attendanceRating}
@@ -77,6 +80,7 @@ const uid = faculty.id || Math.random().toString(36).slice(2, 8);
     <RateFaculty client:visible />
     <HeartButton faculty={faculty} client:visible />
 </article>
+
 <script define:vars={{ uid }}>
   const bottom = document.getElementById(`b-${uid}`);
   const changeBtn = document.getElementById(`c-${uid}`);
@@ -108,5 +112,6 @@ const uid = faculty.id || Math.random().toString(36).slice(2, 8);
   });
 
   update();
+
 </script>
 
