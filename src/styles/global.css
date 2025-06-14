@@ -134,8 +134,7 @@ body.no-scroll {
 
 html.dark body {
   background-color: #000;
-  background-image: radial-gradient(circle at 20% 30%, #8000ff40, transparent 60%), radial-gradient(circle at 80% 70%, #ff00c840, transparent 60%), linear-gradient(#0a0116, #000);
-  background-position: center;
+  background-image: none;
 }
 
 .animated-bg {
