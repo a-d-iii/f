@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { createClient } from "@supabase/supabase-js";
 
 import FacultyRatings from "./FacultyRatings.tsx";
@@ -37,6 +37,81 @@ export default function SearchBar() {
   const [showSort, setShowSort] = useState(false);
   const [sortOption, setSortOption] = useState("");
   const [displayResults, setDisplayResults] = useState<ListItem[]>([]);
+
+  const filterRef = useRef<HTMLFormElement | null>(null);
+  const filterButtonRef = useRef<HTMLButtonElement | null>(null);
+  const sortRef = useRef<HTMLDivElement | null>(null);
+  const sortButtonRef = useRef<HTMLButtonElement | null>(null);
+
+  function sortHomeCards(option: string) {
+    const container = document.getElementById('home-cards');
+    if (!container) return;
+    const cards = Array.from(
+      container.querySelectorAll<HTMLDivElement>('.card-wrapper')
+    );
+    const getData = (el: HTMLDivElement) => ({
+      index: Number(el.dataset.index) || 0,
+      name: (el.dataset.name || '').toLowerCase(),
+      teach: Number(el.dataset.teach) || 0,
+      attend: Number(el.dataset.attend) || 0,
+      correct: Number(el.dataset.correct) || 0,
+      total: Number(el.dataset.total) || 0,
+    });
+    cards.sort((a, b) => {
+      const da = getData(a);
+      const db = getData(b);
+      switch (option) {
+        case 'name-asc':
+          return da.name.localeCompare(db.name);
+        case 'name-desc':
+          return db.name.localeCompare(da.name);
+        case 'teach-asc':
+          return da.teach - db.teach;
+        case 'teach-desc':
+          return db.teach - da.teach;
+        case 'attend-asc':
+          return da.attend - db.attend;
+        case 'attend-desc':
+          return db.attend - da.attend;
+        case 'correct-asc':
+          return da.correct - db.correct;
+        case 'correct-desc':
+          return db.correct - da.correct;
+        case 'total-asc':
+          return da.total - db.total;
+        case 'total-desc':
+          return db.total - da.total;
+        default:
+          return da.index - db.index;
+      }
+    });
+    cards.forEach((c) => container.appendChild(c));
+  }
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (
+        showFilters &&
+        filterRef.current &&
+        !filterRef.current.contains(e.target as Node) &&
+        filterButtonRef.current &&
+        !filterButtonRef.current.contains(e.target as Node)
+      ) {
+        setShowFilters(false);
+      }
+      if (
+        showSort &&
+        sortRef.current &&
+        !sortRef.current.contains(e.target as Node) &&
+        sortButtonRef.current &&
+        !sortButtonRef.current.contains(e.target as Node)
+      ) {
+        setShowSort(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, [showFilters, showSort]);
 
   useEffect(() => {
  
@@ -157,8 +232,18 @@ export default function SearchBar() {
         );
         break;
     }
-    setDisplayResults(sorted);
-  }, [results, sortOption]);
+    if (
+      !query.trim() &&
+      teachingFilter === 0 &&
+      attendanceFilter === 0 &&
+      correctionFilter === 0
+    ) {
+      sortHomeCards(sortOption);
+      setDisplayResults([]);
+    } else {
+      setDisplayResults(sorted);
+    }
+  }, [results, sortOption, query, teachingFilter, attendanceFilter, correctionFilter]);
 
   return (
     <div className="mb-6 w-full">
@@ -176,6 +261,7 @@ export default function SearchBar() {
           <div className="relative">
             <button
               type="button"
+              ref={filterButtonRef}
               onClick={() => setShowFilters(!showFilters)}
               className="px-3 py-2 rounded-md bg-seablue text-white dark:bg-[#1E2230] hover:bg-blue-600 dark:hover:bg-[#374151]"
             >
@@ -183,6 +269,7 @@ export default function SearchBar() {
             </button>
             {showFilters && (
               <form
+                ref={filterRef}
                 onSubmit={(e) => {
                   e.preventDefault();
                   setShowFilters(false);
@@ -258,13 +345,17 @@ export default function SearchBar() {
           <div className="relative">
             <button
               type="button"
+              ref={sortButtonRef}
               onClick={() => setShowSort(!showSort)}
               className="px-3 py-2 rounded-md bg-seablue text-white dark:bg-[#1E2230] hover:bg-blue-600 dark:hover:bg-[#374151]"
             >
               Sort
             </button>
             {showSort && (
-              <div className="absolute z-20 left-0 mt-2 w-56 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700">
+              <div
+                ref={sortRef}
+                className="absolute z-20 left-0 mt-2 w-56 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700"
+              >
                 <label className="block text-sm font-semibold mb-1 dark:text-gray-200">Sort by</label>
                 <select
                   className="w-full p-2 border rounded-md bg-white dark:bg-[#1E2230] border-gray-300 dark:border-gray-600 dark:text-gray-100"
