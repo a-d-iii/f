@@ -179,6 +179,26 @@ html.dark body {
   animation: move-three 18s ease-in-out infinite alternate;
 }
 
+.shape-four {
+  width: 18rem;
+  height: 18rem;
+  background: radial-gradient(circle, #ffd500, transparent 70%);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  top: 10%;
+  right: -6rem;
+  animation: move-four 20s ease-in-out infinite alternate;
+}
+
+.shape-five {
+  width: 14rem;
+  height: 14rem;
+  background: radial-gradient(circle, #00aaff, transparent 70%);
+  transform: rotate(45deg);
+  bottom: 20%;
+  left: -7rem;
+  animation: move-five 22s ease-in-out infinite alternate;
+}
+
 @keyframes move-one {
   from { transform: translate(0, 0) rotate(0deg); }
   to { transform: translate(40px, -40px) rotate(45deg); }
@@ -192,4 +212,14 @@ html.dark body {
 @keyframes move-three {
   from { transform: translate(-50%, -50%) scale(1); }
   to { transform: translate(-60%, -40%) scale(1.2); }
+}
+
+@keyframes move-four {
+  from { transform: rotate(0deg) translate(0, 0); }
+  to { transform: rotate(360deg) translate(-40px, 40px); }
+}
+
+@keyframes move-five {
+  from { transform: rotate(45deg) translate(0, 0) scale(1); }
+  to { transform: rotate(45deg) translate(40px, -40px) scale(1.3); }
 }
