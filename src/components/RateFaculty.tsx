@@ -49,11 +49,9 @@ export default function RateFaculty() {
       <button
         type="button"
         onClick={() => setOpen(true)}
- 
         className={`absolute bottom-2 left-2 px-2 py-0.5 rounded text-sm ${
- 
           ratedAverage === null
-            ? 'bg-gray-400 text-white hover:bg-gray-500'
+            ? 'bg-gray-400 text-white hover:bg-gray-500 dark:bg-transparent dark:h-12 dark:right-2 dark:left-2 dark:w-auto dark:px-0 dark:py-0 dark:rounded-full dark:border dark:border-[#00FFD8] dark:text-[#00FFD8] dark:hover:bg-white/10'
             : 'bg-yellow-300 text-gray-900'
         }`}
       >
