@@ -36,7 +36,9 @@ export default function SearchBar() {
   const [correctionFilter, setCorrectionFilter] = useState(0);
   const [displayResults, setDisplayResults] = useState<ListItem[]>([]);
   const [showSort, setShowSort] = useState(false);
+ 
   const [sortOption, setSortOption] = useState("default");
+ 
 
   const sortRef = useRef<HTMLDivElement | null>(null);
   const sortButtonRef = useRef<HTMLButtonElement | null>(null);
@@ -65,8 +67,10 @@ export default function SearchBar() {
         setShowSort(false);
       }
     }
+ 
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
+ 
   }, [showFilters, showSort]);
 
   useEffect(() => {
@@ -144,6 +148,7 @@ export default function SearchBar() {
       });
     };
     switch (sortOption) {
+ 
       case "default":
         break;
       case "nameAsc":
@@ -175,6 +180,7 @@ export default function SearchBar() {
         break;
       case "ratingsLow":
         sortByNumber("total_ratings", true);
+ 
         break;
       default:
         break;
@@ -182,6 +188,7 @@ export default function SearchBar() {
     setDisplayResults(sorted);
 
     if (sorted.length === 0) {
+ 
       const container = document.getElementById("home-cards");
       if (container) {
         const children = Array.from(container.children) as HTMLElement[];
@@ -214,16 +221,19 @@ export default function SearchBar() {
               return getNum(b, "total") - getNum(a, "total");
             case "ratingsLow":
               return getNum(a, "total") - getNum(b, "total");
+ 
             default:
               return 0;
           }
         });
+ 
         container.innerHTML = "";
+ 
         children.forEach((c) => container.appendChild(c));
       }
     }
   }, [results, sortOption]);
-
+ 
   return (
     <div className="mb-6 w-full">
       <input
@@ -466,7 +476,57 @@ export default function SearchBar() {
               </div>
             )}
           </div>
+          <div className="relative">
+            <button
+              type="button"
+              ref={sortButtonRef}
+              onClick={() => setShowSort(!showSort)}
+              className="px-3 py-2 rounded-md bg-seablue text-white dark:bg-[#1E2230] hover:bg-blue-600 dark:hover:bg-[#374151]"
+            >
+              Sort
+            </button>
+            {showSort && (
+              <div
+                ref={sortRef}
+                className="absolute z-10 mt-2 w-48 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700"
+              >
+                <ul className="space-y-2">
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('nameAsc'); setShowSort(false); }}>Name A-Z</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('nameDesc'); setShowSort(false); }}>Name Z-A</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('teachHigh'); setShowSort(false); }}>Teaching high-low</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('teachLow'); setShowSort(false); }}>Teaching low-high</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('attendHigh'); setShowSort(false); }}>Attendance high-low</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('attendLow'); setShowSort(false); }}>Attendance low-high</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('correctHigh'); setShowSort(false); }}>Correction high-low</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('correctLow'); setShowSort(false); }}>Correction low-high</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('ratingsHigh'); setShowSort(false); }}>Most ratings</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('ratingsLow'); setShowSort(false); }}>Fewest ratings</button>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
+ 
       </div>
       {loading && <p className="text-gray-500">Loading...</p>}
       {error && <p className="text-red-500">Error: {error}</p>}
