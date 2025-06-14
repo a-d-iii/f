@@ -28,6 +28,8 @@ const correctionCount =
 const quizCount =
   faculty.num_quiz_ratings ?? faculty.numQuizRatings ?? faculty.ratingsCount ?? faculty.total_ratings ?? null;
 
+const uid = faculty.id || Math.random().toString(36).slice(2, 8);
+
 ---
 <article class="card pb-32 dark:pb-6 card-wrapper dark:backdrop-blur-lg dark:bg-opacity-5 dark:border dark:border-opacity-20 dark:rounded-2xl dark:p-6">
     <div class="flex items-start gap-4 mb-2 h-40 dark:h-auto">
@@ -53,7 +55,13 @@ const quizCount =
         )}
       </div>
     </div>
-    <div class="mb-4">
+    <hr class="border-t border-gray-300 dark:border-gray-700 my-2" />
+    <div class="flex gap-2 mb-2">
+      <button type="button" id={`c-${uid}`} class="px-2 py-1 text-xs rounded bg-gray-200 dark:bg-gray-700">Change</button>
+      <button type="button" id={`l-${uid}`} class="px-2 py-1 text-xs rounded bg-gray-200 dark:bg-gray-700">Lighter</button>
+      <button type="button" id={`d-${uid}`} class="px-2 py-1 text-xs rounded bg-gray-200 dark:bg-gray-700">Darker</button>
+    </div>
+    <div id={`b-${uid}`} class="mb-4 p-2 rounded-md bg-gray-100 dark:bg-gray-800/40">
       <FacultyRatings
         teaching={faculty.teaching_rating ?? faculty.teachingRating}
         attendance={faculty.attendance_rating ?? faculty.attendanceRating}
@@ -69,3 +77,30 @@ const quizCount =
     <RateFaculty client:visible />
     <HeartButton faculty={faculty} client:visible />
 </article>
+<script>
+  {
+    const bottom = document.getElementById(`b-${uid}`);
+    const changeBtn = document.getElementById(`c-${uid}`);
+    const lightBtn = document.getElementById(`l-${uid}`);
+    const darkBtn = document.getElementById(`d-${uid}`);
+    let h = 210, s = 20, l = 95;
+    const update = () => {
+      if (bottom) bottom.style.backgroundColor = `hsl(${h}, ${s}%, ${l}%)`;
+    };
+    changeBtn?.addEventListener('click', () => {
+      h = Math.floor(Math.random() * 360);
+      s = 30;
+      update();
+    });
+    lightBtn?.addEventListener('click', () => {
+      l = Math.min(l + 5, 100);
+      update();
+    });
+    darkBtn?.addEventListener('click', () => {
+      l = Math.max(l - 5, 0);
+      update();
+    });
+    update();
+  }
+</script>
+
