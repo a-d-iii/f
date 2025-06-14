@@ -354,6 +354,9 @@ export default function SearchBar() {
           </article>
         ))}
       </div>
+      {displayResults.length > 0 && (
+        <hr className="my-8 mx-auto w-1/2 border-t-2 border-dashed border-gray-400" />
+      )}
     </div>
   );
 }
