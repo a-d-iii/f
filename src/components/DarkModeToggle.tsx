@@ -12,7 +12,7 @@ export default function DarkModeToggle({ className = '' }: Props) {
       onClick={toggleDark}
  
       className={`p-2 rounded-md ${className} ${isDark ? 'bg-gray-800' : 'bg-gray-200'}`}
- 
+   
       aria-label="Toggle dark mode"
     >
       <svg

@@ -28,9 +28,7 @@ const correctionCount =
 
 ---
 <article class="card pb-32 dark:pb-6 card-wrapper">
- 
-    <div class="flex items-start gap-4 mb-2">
- 
+    <div class="flex items-start gap-4 mb-2 h-40 dark:h-auto">
       <div class="photo-wrapper">
         <img
           src={photoUrl}
@@ -42,9 +40,9 @@ const correctionCount =
       </div>
  
 
-      <div class="flex flex-col flex-1 overflow-hidden">
-
+      <div class="flex flex-col flex-1 h-40 dark:h-auto overflow-hidden">
  
+
         <h3 class="text-lg font-bold mb-1 clamp-two-lines faculty-name font-poppins dark:text-[#E4E9F0] dark:text-2xl dark:font-medium">{faculty.name || 'Unknown'}</h3>
         {specialization && (
           <p class="text-sm italic text-gray-400 leading-snug overflow-hidden flex-grow clamp-four-lines font-segoe dark:text-[#CDD2E0] dark:font-normal mt-1">

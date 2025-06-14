@@ -80,7 +80,7 @@ export default function SearchBar() {
         {results.map((item) => (
 
           <article key={item.name} className="card pb-32 card-wrapper">
-            <div className="flex items-start gap-4 mb-2">
+            <div className="flex items-start gap-4 mb-2 h-40">
               <div className="photo-wrapper">
                 <img
                   src={item.photo_url || 'https://placehold.co/300x400?text=No+Photo'}
@@ -93,9 +93,7 @@ export default function SearchBar() {
                   className="faculty-photo"
                 />
               </div>
- 
-              <div className="flex flex-col flex-1 overflow-hidden">
- 
+              <div className="flex flex-col flex-1 h-40 overflow-hidden">
                 <h3 className="text-lg font-bold mb-1 clamp-two-lines faculty-name font-poppins dark:text-[#E4E9F0] dark:text-2xl dark:font-medium">{item.name}</h3>
                 {item.specialization && (
                   <p className="text-sm italic text-gray-400 leading-snug overflow-hidden flex-grow clamp-four-lines font-segoe dark:text-[#CDD2E0] dark:font-normal mt-1">
