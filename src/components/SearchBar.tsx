@@ -277,9 +277,11 @@ export default function SearchBar() {
                 teaching={item.teaching_rating ?? 0}
                 attendance={item.attendance_rating ?? 0}
                 correction={item.correction_rating ?? 0}
+                quiz={item.quiz_rating ?? 0}
                 tCount={item.total_ratings ?? null}
                 aCount={item.total_ratings ?? null}
                 cCount={item.total_ratings ?? null}
+                qCount={item.total_ratings ?? null}
               />
             </div>
             <RateFaculty />

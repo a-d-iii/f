@@ -38,6 +38,12 @@ export default function FacultyCardReact({ faculty }: { faculty: Faculty }) {
     (faculty as any).ratingsCount ??
     (faculty as any).total_ratings ??
     null;
+  const quizCount =
+    (faculty as any).num_quiz_ratings ??
+    (faculty as any).numQuizRatings ??
+    (faculty as any).ratingsCount ??
+    (faculty as any).total_ratings ??
+    null;
 
   return (
     <article className="card pb-32 dark:pb-6 card-wrapper dark:backdrop-blur-lg dark:bg-opacity-5 dark:border dark:border-opacity-20 dark:rounded-2xl dark:p-6">
@@ -71,9 +77,11 @@ export default function FacultyCardReact({ faculty }: { faculty: Faculty }) {
           teaching={(faculty as any).teaching_rating ?? (faculty as any).teachingRating}
           attendance={(faculty as any).attendance_rating ?? (faculty as any).attendanceRating}
           correction={(faculty as any).correction_rating ?? (faculty as any).correctionRating}
+          quiz={(faculty as any).quiz_rating ?? (faculty as any).quizRating}
           tCount={teachingCount}
           aCount={attendanceCount}
           cCount={correctionCount}
+          qCount={quizCount}
           client:visible
         />
       </div>
