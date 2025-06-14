@@ -73,7 +73,9 @@ export default function FacultyCardReact({ faculty }: { faculty: Faculty }) {
         </div>
       </div>
       <hr className="border-t border-gray-300 dark:border-gray-700 my-2" />
+ 
       <div className="mb-4 p-2 bg-gray-100 dark:bg-gray-800/40 rounded-md">
+ 
         <FacultyRatings
           teaching={(faculty as any).teaching_rating ?? (faculty as any).teachingRating}
           attendance={(faculty as any).attendance_rating ?? (faculty as any).attendanceRating}
