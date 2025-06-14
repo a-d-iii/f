@@ -94,9 +94,9 @@ export default function SearchBar() {
                 />
               </div>
               <div className="flex flex-col flex-1 h-40 overflow-hidden">
-                <h3 className="text-lg font-bold mb-1 clamp-two-lines faculty-name font-poppins dark:text-[#E4E9F0] dark:text-2xl dark:font-medium">{item.name}</h3>
+                <h3 className="text-2xl font-medium clamp-two-lines faculty-name font-poppins dark:text-[#E4E9F0]">{item.name}</h3>
                 {item.specialization && (
-                  <p className="text-sm italic text-gray-400 leading-snug overflow-hidden flex-grow clamp-four-lines font-segoe dark:text-[#CDD2E0] dark:font-normal mt-1">
+                  <p className="italic leading-snug mt-1 overflow-hidden flex-grow clamp-four-lines font-segoe text-gray-400 dark:text-[#CDD2E0]">
                     {item.specialization}
                   </p>
                 )}
