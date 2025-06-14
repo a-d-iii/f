@@ -99,7 +99,9 @@ export default function SearchBar() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
+ 
       <div className="relative mb-4 text-left w-full">
+ 
         <button
           type="button"
           onClick={() => setShowFilters(!showFilters)}
@@ -108,6 +110,7 @@ export default function SearchBar() {
           Filter
         </button>
         {showFilters && (
+ 
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -121,6 +124,7 @@ export default function SearchBar() {
             }}
             className="absolute z-10 mt-2 w-64 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700"
           >
+ 
             <div className="mb-3">
               <label className="block text-sm font-semibold mb-1 dark:text-gray-200">Teaching rating</label>
               <select
@@ -163,6 +167,7 @@ export default function SearchBar() {
                 <option value={2}>2 & up</option>
               </select>
             </div>
+ 
             <button
               type="submit"
               className="mt-3 w-full px-3 py-2 rounded-md bg-seablue text-white dark:bg-darkblue hover:bg-blue-600 dark:hover:bg-blue-800"
@@ -170,6 +175,7 @@ export default function SearchBar() {
               Apply
             </button>
           </form>
+ 
         )}
       </div>
       {loading && <p className="text-gray-500">Loading...</p>}
