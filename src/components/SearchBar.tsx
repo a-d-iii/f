@@ -35,6 +35,11 @@ export default function SearchBar() {
   const [attendanceFilter, setAttendanceFilter] = useState(0);
   const [correctionFilter, setCorrectionFilter] = useState(0);
   const [displayResults, setDisplayResults] = useState<ListItem[]>([]);
+  const [showSort, setShowSort] = useState(false);
+  const [sortOption, setSortOption] = useState("nameAsc");
+
+  const sortRef = useRef<HTMLDivElement | null>(null);
+  const sortButtonRef = useRef<HTMLButtonElement | null>(null);
 
   const filterRef = useRef<HTMLFormElement | null>(null);
   const filterButtonRef = useRef<HTMLButtonElement | null>(null);
@@ -53,10 +58,19 @@ export default function SearchBar() {
       ) {
         setShowFilters(false);
       }
+      if (
+        showSort &&
+        sortRef.current &&
+        !sortRef.current.contains(e.target as Node) &&
+        sortButtonRef.current &&
+        !sortButtonRef.current.contains(e.target as Node)
+      ) {
+        setShowSort(false);
+      }
     }
     document.addEventListener('mousedown', handleClick);
     return () => document.removeEventListener('mousedown', handleClick);
-  }, [showFilters]);
+  }, [showFilters, showSort]);
 
   useEffect(() => {
  
@@ -126,6 +140,89 @@ export default function SearchBar() {
     }
     setResults(filtered);
   }, [allResults, teachingFilter, attendanceFilter, correctionFilter]);
+
+  useEffect(() => {
+    let sorted = [...results];
+    const sortByNumber = (key: keyof ListItem, asc = true) => {
+      sorted.sort((a, b) => {
+        const av = (a[key] as number | null) ?? 0;
+        const bv = (b[key] as number | null) ?? 0;
+        return asc ? av - bv : bv - av;
+      });
+    };
+    switch (sortOption) {
+      case 'nameAsc':
+        sorted.sort((a, b) => a.name.localeCompare(b.name));
+        break;
+      case 'nameDesc':
+        sorted.sort((a, b) => b.name.localeCompare(a.name));
+        break;
+      case 'teachHigh':
+        sortByNumber('teaching_rating', false);
+        break;
+      case 'teachLow':
+        sortByNumber('teaching_rating', true);
+        break;
+      case 'attendHigh':
+        sortByNumber('attendance_rating', false);
+        break;
+      case 'attendLow':
+        sortByNumber('attendance_rating', true);
+        break;
+      case 'correctHigh':
+        sortByNumber('correction_rating', false);
+        break;
+      case 'correctLow':
+        sortByNumber('correction_rating', true);
+        break;
+      case 'ratingsHigh':
+        sortByNumber('total_ratings', false);
+        break;
+      case 'ratingsLow':
+        sortByNumber('total_ratings', true);
+        break;
+      default:
+        break;
+    }
+    setDisplayResults(sorted);
+
+    if (sorted.length === 0) {
+      const container = document.getElementById('home-cards');
+      if (container) {
+        const children = Array.from(container.children) as HTMLElement[];
+        const getNum = (el: HTMLElement, key: string) =>
+          parseFloat(el.dataset[key] || '0');
+        children.sort((a, b) => {
+          switch (sortOption) {
+            case 'nameAsc':
+              return (a.dataset.name || '').localeCompare(b.dataset.name || '');
+            case 'nameDesc':
+              return (b.dataset.name || '').localeCompare(a.dataset.name || '');
+            case 'teachHigh':
+              return getNum(b, 'teach') - getNum(a, 'teach');
+            case 'teachLow':
+              return getNum(a, 'teach') - getNum(b, 'teach');
+            case 'attendHigh':
+              return getNum(b, 'attend') - getNum(a, 'attend');
+            case 'attendLow':
+              return getNum(a, 'attend') - getNum(b, 'attend');
+            case 'correctHigh':
+              return getNum(b, 'correct') - getNum(a, 'correct');
+            case 'correctLow':
+              return getNum(a, 'correct') - getNum(b, 'correct');
+            case 'ratingsHigh':
+              return getNum(b, 'total') - getNum(a, 'total');
+            case 'ratingsLow':
+              return getNum(a, 'total') - getNum(b, 'total');
+            default:
+              return 0;
+          }
+        });
+        container.innerHTML = '';
+        children.forEach((c) => container.appendChild(c));
+      }
+    }
+  }, [results, sortOption]);
 
   
 
@@ -226,8 +323,57 @@ export default function SearchBar() {
             </form>
             )}
           </div>
+          <div className="relative">
+            <button
+              type="button"
+              ref={sortButtonRef}
+              onClick={() => setShowSort(!showSort)}
+              className="px-3 py-2 rounded-md bg-seablue text-white dark:bg-[#1E2230] hover:bg-blue-600 dark:hover:bg-[#374151]"
+            >
+              Sort
+            </button>
+            {showSort && (
+              <div
+                ref={sortRef}
+                className="absolute z-10 mt-2 w-48 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700"
+              >
+                <ul className="space-y-2">
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('nameAsc'); setShowSort(false); }}>Name A-Z</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('nameDesc'); setShowSort(false); }}>Name Z-A</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('teachHigh'); setShowSort(false); }}>Teaching high-low</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('teachLow'); setShowSort(false); }}>Teaching low-high</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('attendHigh'); setShowSort(false); }}>Attendance high-low</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('attendLow'); setShowSort(false); }}>Attendance low-high</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('correctHigh'); setShowSort(false); }}>Correction high-low</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('correctLow'); setShowSort(false); }}>Correction low-high</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('ratingsHigh'); setShowSort(false); }}>Most ratings</button>
+                  </li>
+                  <li>
+                    <button className="w-full text-left" onClick={() => { setSortOption('ratingsLow'); setShowSort(false); }}>Fewest ratings</button>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
- 
+
       </div>
       {loading && <p className="text-gray-500">Loading...</p>}
       {error && <p className="text-red-500">Error: {error}</p>}
