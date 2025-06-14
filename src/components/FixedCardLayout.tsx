@@ -11,7 +11,7 @@ export function FacultyCardExample() {
       />
       <h3 className="text-lg font-semibold font-poppins">Prof. Jane Doe</h3>
       <p className="text-sm italic text-gray-500">Computer Science</p>
-      <FacultyRatings teaching={4.5} attendance={4.2} correction={4.7} quiz={4.0} />
+      <FacultyRatings teaching={4.5} attendance={4.2} correction={4.7} />
     </div>
   );
 }
