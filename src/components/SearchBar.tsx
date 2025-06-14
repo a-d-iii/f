@@ -354,7 +354,7 @@ export default function SearchBar() {
             {showSort && (
               <div
                 ref={sortRef}
-                className="absolute z-20 left-0 mt-2 w-56 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700"
+                className="absolute z-50 left-0 mt-2 w-56 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700"
               >
                 <label className="block text-sm font-semibold mb-1 dark:text-gray-200">Sort by</label>
                 <select
