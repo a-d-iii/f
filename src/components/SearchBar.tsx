@@ -396,7 +396,7 @@ export default function SearchBar() {
         )}
       {/* Display search results using same layout as the homepage */}
  
-      <div className="flex flex-wrap justify-center gap-x-4 gap-y-8">
+      <div className="flex flex-wrap justify-start gap-x-4 gap-y-8">
  
         {displayResults.map((item) => (
           <article
