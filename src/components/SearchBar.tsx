@@ -116,7 +116,7 @@ export default function SearchBar() {
               />
             </div>
             <RateFaculty />
-            <HeartButton />
+            <HeartButton faculty={item} />
           </article>
 
         ))}
