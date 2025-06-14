@@ -39,7 +39,7 @@ function StarRow({ label, value, count }: { label: string; value: number; count?
         ))}
       </span>
 
-      <span className={`text-xs ml-1 w-8 text-right font-semibold ${getTextColor(value)}`}>{value.toFixed(1)}</span>
+      <span className={`text-xs ml-1 w-8 text-right font-semibold ${getTextColor(value, count)}`}>{value.toFixed(1)}</span>
 
       {typeof count === 'number' && (
         <span className="text-sm text-gray-500 flex items-center gap-1 ml-1">
@@ -53,7 +53,8 @@ function StarRow({ label, value, count }: { label: string; value: number; count?
   );
 }
 
-function getTextColor(rating: number) {
+function getTextColor(rating: number, count?: number | null) {
+  if (count === 0) return 'text-gray-500 dark:text-gray-400';
   if (rating === 5) return 'text-violet-600 dark:text-[#00FFD8]';
   if (rating > 4) return 'text-green-600 dark:text-[#00FFD8]';
   if (rating > 3.5) return 'text-green-500 dark:text-[#00FFD8]';
@@ -97,7 +98,7 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
 
           <div className="flex flex-col items-center gap-1">
             <div className={`px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof teaching === 'number' ? teaching : 0)}`}>
-              <RatingWidget rating={teaching} />
+              <RatingWidget rating={teaching} count={tCount} />
 
               <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Teaching</span>
               
@@ -114,7 +115,7 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
 
           <div className="flex flex-col items-center gap-1">
             <div className={`px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof attendance === 'number' ? attendance : 0)}`}>
-              <RatingWidget rating={attendance} />
+              <RatingWidget rating={attendance} count={aCount} />
 
               <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Attendance</span>
               
@@ -131,7 +132,7 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
 
           <div className="flex flex-col items-center gap-1">
             <div className={`px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof correction === 'number' ? correction : 0)}`}>
-              <RatingWidget rating={correction} />
+              <RatingWidget rating={correction} count={cCount} />
 
               <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Correction</span>
 
@@ -148,7 +149,7 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
 
           <div className="flex flex-col items-center gap-1 col-start-2">
             <div className={`px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof quiz === 'number' ? quiz : 0)}`}>
-              <RatingWidget rating={quiz} />
+              <RatingWidget rating={quiz} count={qCount} />
 
               <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Quiz</span>
 
