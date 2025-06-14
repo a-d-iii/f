@@ -11,9 +11,19 @@
   @apply relative bg-gray-50 p-4 rounded-lg shadow-md transition-shadow transition-transform transform animate-fade;
 }
 
-.dark .card { 
-  @apply bg-white/5 text-[#E4E9F0] backdrop-blur-lg border border-white/20 rounded-2xl p-6;
- 
+.dark .card {
+  @apply bg-white/5 text-[#E4E9F0] backdrop-blur-lg rounded-2xl p-6 border-2 border-transparent relative;
+  background-image: linear-gradient(#0A0F1E,#0A0F1E), linear-gradient(90deg,#FF00C8,#8000FF,#1E90FF,#FFFFFF);
+  background-origin: border-box;
+  background-clip: padding-box,border-box;
+  background-size: 200% 200%;
+  animation: borderMove 6s linear infinite;
+}
+
+@keyframes borderMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 .card:hover {
