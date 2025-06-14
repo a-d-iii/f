@@ -6,13 +6,13 @@ interface Props {
   disabled?: boolean;
 }
 
-const getLightTextColor = (rating: number) => {
-  if (rating === 5) return 'text-violet-600';
-  if (rating > 4) return 'text-green-600';
-  if (rating > 3.5) return 'text-green-500';
-  if (rating >= 3) return 'text-yellow-600';
-  if (rating >= 2) return 'text-red-500';
-  return 'text-red-700';
+const getLightColor = (rating: number) => {
+  if (rating === 5) return 'bg-violet-600 text-white ring-2 ring-violet-300 animate-pulse';
+  if (rating > 4) return 'bg-green-600 text-white';
+  if (rating > 3.5) return 'bg-green-500 text-white';
+  if (rating >= 3) return 'bg-yellow-400 text-gray-900';
+  if (rating >= 2) return 'bg-red-500 text-white';
+  return 'bg-red-700 text-white';
 };
 
 const getDarkTextColor = (rating: number) => {
@@ -23,7 +23,7 @@ const getDarkTextColor = (rating: number) => {
 
 const RatingWidget: FC<Props> = ({ rating }) => {
   const value = typeof rating === 'number' ? rating : 0;
-  const classes = `font-bold text-lg ${getLightTextColor(value)} ${getDarkTextColor(value)}`;
+  const classes = `px-2 py-1 dark:py-0.5 rounded-lg font-bold text-lg ${getLightColor(value)} dark:bg-transparent dark:ring-0 ${getDarkTextColor(value)}`;
   return (
     <div aria-label={`Rating ${value}`} className={classes}>
       {value.toFixed(1)}
