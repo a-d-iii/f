@@ -52,15 +52,13 @@ export default function RateFaculty() {
         type="button"
         onClick={() => setOpen(true)}
  
-        className={
+        className={`absolute bottom-2 left-2 px-2 py-0.5 rounded text-sm ${
           isDark
-            ? 'w-full h-12 rounded-full border border-[#00FFD8] text-[#00FFD8] hover:bg-white/10'
-            : `absolute bottom-2 left-2 px-2 py-0.5 rounded text-sm ${
-                ratedAverage === null
-                  ? 'bg-gray-400 text-white hover:bg-gray-500'
-                  : 'bg-yellow-300 text-gray-900'
-              }`
-        }
+            ? 'border border-[#00FFD8] text-[#00FFD8] hover:bg-white/10'
+            : ratedAverage === null
+              ? 'bg-gray-400 text-white hover:bg-gray-500'
+              : 'bg-yellow-300 text-gray-900'
+        }`}
  
       >
         {ratedAverage === null ? 'Rate' : ratedAverage.toFixed(1)}
