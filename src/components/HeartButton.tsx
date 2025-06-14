@@ -1,22 +1,27 @@
 import { useState } from 'react';
+import useWishlist from '../hooks/useWishlist';
+import type { Faculty } from '../hooks/useWishlist';
+interface Props {
+  faculty: Faculty;
+}
 
-export default function HeartButton() {
-  const [liked, setLiked] = useState(false);
+export default function HeartButton({ faculty }: Props) {
+  const { wishlist, toggle } = useWishlist();
   const [animate, setAnimate] = useState(false);
+  const liked = wishlist.some((f) => f.id === faculty.id);
 
-  const toggle = () => {
-    setLiked(!liked);
+  const handle = () => {
+    toggle(faculty);
     setAnimate(true);
   };
 
   return (
     <svg
-      onClick={toggle}
+      onClick={handle}
       onAnimationEnd={() => setAnimate(false)}
  
       className={`w-6 h-6 cursor-pointer absolute bottom-2 right-2 transition-colors ${
- 
-        liked ? 'text-red-500' : 'text-gray-400'
+        liked ? 'text-red-500' : 'text-gray-400 dark:text-gray-500'
       } ${animate ? 'animate-pop' : ''}`}
       viewBox="0 0 24 24"
       fill={liked ? 'currentColor' : 'none'}
