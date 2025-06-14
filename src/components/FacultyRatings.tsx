@@ -60,11 +60,6 @@ function getTextColor(rating: number) {
   return 'text-red-700 dark:text-[#FF00C8]';
 }
 
-function getBoxDarkClasses(rating: number) {
-  if (rating > 4) return 'dark:border-[#00FFD8] dark:text-[#00FFD8] dark:bg-[#00FFD8]20 dark:drop-shadow-[0_0_10px_#00FFD8]';
-  if (rating >= 3) return 'dark:border-[#FFD500] dark:text-[#FFD500] dark:bg-[#FFD500]20 dark:drop-shadow-[0_0_10px_#FFD500]';
-  return 'dark:border-[#FF00C8] dark:text-[#FF00C8] dark:bg-[#FF00C8]20 dark:drop-shadow-[0_0_10px_#FF00C8]';
-}
 
 export default function FacultyRatings({ teaching, attendance, correction, tCount, aCount, cCount }: Props) {
   const [detailed, setDetailed] = useState<boolean>(
@@ -92,7 +87,7 @@ export default function FacultyRatings({ teaching, attendance, correction, tCoun
         <div className="grid grid-cols-3 gap-2 mb-2 w-full text-center">
 
           <div className="flex flex-col items-center gap-1">
-            <div className={`px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof teaching === 'number' ? teaching : 0)}`}>
+            <div className="px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 dark:text-[#FF00C8] dark:border-[#FF00C8] dark:hover:bg-[#FF00C8]20 dark:hover:drop-shadow-[0_0_10px_#FF00C8]">
               <RatingWidget rating={teaching} />
 
               <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Teaching</span>
@@ -109,7 +104,7 @@ export default function FacultyRatings({ teaching, attendance, correction, tCoun
           </div>
 
           <div className="flex flex-col items-center gap-1">
-            <div className={`px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof attendance === 'number' ? attendance : 0)}`}>
+            <div className="px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 dark:text-[#00FFD8] dark:border-[#00FFD8] dark:hover:bg-[#00FFD8]20 dark:hover:drop-shadow-[0_0_10px_#00FFD8]">
               <RatingWidget rating={attendance} />
 
               <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Attendance</span>
@@ -126,7 +121,7 @@ export default function FacultyRatings({ teaching, attendance, correction, tCoun
           </div>
 
           <div className="flex flex-col items-center gap-1">
-            <div className={`px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof correction === 'number' ? correction : 0)}`}>
+            <div className="px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 dark:text-[#FFD500] dark:border-[#FFD500] dark:hover:bg-[#FFD500]20 dark:hover:drop-shadow-[0_0_10px_#FFD500]">
               <RatingWidget rating={correction} />
 
               <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Correction</span>
