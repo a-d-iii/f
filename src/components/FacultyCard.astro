@@ -27,15 +27,17 @@ const correctionCount =
   faculty.num_correction_ratings ?? faculty.numCorrectionRatings ?? faculty.ratingsCount ?? faculty.total_ratings ?? null;
 
 ---
-<article class="relative bg-white/5 dark:bg-white/5 backdrop-blur-lg border border-white/20 dark:border-white/20 rounded-2xl p-6 pb-32 dark:pb-6 card-wrapper">
+<article class="card pb-32 dark:pb-6 card-wrapper">
     <div class="flex items-start gap-4 mb-2 h-40 dark:h-auto">
-      <img
-        src={photoUrl}
-        alt={`Photo of ${faculty.name || 'Unknown'}`}
-        loading="lazy"
-        onerror="this.src='https://placehold.co/300x400?text=No+Photo';this.onerror=null;"
-        class="w-20 h-20 rounded-lg object-cover dark:border-2 dark:border-[#1E2230]"
-      />
+      <div class="photo-wrapper">
+        <img
+          src={photoUrl}
+          alt={`Photo of ${faculty.name || 'Unknown'}`}
+          loading="lazy"
+          onerror="this.src='https://placehold.co/300x400?text=No+Photo';this.onerror=null;"
+          class="faculty-photo"
+        />
+      </div>
  
 
       <div class="flex flex-col flex-1 h-40 dark:h-auto overflow-hidden">
