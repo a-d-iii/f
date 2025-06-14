@@ -92,7 +92,6 @@ export default function FacultyCardReact({ faculty }: { faculty: Faculty }) {
         </div>
       </div>
       <hr className="border-t border-gray-300 dark:border-gray-700 my-2" />
- 
       <div className="flex gap-2 mb-2">
         <button type="button" onClick={change} className="px-2 py-1 text-xs rounded bg-gray-200 dark:bg-gray-700">
           Change
@@ -105,7 +104,6 @@ export default function FacultyCardReact({ faculty }: { faculty: Faculty }) {
         </button>
       </div>
       <div className="mb-4 p-2 rounded-md" style={{ backgroundColor: color }}>
- 
         <FacultyRatings
           teaching={(faculty as any).teaching_rating ?? (faculty as any).teachingRating}
           attendance={(faculty as any).attendance_rating ?? (faculty as any).attendanceRating}
