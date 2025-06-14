@@ -98,8 +98,10 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
           <div className="flex flex-col items-center gap-1">
             <div className={`relative px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof teaching === 'number' ? teaching : 0)}`}>
               <RatingWidget rating={teaching} />
+ 
               {typeof tCount === 'number' && (
                 <span className="absolute right-1 top-1 text-xs text-gray-500 flex items-center gap-1">
+ 
                   <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
                   </svg>
@@ -107,14 +109,18 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
                 </span>
               )}
             </div>
+ 
             <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Teaching</span>
+ 
           </div>
 
           <div className="flex flex-col items-center gap-1">
             <div className={`relative px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof attendance === 'number' ? attendance : 0)}`}>
               <RatingWidget rating={attendance} />
+ 
               {typeof aCount === 'number' && (
                 <span className="absolute right-1 top-1 text-xs text-gray-500 flex items-center gap-1">
+ 
                   <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
                   </svg>
@@ -122,14 +128,18 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
                 </span>
               )}
             </div>
+ 
             <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Attendance</span>
+ 
           </div>
 
           <div className="flex flex-col items-center gap-1">
             <div className={`relative px-2 py-1 md:py-0.5 dark:py-0.5 rounded-lg bg-gray-200 flex flex-col items-center gap-1 shadow w-full dark:justify-center dark:bg-transparent dark:border-2 ${getBoxDarkClasses(typeof correction === 'number' ? correction : 0)}`}>
               <RatingWidget rating={correction} />
+ 
               {typeof cCount === 'number' && (
                 <span className="absolute right-1 top-1 text-xs text-gray-500 flex items-center gap-1">
+ 
                   <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
                   </svg>
@@ -137,6 +147,7 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
                 </span>
               )}
             </div>
+ 
             <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Correction</span>
           </div>
 
@@ -145,6 +156,7 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
               <RatingWidget rating={quiz} />
               {typeof qCount === 'number' && (
                 <span className="absolute right-1 top-1 text-xs text-gray-500 flex items-center gap-1">
+ 
                   <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path d="M2 11a1 1 0 112 0v6a1 1 0 11-2 0v-6zm5-5a1 1 0 112 0v11a1 1 0 11-2 0V6zm5 8a1 1 0 112 0v3a1 1 0 11-2 0v-3zm5-10a1 1 0 112 0v13a1 1 0 11-2 0V4z" />
                   </svg>
@@ -152,7 +164,9 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
                 </span>
               )}
             </div>
+ 
             <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Quiz</span>
+ 
           </div>
         </div>
       )}
