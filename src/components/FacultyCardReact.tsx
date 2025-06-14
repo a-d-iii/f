@@ -71,6 +71,7 @@ export default function FacultyCardReact({ faculty }: { faculty: Faculty }) {
           teaching={(faculty as any).teaching_rating ?? (faculty as any).teachingRating}
           attendance={(faculty as any).attendance_rating ?? (faculty as any).attendanceRating}
           correction={(faculty as any).correction_rating ?? (faculty as any).correctionRating}
+          quiz={(faculty as any).quiz_rating ?? (faculty as any).quizRating}
           tCount={teachingCount}
           aCount={attendanceCount}
           cCount={correctionCount}
