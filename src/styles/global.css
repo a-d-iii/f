@@ -13,12 +13,7 @@
 }
 
 .dark .card {
-  @apply bg-white/10 text-[#E4E9F0] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-lg relative;
-  background-image: linear-gradient(#0A0F1E,#0A0F1E), linear-gradient(90deg,#FF00C8,#8000FF,#1E90FF,#FFFFFF);
-  background-origin: border-box;
-  background-clip: padding-box,border-box;
-  background-size: 200% 200%;
-  animation: borderMove 6s linear infinite;
+  @apply bg-white/5 text-[#E4E9F0] backdrop-blur-lg rounded-2xl p-6 border border-white/20 relative;
 }
 
 @keyframes borderMove {
@@ -110,15 +105,12 @@
 
 
 .photo-wrapper {
-  /* Increased size with maintained 3:4 ratio and stronger shadow */
-  /* Slightly taller to give the card more vertical room */
-  @apply w-28 h-40 rounded-lg overflow-hidden flex items-center justify-center bg-white shadow-lg ml-2;
+  @apply w-20 h-20 rounded-lg overflow-hidden flex items-center justify-center bg-white shadow-lg ml-2;
 }
  
 
 .dark .photo-wrapper {
-  @apply w-28 h-40 rounded-lg overflow-hidden flex items-center justify-center bg-transparent border-2 border-[#1E2230];
- 
+  @apply w-20 h-20 rounded-lg overflow-hidden flex items-center justify-center bg-transparent border-2 border-[#1E2230];
 }
 
 html.no-scroll,
@@ -136,9 +128,8 @@ body.no-scroll {
 
 /* Dark mode global background */
 html.dark body {
-  background-color: #000;
-  background-image: radial-gradient(circle at 20% 30%, #8000ff40, transparent 60%), radial-gradient(circle at 80% 70%, #ff00c840, transparent 60%), linear-gradient(#0a0116, #000);
-  background-attachment: fixed;
+  background-color: #0A0F1E;
+  background-image: url('/assets/neon-pattern.svg');
   background-size: cover;
   background-position: center;
 }

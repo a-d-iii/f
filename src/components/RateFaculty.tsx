@@ -54,8 +54,7 @@ export default function RateFaculty() {
  
         className={`absolute bottom-2 left-2 px-2 py-0.5 rounded text-sm ${
           isDark
-            ?
-              'border border-[#FFD500] text-[#FFD500] hover:bg-[#FFD500]20 drop-shadow-[0_0_10px_#FFD500]'
+            ? 'border border-[#00FFD8] text-[#00FFD8] hover:bg-white/10'
             : ratedAverage === null
               ? 'bg-gray-400 text-white hover:bg-gray-500'
               : 'bg-yellow-300 text-gray-900'
