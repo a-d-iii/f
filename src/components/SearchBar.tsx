@@ -34,59 +34,13 @@ export default function SearchBar() {
   const [teachingFilter, setTeachingFilter] = useState(0);
   const [attendanceFilter, setAttendanceFilter] = useState(0);
   const [correctionFilter, setCorrectionFilter] = useState(0);
-  const [showSort, setShowSort] = useState(false);
-  const [sortOption, setSortOption] = useState("");
   const [displayResults, setDisplayResults] = useState<ListItem[]>([]);
 
   const filterRef = useRef<HTMLFormElement | null>(null);
   const filterButtonRef = useRef<HTMLButtonElement | null>(null);
-  const sortRef = useRef<HTMLDivElement | null>(null);
-  const sortButtonRef = useRef<HTMLButtonElement | null>(null);
+  
 
-  function sortHomeCards(option: string) {
-    const container = document.getElementById('home-cards');
-    if (!container) return;
-    const cards = Array.from(
-      container.querySelectorAll<HTMLDivElement>('.card-wrapper')
-    );
-    const getData = (el: HTMLDivElement) => ({
-      index: Number(el.dataset.index) || 0,
-      name: (el.dataset.name || '').toLowerCase(),
-      teach: Number(el.dataset.teach) || 0,
-      attend: Number(el.dataset.attend) || 0,
-      correct: Number(el.dataset.correct) || 0,
-      total: Number(el.dataset.total) || 0,
-    });
-    cards.sort((a, b) => {
-      const da = getData(a);
-      const db = getData(b);
-      switch (option) {
-        case 'name-asc':
-          return da.name.localeCompare(db.name);
-        case 'name-desc':
-          return db.name.localeCompare(da.name);
-        case 'teach-asc':
-          return da.teach - db.teach;
-        case 'teach-desc':
-          return db.teach - da.teach;
-        case 'attend-asc':
-          return da.attend - db.attend;
-        case 'attend-desc':
-          return db.attend - da.attend;
-        case 'correct-asc':
-          return da.correct - db.correct;
-        case 'correct-desc':
-          return db.correct - da.correct;
-        case 'total-asc':
-          return da.total - db.total;
-        case 'total-desc':
-          return db.total - da.total;
-        default:
-          return da.index - db.index;
-      }
-    });
-    cards.forEach((c) => container.appendChild(c));
-  }
+
 
   useEffect(() => {
     function handleClick(e: MouseEvent) {
@@ -99,19 +53,10 @@ export default function SearchBar() {
       ) {
         setShowFilters(false);
       }
-      if (
-        showSort &&
-        sortRef.current &&
-        !sortRef.current.contains(e.target as Node) &&
-        sortButtonRef.current &&
-        !sortButtonRef.current.contains(e.target as Node)
-      ) {
-        setShowSort(false);
-      }
     }
     document.addEventListener('mousedown', handleClick);
     return () => document.removeEventListener('mousedown', handleClick);
-  }, [showFilters, showSort]);
+  }, [showFilters]);
 
   useEffect(() => {
  
@@ -182,68 +127,7 @@ export default function SearchBar() {
     setResults(filtered);
   }, [allResults, teachingFilter, attendanceFilter, correctionFilter]);
 
-  useEffect(() => {
-    let sorted = [...results];
-    switch (sortOption) {
-      case 'name-asc':
-        sorted.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
-        break;
-      case 'name-desc':
-        sorted.sort((a, b) => (b.name || '').localeCompare(a.name || ''));
-        break;
-      case 'teach-asc':
-        sorted.sort(
-          (a, b) => (a.teaching_rating ?? 0) - (b.teaching_rating ?? 0)
-        );
-        break;
-      case 'teach-desc':
-        sorted.sort(
-          (a, b) => (b.teaching_rating ?? 0) - (a.teaching_rating ?? 0)
-        );
-        break;
-      case 'attend-asc':
-        sorted.sort(
-          (a, b) => (a.attendance_rating ?? 0) - (b.attendance_rating ?? 0)
-        );
-        break;
-      case 'attend-desc':
-        sorted.sort(
-          (a, b) => (b.attendance_rating ?? 0) - (a.attendance_rating ?? 0)
-        );
-        break;
-      case 'correct-asc':
-        sorted.sort(
-          (a, b) => (a.correction_rating ?? 0) - (b.correction_rating ?? 0)
-        );
-        break;
-      case 'correct-desc':
-        sorted.sort(
-          (a, b) => (b.correction_rating ?? 0) - (a.correction_rating ?? 0)
-        );
-        break;
-      case 'total-asc':
-        sorted.sort(
-          (a, b) => (a.total_ratings ?? 0) - (b.total_ratings ?? 0)
-        );
-        break;
-      case 'total-desc':
-        sorted.sort(
-          (a, b) => (b.total_ratings ?? 0) - (a.total_ratings ?? 0)
-        );
-        break;
-    }
-    if (
-      !query.trim() &&
-      teachingFilter === 0 &&
-      attendanceFilter === 0 &&
-      correctionFilter === 0
-    ) {
-      sortHomeCards(sortOption);
-      setDisplayResults([]);
-    } else {
-      setDisplayResults(sorted);
-    }
-  }, [results, sortOption, query, teachingFilter, attendanceFilter, correctionFilter]);
+  
 
   return (
     <div className="mb-6 w-full">
@@ -340,44 +224,6 @@ export default function SearchBar() {
             </button>
  
             </form>
-            )}
-          </div>
-          <div className="relative">
-            <button
-              type="button"
-              ref={sortButtonRef}
-              onClick={() => setShowSort(!showSort)}
-              className="px-3 py-2 rounded-md bg-seablue text-white dark:bg-[#1E2230] hover:bg-blue-600 dark:hover:bg-[#374151]"
-            >
-              Sort
-            </button>
-            {showSort && (
-              <div
-                ref={sortRef}
-                className="absolute z-50 left-0 mt-2 w-56 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700"
-              >
-                <label className="block text-sm font-semibold mb-1 dark:text-gray-200">Sort by</label>
-                <select
-                  className="w-full p-2 border rounded-md bg-white dark:bg-[#1E2230] border-gray-300 dark:border-gray-600 dark:text-gray-100"
-                  value={sortOption}
-                  onChange={(e) => {
-                    setSortOption(e.target.value);
-                    setShowSort(false);
-                  }}
-                >
-                  <option value="">Default</option>
-                  <option value="name-asc">Name A-Z</option>
-                  <option value="name-desc">Name Z-A</option>
-                  <option value="teach-asc">Teaching rating ↑</option>
-                  <option value="teach-desc">Teaching rating ↓</option>
-                  <option value="attend-asc">Attendance rating ↑</option>
-                  <option value="attend-desc">Attendance rating ↓</option>
-                  <option value="correct-asc">Correction rating ↑</option>
-                  <option value="correct-desc">Correction rating ↓</option>
-                  <option value="total-desc">Most total ratings</option>
-                  <option value="total-asc">Least total ratings</option>
-                </select>
-              </div>
             )}
           </div>
         </div>
