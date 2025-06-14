@@ -23,7 +23,7 @@ const getDarkTextColor = (rating: number) => {
 
 const RatingWidget: FC<Props> = ({ rating }) => {
   const value = typeof rating === 'number' ? rating : 0;
-  const classes = `px-2 py-1 dark:py-0.5 rounded-full font-bold text-lg ${getLightColor(value)} dark:bg-transparent dark:ring-0 ${getDarkTextColor(value)}`;
+  const classes = `px-2 py-1 dark:py-0.5 rounded-lg font-bold text-lg ${getLightColor(value)} dark:bg-transparent dark:ring-0 ${getDarkTextColor(value)}`;
   return (
     <div aria-label={`Rating ${value}`} className={classes}>
       {value.toFixed(1)}
