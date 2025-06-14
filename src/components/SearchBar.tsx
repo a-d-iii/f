@@ -34,6 +34,9 @@ export default function SearchBar() {
   const [teachingFilter, setTeachingFilter] = useState(0);
   const [attendanceFilter, setAttendanceFilter] = useState(0);
   const [correctionFilter, setCorrectionFilter] = useState(0);
+  const [showSort, setShowSort] = useState(false);
+  const [sortOption, setSortOption] = useState("");
+  const [displayResults, setDisplayResults] = useState<ListItem[]>([]);
 
   useEffect(() => {
  
@@ -104,6 +107,59 @@ export default function SearchBar() {
     setResults(filtered);
   }, [allResults, teachingFilter, attendanceFilter, correctionFilter]);
 
+  useEffect(() => {
+    let sorted = [...results];
+    switch (sortOption) {
+      case 'name-asc':
+        sorted.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+        break;
+      case 'name-desc':
+        sorted.sort((a, b) => (b.name || '').localeCompare(a.name || ''));
+        break;
+      case 'teach-asc':
+        sorted.sort(
+          (a, b) => (a.teaching_rating ?? 0) - (b.teaching_rating ?? 0)
+        );
+        break;
+      case 'teach-desc':
+        sorted.sort(
+          (a, b) => (b.teaching_rating ?? 0) - (a.teaching_rating ?? 0)
+        );
+        break;
+      case 'attend-asc':
+        sorted.sort(
+          (a, b) => (a.attendance_rating ?? 0) - (b.attendance_rating ?? 0)
+        );
+        break;
+      case 'attend-desc':
+        sorted.sort(
+          (a, b) => (b.attendance_rating ?? 0) - (a.attendance_rating ?? 0)
+        );
+        break;
+      case 'correct-asc':
+        sorted.sort(
+          (a, b) => (a.correction_rating ?? 0) - (b.correction_rating ?? 0)
+        );
+        break;
+      case 'correct-desc':
+        sorted.sort(
+          (a, b) => (b.correction_rating ?? 0) - (a.correction_rating ?? 0)
+        );
+        break;
+      case 'total-asc':
+        sorted.sort(
+          (a, b) => (a.total_ratings ?? 0) - (b.total_ratings ?? 0)
+        );
+        break;
+      case 'total-desc':
+        sorted.sort(
+          (a, b) => (b.total_ratings ?? 0) - (a.total_ratings ?? 0)
+        );
+        break;
+    }
+    setDisplayResults(sorted);
+  }, [results, sortOption]);
+
   return (
     <div className="mb-6 w-full">
       <input
@@ -114,28 +170,30 @@ export default function SearchBar() {
         onChange={(e) => setQuery(e.target.value)}
       />
 
-      <div className="relative mb-4 text-left w-full">
-        <button
-          type="button"
-          onClick={() => setShowFilters(!showFilters)}
-          className="px-3 py-2 rounded-md bg-seablue text-white dark:bg-darkblue hover:bg-blue-600 dark:hover:bg-blue-800"
-        >
-          Filter
-        </button>
-        {showFilters && (
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setShowFilters(false);
-            }}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault();
-                setShowFilters(false);
-              }
-            }}
-            className="absolute z-10 mt-2 w-64 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700"
-          >
+      <div className="mb-4 text-left w-full">
+        <div className="flex gap-2">
+          <div className="relative">
+            <button
+              type="button"
+              onClick={() => setShowFilters(!showFilters)}
+              className="px-3 py-2 rounded-md bg-seablue text-white dark:bg-darkblue hover:bg-blue-600 dark:hover:bg-blue-700"
+            >
+              Filter
+            </button>
+            {showFilters && (
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  setShowFilters(false);
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    setShowFilters(false);
+                  }
+                }}
+                className="absolute z-10 mt-2 w-64 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700"
+              >
             <div className="mb-3">
               <label className="block text-sm font-semibold mb-1 dark:text-gray-200">
                 Teaching rating
@@ -191,8 +249,44 @@ export default function SearchBar() {
             >
               Apply
             </button>
-          </form>
-        )}
+            </form>
+            )}
+          </div>
+          <div className="relative">
+            <button
+              type="button"
+              onClick={() => setShowSort(!showSort)}
+              className="px-3 py-2 rounded-md bg-seablue text-white dark:bg-darkblue hover:bg-blue-600 dark:hover:bg-blue-700"
+            >
+              Sort
+            </button>
+            {showSort && (
+              <div className="absolute left-0 mt-2 w-56 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700">
+                <label className="block text-sm font-semibold mb-1 dark:text-gray-200">Sort by</label>
+                <select
+                  className="w-full p-2 border rounded-md bg-white dark:bg-[#1E2230] border-gray-300 dark:border-gray-600 dark:text-gray-100"
+                  value={sortOption}
+                  onChange={(e) => {
+                    setSortOption(e.target.value);
+                    setShowSort(false);
+                  }}
+                >
+                  <option value="">Default</option>
+                  <option value="name-asc">Name A-Z</option>
+                  <option value="name-desc">Name Z-A</option>
+                  <option value="teach-asc">Teaching rating ↑</option>
+                  <option value="teach-desc">Teaching rating ↓</option>
+                  <option value="attend-asc">Attendance rating ↑</option>
+                  <option value="attend-desc">Attendance rating ↓</option>
+                  <option value="correct-asc">Correction rating ↑</option>
+                  <option value="correct-desc">Correction rating ↓</option>
+                  <option value="total-desc">Most total ratings</option>
+                  <option value="total-asc">Least total ratings</option>
+                </select>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
       {loading && <p className="text-gray-500">Loading...</p>}
       {error && <p className="text-red-500">Error: {error}</p>}
@@ -202,12 +296,12 @@ export default function SearchBar() {
           teachingFilter > 0 ||
           attendanceFilter > 0 ||
           correctionFilter > 0) &&
-        results.length === 0 && (
+        displayResults.length === 0 && (
           <p className="text-gray-500">No results found.</p>
         )}
       {/* Display search results using same layout as the homepage */}
-      <div className="flex flex-wrap justify-center gap-x-4 gap-y-8">
-        {results.map((item) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mx-auto justify-center">
+        {displayResults.map((item) => (
           <article
             key={item.name}
             className="card pb-32 dark:pb-6 card-wrapper dark:backdrop-blur-lg dark:bg-opacity-5 dark:border dark:border-opacity-20 dark:rounded-2xl dark:p-6"
