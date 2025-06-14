@@ -56,7 +56,9 @@ export default function SearchBar() {
         setResults([]);
         setAllResults([]);
       } else {
-        const list = (data as ListItem[]) || [];
+        const list = ((data as ListItem[]) || []).filter(
+          (item) => item.name && item.name.trim() !== ''
+        );
         setAllResults(list);
         setResults(list);
       }
@@ -70,7 +72,9 @@ export default function SearchBar() {
   }, [query]);
 
   useEffect(() => {
-    let filtered = allResults;
+    let filtered = allResults.filter(
+      (f) => f.name && f.name.trim() !== ''
+    );
     if (teachingFilter > 0) {
       filtered = filtered.filter(
         (f) => (f.teaching_rating ?? 0) >= teachingFilter
