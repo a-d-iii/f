@@ -93,7 +93,9 @@ export default function SearchBar() {
                   className="faculty-photo"
                 />
               </div>
+ 
               <div className="flex flex-col flex-1 overflow-hidden">
+ 
                 <h3 className="text-lg font-bold mb-1 clamp-two-lines faculty-name font-poppins dark:text-[#E4E9F0] dark:text-2xl dark:font-medium">{item.name}</h3>
                 {item.specialization && (
                   <p className="text-sm italic text-gray-400 leading-snug overflow-hidden flex-grow clamp-four-lines font-segoe dark:text-[#CDD2E0] dark:font-normal mt-1">

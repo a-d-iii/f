@@ -10,9 +10,10 @@
 .card {
   @apply relative bg-gray-50 p-4 rounded-lg shadow-md transition-shadow transition-transform transform animate-fade;
 }
-
+ 
 .dark .card {
   @apply bg-white/5 text-[#E4E9F0] backdrop-blur-lg border border-white/20 rounded-2xl p-6;
+ 
 }
 
 .card:hover {
@@ -98,11 +99,13 @@
 
 
 .photo-wrapper {
+ 
   @apply w-20 h-20 rounded-lg overflow-hidden flex items-center justify-center bg-white shadow-lg ml-2;
 }
 
 .dark .photo-wrapper {
   @apply w-20 h-20 rounded-lg overflow-hidden flex items-center justify-center bg-transparent border-2 border-[#1E2230];
+ 
 }
 
 html.no-scroll,
