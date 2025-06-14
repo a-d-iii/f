@@ -37,20 +37,19 @@ export default function SearchBar() {
   const [correctionFilter, setCorrectionFilter] = useState(0);
 
   useEffect(() => {
-    if (!query.trim()) {
-      setResults([]);
-      setAllResults([]);
-      return;
-    }
-
     const ctrl = { cancelled: false };
     setLoading(true);
     setError(null);
     const timer = setTimeout(async () => {
-      const { data, error } = await supabase
-        .from('lists')
-        .select('*')
-        .ilike('name', `%${query}%`);
+      let data, error;
+      if (query.trim()) {
+        ({ data, error } = await supabase
+          .from('lists')
+          .select('*')
+          .ilike('name', `%${query}%`));
+      } else {
+        ({ data, error } = await supabase.from('lists').select('*'));
+      }
       if (ctrl.cancelled) return;
       if (error) {
         setError(error.message);
