@@ -13,12 +13,7 @@
 }
 
 .dark .card {
-  @apply bg-white/10 text-[#E4E9F0] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-lg relative;
-  background-image: linear-gradient(#0A0F1E,#0A0F1E), linear-gradient(90deg,#FF00C8,#8000FF,#1E90FF,#FFFFFF);
-  background-origin: border-box;
-  background-clip: padding-box,border-box;
-  background-size: 200% 200%;
-  animation: borderMove 6s linear infinite;
+  @apply bg-white text-[#E4E9F0] backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-lg relative;
 }
 
 @keyframes borderMove {
