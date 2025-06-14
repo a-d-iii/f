@@ -51,6 +51,7 @@ export default function RateFaculty() {
       <button
         type="button"
         onClick={() => setOpen(true)}
+ 
         className={
           isDark
             ? 'w-full h-12 rounded-full border border-[#00FFD8] text-[#00FFD8] hover:bg-white/10'
@@ -60,6 +61,7 @@ export default function RateFaculty() {
                   : 'bg-yellow-300 text-gray-900'
               }`
         }
+ 
       >
         {ratedAverage === null ? 'Rate' : ratedAverage.toFixed(1)}
       </button>
