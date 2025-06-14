@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import SearchBar from '../components/SearchBar.tsx';
-import DarkModeToggle from '../components/DarkModeToggle.tsx';
 const { title = 'Faculty Ranker', headerTitle = 'Faculty Ranker' } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -18,18 +17,19 @@ const { title = 'Faculty Ranker', headerTitle = 'Faculty Ranker' } = Astro.props
   <link rel="preload" as="image" href="https://placehold.co/300x400?text=Faculty+3" />
   <link rel="preload" as="image" href="https://placehold.co/300x400?text=Faculty+4" />
   <script type="module" src="/viewTransitions.js"></script>
+  <script type="module" src="/darkMode.js"></script>
   <script type="module" src="/ratingSlider.js"></script>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 dark:from-darkpurple dark:to-darkpurple text-gray-900 dark:text-gray-100">
 
   <header class="relative p-4 mt-4 mb-2 flex flex-col items-center gap-2 dark:bg-darkblue">
     <div class="w-full flex justify-center items-center">
-      <h1 class="text-4xl font-bold dark:text-[#00FFD8]">{headerTitle}</h1>
-      <DarkModeToggle client:load class="absolute right-4" />
+      <h1 class="text-2xl font-bold">{headerTitle}</h1>
+      <button id="dark-mode-toggle" class="absolute right-4 p-2 rounded-lg bg-gray-200 dark:bg-pink-600">🌓</button>
     </div>
     <SearchBar client:load />
     
   </header>
-  <main class="container mx-auto p-4 md:p-8"><slot /></main>
+  <main class="container mx-auto p-4"><slot /></main>
 </body>
 </html>

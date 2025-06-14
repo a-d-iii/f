@@ -65,7 +65,7 @@ export default function SearchBar() {
     <div className="mb-6">
       <input
         type="text"
-        className="w-full h-12 px-4 rounded-md border border-[#1E2230] mb-4 bg-white text-gray-800 placeholder-gray-500 dark:bg-[#0A0F1E] dark:text-[#E4E9F0] dark:placeholder-[#5A5F7D] focus:outline-none focus:ring-2 focus:ring-[#00FFD8]"
+        className="w-full px-4 py-2 border rounded-lg mb-4 dark:bg-seablue dark:text-white"
         placeholder="Search..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
@@ -94,9 +94,9 @@ export default function SearchBar() {
                 />
               </div>
               <div className="flex flex-col flex-1 h-40 overflow-hidden">
-                <h3 className="text-lg font-bold mb-1 clamp-two-lines faculty-name font-poppins dark:text-[#E4E9F0] dark:text-2xl dark:font-medium">{item.name}</h3>
+                <h3 className="text-lg font-bold mb-1 clamp-two-lines faculty-name font-poppins">{item.name}</h3>
                 {item.specialization && (
-                  <p className="text-sm italic text-gray-400 leading-snug overflow-hidden flex-grow clamp-four-lines font-segoe dark:text-[#CDD2E0] dark:font-normal mt-1">
+                  <p className="text-sm italic text-gray-400 dark:text-gray-400 leading-snug overflow-hidden flex-grow clamp-four-lines font-segoe">
                     {item.specialization}
                   </p>
                 )}
