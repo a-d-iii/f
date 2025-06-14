@@ -68,7 +68,9 @@ function getBoxDarkClasses(rating: number) {
   return 'dark:border-[#FF00C8] dark:text-[#FF00C8] dark:bg-[#FF00C8]20';
 }
 
+ 
 export default function FacultyRatings({ teaching, attendance, correction, quiz, tCount, aCount, cCount, qCount }: Props) {
+ 
   const [detailed, setDetailed] = useState<boolean>(
     typeof window !== 'undefined' && (window as any).showDetailedRatings === true
   );
@@ -151,6 +153,7 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
               <span className="text-sm text-gray-500 dark:text-inherit font-segoe">Quiz</span>
 
             </div>
+ 
             {typeof qCount === 'number' && (
               <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
                 <svg className="w-3 h-3 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -159,6 +162,7 @@ export default function FacultyRatings({ teaching, attendance, correction, quiz,
                 {qCount}
               </span>
             )}
+ 
           </div>
         </div>
       )}
