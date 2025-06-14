@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react';
-import { createClient } from '@supabase/supabase-js';
+import { useState, useEffect } from "react";
+import { createClient } from "@supabase/supabase-js";
 
-import FacultyRatings from './FacultyRatings.tsx';
-import RateFaculty from './RateFaculty.tsx';
-import HeartButton from './HeartButton.tsx';
-
+import FacultyRatings from "./FacultyRatings.tsx";
+import RateFaculty from "./RateFaculty.tsx";
+import HeartButton from "./HeartButton.tsx";
 
 interface ListItem {
   name: string;
@@ -18,15 +17,15 @@ interface ListItem {
 
 const supabaseUrl =
   (import.meta as any).env.PUBLIC_SUPABASE_URL ||
-  'https://dwyojdeyfaozeeplpbyr.supabase.co';
+  "https://dwyojdeyfaozeeplpbyr.supabase.co";
 const supabaseAnonKey =
   (import.meta as any).env.PUBLIC_SUPABASE_ANON_KEY ||
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR3eW9qZGV5ZmFvemVlcGxwYnlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk3OTY5MTMsImV4cCI6MjA2NTM3MjkxM30.A3EWWal-iREIyXX6j2F5Dzdi9KBTJQXAF1GHVcpDHY8';
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR3eW9qZGV5ZmFvemVlcGxwYnlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk3OTY5MTMsImV4cCI6MjA2NTM3MjkxM30.A3EWWal-iREIyXX6j2F5Dzdi9KBTJQXAF1GHVcpDHY8";
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export default function SearchBar() {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
   const [results, setResults] = useState<ListItem[]>([]);
   const [allResults, setAllResults] = useState<ListItem[]>([]);
   const [loading, setLoading] = useState(false);
@@ -37,7 +36,12 @@ export default function SearchBar() {
   const [correctionFilter, setCorrectionFilter] = useState(0);
 
   useEffect(() => {
-    if (!query.trim()) {
+    if (
+      !query.trim() &&
+      teachingFilter === 0 &&
+      attendanceFilter === 0 &&
+      correctionFilter === 0
+    ) {
       setResults([]);
       setAllResults([]);
       return;
@@ -47,17 +51,20 @@ export default function SearchBar() {
     setLoading(true);
     setError(null);
     const timer = setTimeout(async () => {
-      const { data, error } = await supabase
-        .from('lists')
-        .select('*')
-        .ilike('name', `%${query}%`);
+      const { data, error } = await supabase.from("lists").select("*");
       if (ctrl.cancelled) return;
       if (error) {
         setError(error.message);
         setResults([]);
         setAllResults([]);
       } else {
-        const list = (data as ListItem[]) || [];
+        let list = ((data as ListItem[]) || []).filter(
+          (item) => item.name && item.name.trim() !== "",
+        );
+        if (query.trim()) {
+          const term = query.toLowerCase();
+          list = list.filter((item) => item.name.toLowerCase().includes(term));
+        }
         setAllResults(list);
         setResults(list);
       }
@@ -68,23 +75,23 @@ export default function SearchBar() {
       ctrl.cancelled = true;
       clearTimeout(timer);
     };
-  }, [query]);
+  }, [query, teachingFilter, attendanceFilter, correctionFilter]);
 
   useEffect(() => {
-    let filtered = allResults;
+    let filtered = allResults.filter((f) => f.name && f.name.trim() !== "");
     if (teachingFilter > 0) {
       filtered = filtered.filter(
-        (f) => (f.teaching_rating ?? 0) >= teachingFilter
+        (f) => (f.teaching_rating ?? 0) >= teachingFilter,
       );
     }
     if (attendanceFilter > 0) {
       filtered = filtered.filter(
-        (f) => (f.attendance_rating ?? 0) >= attendanceFilter
+        (f) => (f.attendance_rating ?? 0) >= attendanceFilter,
       );
     }
     if (correctionFilter > 0) {
       filtered = filtered.filter(
-        (f) => (f.correction_rating ?? 0) >= correctionFilter
+        (f) => (f.correction_rating ?? 0) >= correctionFilter,
       );
     }
     setResults(filtered);
@@ -99,9 +106,8 @@ export default function SearchBar() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
- 
+
       <div className="relative mb-4 text-left w-full">
- 
         <button
           type="button"
           onClick={() => setShowFilters(!showFilters)}
@@ -110,23 +116,23 @@ export default function SearchBar() {
           Filter
         </button>
         {showFilters && (
- 
           <form
             onSubmit={(e) => {
               e.preventDefault();
               setShowFilters(false);
             }}
             onKeyDown={(e) => {
-              if (e.key === 'Enter') {
+              if (e.key === "Enter") {
                 e.preventDefault();
                 setShowFilters(false);
               }
             }}
             className="absolute z-10 mt-2 w-64 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700"
           >
- 
             <div className="mb-3">
-              <label className="block text-sm font-semibold mb-1 dark:text-gray-200">Teaching rating</label>
+              <label className="block text-sm font-semibold mb-1 dark:text-gray-200">
+                Teaching rating
+              </label>
               <select
                 className="w-full p-2 border rounded-md bg-white dark:bg-[#1E2230] border-gray-300 dark:border-gray-600 dark:text-gray-100"
                 value={teachingFilter}
@@ -140,7 +146,9 @@ export default function SearchBar() {
               </select>
             </div>
             <div className="mb-3">
-              <label className="block text-sm font-semibold mb-1 dark:text-gray-200">Attendance rating</label>
+              <label className="block text-sm font-semibold mb-1 dark:text-gray-200">
+                Attendance rating
+              </label>
               <select
                 className="w-full p-2 border rounded-md bg-white dark:bg-[#1E2230] border-gray-300 dark:border-gray-600 dark:text-gray-100"
                 value={attendanceFilter}
@@ -154,7 +162,9 @@ export default function SearchBar() {
               </select>
             </div>
             <div className="mb-2">
-              <label className="block text-sm font-semibold mb-1 dark:text-gray-200">Correction rating</label>
+              <label className="block text-sm font-semibold mb-1 dark:text-gray-200">
+                Correction rating
+              </label>
               <select
                 className="w-full p-2 border rounded-md bg-white dark:bg-[#1E2230] border-gray-300 dark:border-gray-600 dark:text-gray-100"
                 value={correctionFilter}
@@ -167,7 +177,7 @@ export default function SearchBar() {
                 <option value={2}>2 & up</option>
               </select>
             </div>
- 
+
             <button
               type="submit"
               className="mt-3 w-full px-3 py-2 rounded-md bg-seablue text-white dark:bg-darkblue hover:bg-blue-600 dark:hover:bg-blue-800"
@@ -175,18 +185,22 @@ export default function SearchBar() {
               Apply
             </button>
           </form>
- 
         )}
       </div>
       {loading && <p className="text-gray-500">Loading...</p>}
       {error && <p className="text-red-500">Error: {error}</p>}
-      {!loading && !error && query.trim() && results.length === 0 && (
-        <p className="text-gray-500">No results found.</p>
-      )}
-      {/* Display search results in a responsive grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 justify-items-center">
+      {!loading &&
+        !error &&
+        (query.trim() ||
+          teachingFilter > 0 ||
+          attendanceFilter > 0 ||
+          correctionFilter > 0) &&
+        results.length === 0 && (
+          <p className="text-gray-500">No results found.</p>
+        )}
+      {/* Display search results using same layout as the homepage */}
+      <div className="flex flex-wrap justify-center gap-x-4 gap-y-8">
         {results.map((item) => (
-
           <article
             key={item.name}
             className="card pb-32 dark:pb-6 card-wrapper dark:backdrop-blur-lg dark:bg-opacity-5 dark:border dark:border-opacity-20 dark:rounded-2xl dark:p-6"
@@ -194,18 +208,23 @@ export default function SearchBar() {
             <div className="flex items-start gap-4 mb-2 h-40 dark:h-auto">
               <div className="photo-wrapper">
                 <img
-                  src={item.photo_url || 'https://placehold.co/300x400?text=No+Photo'}
+                  src={
+                    item.photo_url ||
+                    "https://placehold.co/300x400?text=No+Photo"
+                  }
                   alt={`Photo of ${item.name}`}
                   onError={(e) => {
                     const target = e.currentTarget;
-                    target.src = 'https://placehold.co/300x400?text=No+Photo';
+                    target.src = "https://placehold.co/300x400?text=No+Photo";
                     target.onerror = null;
                   }}
                   className="faculty-photo"
                 />
               </div>
               <div className="flex flex-col flex-1 h-40 dark:h-auto overflow-hidden">
-                <h3 className="text-lg font-bold mb-1 clamp-two-lines faculty-name font-poppins dark:text-[#E4E9F0] dark:text-2xl dark:font-medium">{item.name}</h3>
+                <h3 className="text-lg font-bold mb-1 clamp-two-lines faculty-name font-poppins dark:text-[#E4E9F0] dark:text-2xl dark:font-medium">
+                  {item.name}
+                </h3>
                 {item.specialization && (
                   <p className="text-sm italic text-gray-400 leading-snug overflow-hidden flex-grow clamp-four-lines font-segoe dark:text-[#CDD2E0] dark:font-normal mt-1">
                     {item.specialization}
@@ -226,7 +245,6 @@ export default function SearchBar() {
             <RateFaculty />
             <HeartButton faculty={item} />
           </article>
-
         ))}
       </div>
     </div>
