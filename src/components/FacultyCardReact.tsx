@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import FacultyRatings from './FacultyRatings.tsx';
 import RateFaculty from './RateFaculty.tsx';
 import HeartButton from './HeartButton.tsx';
@@ -45,6 +46,24 @@ export default function FacultyCardReact({ faculty }: { faculty: Faculty }) {
     (faculty as any).total_ratings ??
     null;
 
+  const [color, setColor] = useState('hsl(210, 20%, 95%)');
+  const lighten = () =>
+    setColor((c) => {
+      const match = /hsl\(\d+, \d+%, (\d+)%\)/.exec(c);
+      const l = match ? parseInt(match[1], 10) : 95;
+      return `hsl(210, 20%, ${Math.min(l + 5, 100)}%)`;
+    });
+  const darken = () =>
+    setColor((c) => {
+      const match = /hsl\(\d+, \d+%, (\d+)%\)/.exec(c);
+      const l = match ? parseInt(match[1], 10) : 95;
+      return `hsl(210, 20%, ${Math.max(l - 5, 0)}%)`;
+    });
+  const change = () => {
+    const h = Math.floor(Math.random() * 360);
+    setColor(`hsl(${h}, 30%, 90%)`);
+  };
+
   return (
     <article className="card pb-32 dark:pb-6 card-wrapper dark:backdrop-blur-lg dark:bg-opacity-5 dark:border dark:border-opacity-20 dark:rounded-2xl dark:p-6">
       <div className="flex items-start gap-4 mb-2 h-40 dark:h-auto">
@@ -74,7 +93,18 @@ export default function FacultyCardReact({ faculty }: { faculty: Faculty }) {
       </div>
       <hr className="border-t border-gray-300 dark:border-gray-700 my-2" />
  
-      <div className="mb-4 p-2 bg-gray-100 dark:bg-gray-800/40 rounded-md">
+      <div className="flex gap-2 mb-2">
+        <button type="button" onClick={change} className="px-2 py-1 text-xs rounded bg-gray-200 dark:bg-gray-700">
+          Change
+        </button>
+        <button type="button" onClick={lighten} className="px-2 py-1 text-xs rounded bg-gray-200 dark:bg-gray-700">
+          Lighter
+        </button>
+        <button type="button" onClick={darken} className="px-2 py-1 text-xs rounded bg-gray-200 dark:bg-gray-700">
+          Darker
+        </button>
+      </div>
+      <div className="mb-4 p-2 rounded-md" style={{ backgroundColor: color }}>
  
         <FacultyRatings
           teaching={(faculty as any).teaching_rating ?? (faculty as any).teachingRating}
