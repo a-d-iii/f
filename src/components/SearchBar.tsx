@@ -177,7 +177,7 @@ export default function SearchBar() {
             <button
               type="button"
               onClick={() => setShowFilters(!showFilters)}
-              className="px-3 py-2 rounded-md bg-seablue text-white dark:bg-darkblue hover:bg-blue-600 dark:hover:bg-blue-700"
+              className="px-3 py-2 rounded-md bg-seablue text-white dark:bg-[#1E2230] hover:bg-blue-600 dark:hover:bg-[#374151]"
             >
               Filter
             </button>
@@ -247,7 +247,7 @@ export default function SearchBar() {
 
             <button
               type="submit"
-              className="mt-3 w-full px-3 py-2 rounded-md bg-seablue text-white dark:bg-darkblue hover:bg-blue-600 dark:hover:bg-blue-800"
+              className="mt-3 w-full px-3 py-2 rounded-md bg-seablue text-white dark:bg-[#1E2230] hover:bg-blue-600 dark:hover:bg-[#374151]"
             >
               Apply
             </button>
@@ -259,12 +259,12 @@ export default function SearchBar() {
             <button
               type="button"
               onClick={() => setShowSort(!showSort)}
-              className="px-3 py-2 rounded-md bg-seablue text-white dark:bg-darkblue hover:bg-blue-600 dark:hover:bg-blue-700"
+              className="px-3 py-2 rounded-md bg-seablue text-white dark:bg-[#1E2230] hover:bg-blue-600 dark:hover:bg-[#374151]"
             >
               Sort
             </button>
             {showSort && (
-              <div className="absolute left-0 mt-2 w-56 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700">
+              <div className="absolute z-20 left-0 mt-2 w-56 p-4 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-[#0A0F1E] dark:border-gray-700">
                 <label className="block text-sm font-semibold mb-1 dark:text-gray-200">Sort by</label>
                 <select
                   className="w-full p-2 border rounded-md bg-white dark:bg-[#1E2230] border-gray-300 dark:border-gray-600 dark:text-gray-100"
@@ -305,7 +305,7 @@ export default function SearchBar() {
         )}
       {/* Display search results using same layout as the homepage */}
  
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mx-auto justify-center">
+      <div className="flex flex-wrap justify-center gap-x-4 gap-y-8">
  
         {displayResults.map((item) => (
           <article
